@@ -1,63 +1,57 @@
 import React from "react";
 import { ProductCard } from "./ProductCard";
-import styled from "styled-components";
-
-
-
-const data =[ 
-    {
-        src: "https://ii2.pepperfry.com/media/catalog/product/a/n/494x544/anne-solid-wood-dining-chair-in-rustic-teak-finish---by-amberville-anne-solid-wood-dining-chair-in-r-zlbwrc.jpg",
-        title: "Anne Solid Wood Dining Chair In Rustic Teak Finish",
-        company: "Amberville",
-        price: "17,499"
-    },
-    {
-        src: "https://ii3.pepperfry.com/media/catalog/product/c/h/494x544/charm-velvet-arm-chair-in-teal-colour-by-hometown-charm-velvet-arm-chair-in-teal-colour-by-hometown-hmoceq.jpg",
-        title: "CHarm Wing Chair",
-        company: "HomeTown",
-        price: "28,405"
-    },
-    {
-        src: "https://ii2.pepperfry.com/media/catalog/product/c/a/494x544/capella-armchair-capella-armchair-kxpkxa.jpg",
-        title: "Capella Armchair in Brown Color",
-        company: "Orix",
-        price: "1,43,606"
-    },
-    {
-        src: "https://ii3.pepperfry.com/media/catalog/product/t/h/494x544/the-kangaroo-chair---footstool-in-walnut-finish-by-home-canvas-the-kangaroo-chair---footstool-in-wal-d3hygh.jpg",
-        title: "The Kangaroo Chair and Footstool",
-        company: "Home Canvas",
-        price: "37,995"
-    },
-    {
-        src: "https://ii1.pepperfry.com/media/catalog/product/t/h/494x544/the-kangaroo-chair-in-walnut-finish-by-home-canvas-the-kangaroo-chair-in-walnut-finish-by-home-canva-ecryzk.jpg",
-        title: "The Kangaroo Chair and Footstool",
-        company: "Home Canvas",
-        price: "29,700"
-    },
-    {
-        src: "https://ii3.pepperfry.com/media/catalog/product/g/u/494x544/guest-chair-in-maroon-colour-by-efc-guest-chair-in-maroon-colour-by-efc-z1p5ip.jpg",
-        title: "Arm Chair in Maroon Color",
-        company: "EFC",
-        price: "4,750"
-    }
-]
-
-const Products = styled.div`
-    display: grid;
-    grid-template-column:repeat(3,33%);
-`;
+import "../style/product.css"
+import { Data } from "./Data";
 
 export const ProductList =()=>{
+
+    const [brand,setBrand] = React.useState("");
+
+    console.log("hello");
+    var data = [];
+    for(var i=0;i<Data.length;i++){
+        if(Data[i].company.toLowerCase().includes(brand.toLowerCase())){
+            data.push(Data[i]);
+        }
+    }
     return(
-        <>
+    <>
+    <div className="heading">
+        <h2>Sofas</h2>
+        <h5>Furnitures</h5>    
+    </div>    
+    <div className="product">
+        <span className="filter">
+            <h4>Sort by</h4>
+            <input type="radio" name="money" value="High"/>
+            <label htmlFor="Highest">Highest Priced First</label>
+            <br />
+            <input type="radio" name="money" value="Low"/>
+            <label htmlFor="Lowest">Lowest Priced First</label>
+            <h5>Brand</h5>
+            <input type="radio" name="brand" value="CasaCraft" onChange={(e)=>setBrand(e.target.value)}/>
+            <label htmlFor="CasaCraft">CasaCraft</label>
+            <br />
+            <input type="radio" name="brand" value="Duroflex" onChange={(e)=>setBrand(e.target.value)}/>
+            <label htmlFor="Duroflex">Duroflex</label>
+            <br />
+            <input type="radio" name="brand" value="Wakefit" onChange={(e)=>setBrand(e.target.value)}/>
+            <label htmlFor="Wakefit">Wakefit</label>
+            <br />
+            <input type="radio" name="brand" value="Febonic"  onChange={(e)=>setBrand(e.target.value)}/>
+            <label htmlFor="Febonic">Febonic</label>
+        </span>
+        <span className="list">
         {   
             data.map((items)=>
             <>
-            <Products><ProductCard items = {items}/></Products>
+            <ProductCard items = {items}/>
             </>
             )
         }
-        </>
+            
+        </span>
+    </div>
+    </>
     )
 }
