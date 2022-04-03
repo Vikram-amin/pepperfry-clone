@@ -1,9 +1,9 @@
+import React from 'react'
 
-export const getData = (key) => {
-     return JSON.parse(localStorage.getItem(key)) || []
+function store() {
+  return (
+    <div>store</div>
+  )
 }
 
-export const setData = (key,payload) => {
-    return localStorage.setItem(key,JSON.stringify(payload))
-}
-
+export{ store }
