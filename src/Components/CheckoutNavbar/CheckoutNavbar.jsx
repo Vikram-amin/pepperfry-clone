@@ -1,16 +1,26 @@
 import React from 'react'
-import { NavbarWrapper } from './CheckoutNavbarCSS'
+import { Flex, Img, Name, Navbar, NavbarWrapper } from './CheckoutNavbarCSS'
 import logo from "../../Images/logo.svg";
+import { Link } from "react-router-dom";
 
 const CheckoutNavbar = () => {
   return (
     <>
-    <NavbarWrapper>
-        <img src={logo} alt="" />
-
-     </NavbarWrapper>
+      <NavbarWrapper>
+        <Navbar>
+          <Link to="/">
+            <Img src={logo} alt="cartIcon" />{" "}
+          </Link>
+          <Flex>
+            <h5>Cart </h5> <h5> ---- </h5>
+            <h5> Delivery & Billing Address </h5> <h5> ---- </h5>
+            <h5> Payment </h5> 
+          </Flex>
+          <Name>WELCOME VIKRAM !</Name>
+        </Navbar>
+      </NavbarWrapper>
     </>
-  )
+  );
 }
 
 export { CheckoutNavbar }
