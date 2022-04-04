@@ -6,14 +6,12 @@ export const CartPageWrapper = styled.div`
   margin: auto;
   display: flex;
   flex-direction: row;
-  border: 1px solid black;
   justify-content: space-between;
 `;
 
 
 export const CartLeft = styled.div`
   width: 66%;
-  border: 1px solid black;
 `;
 
 
@@ -79,7 +77,7 @@ color:blue;
 `
 
 export const Orange = styled.span`
-  color: Orange;
+  color:  #f16521;;
 `;
 
 
@@ -142,16 +140,17 @@ export const CheckBoxDiv = styled.div`
 
 export const CardContainer = styled.div`
   width: 100%;
-  display:flex;
+  display: flex;
+  padding-bottom:30px;
+  border: 1px solid lightgray;
 `;
 
 
 export const CardLeft = styled.div`
   width: 17%;
-  border: 1px solid black;
+  margin-top: 30px;
 
   & img {
-    margin-top: 20px;
     width: 90px;
     height: 100px;
     display: block;
@@ -173,16 +172,100 @@ export const CardLeft = styled.div`
     font-weight: 600;
   }
 `;
+
 export const CardMid = styled.div`
   width: 40%;
-  border: 1px solid black;
+  font-weight: 500;
+  font-size: 13px;
+  margin-top: 16px;
+
+  .name {
+    color: #121212;
+  }
+
+  .month {
+    color: #f16521;
+  }
+
+  .flexset {
+    position: relative;
+  }
+
+  .flexset span {
+    position: absolute;
+    top: 5px;
+    left: 40px;
+  }
+
+  .spanItem p {
+    padding-left: 40px;
+    margin: 0;
+    margin-top: -10px;
+    padding-top: 12px;
+  }
+
+  .Safeitems {
+    margin-left: 20px;
+  }
+
+  .Safeitems p {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .Safeitemsimg {
+    margin-left: -10px;
+  }
+
+  .calenderIcon {
+    width: 20px;
+  }
 `;
+
+
 export const CardRight = styled.div`
-  width:20%;
+  width: 15%;
+  color: #848484;
+  margin-left: 80px;
+  margin-top: 30px;
+
+  & button {
+    border: none;
+    background-color: transparent;
+    width: 20px;
+    font-size: 15px;
+  }
+
+  .quantity {
+    width: 20px;
+    height: 20px;
     border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+  }
+
+  .qprice {
+    padding-top: 20px;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+  }
+
+  .add {
+    padding-top: 140px;
+    font-size: 15px;
+  }
 `;
 
 export const CardIcon = styled.div`
-  width:20%;
-    border: 1px solid black;
+  width: 20%;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  padding-right: 10px;
+  margin-top: 30px;
+
+  & span {
+    padding-right: 8px;
+  }
 `;

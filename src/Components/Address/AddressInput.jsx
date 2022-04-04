@@ -1,7 +1,7 @@
 import React from 'react'
 import {  Checkbox } from "@mui/material";
 import { useState } from "react";
-import { Form, Button, Left } from "./AddressCSS";
+import { Form, Button } from "./AddressCSS";
 
 const AddressInput = () => {
 

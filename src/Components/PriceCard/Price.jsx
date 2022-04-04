@@ -7,12 +7,10 @@ import {
   PriceContainer,
   PriceWraper,
   TotalPrice,
-  CheckBoxDiv,
-  Emi,
   Hr,
   PriceDiv,
 } from "./PriceCSS";
-import Checkbox from "@mui/material/Checkbox";
+
 
 
 
