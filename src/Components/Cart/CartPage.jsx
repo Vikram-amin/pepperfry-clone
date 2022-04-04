@@ -37,6 +37,7 @@ const CartPage= () => {
           <div>
             <CartCards/>
           </div>
+          
         </CartLeft>
 
         <CartRight>

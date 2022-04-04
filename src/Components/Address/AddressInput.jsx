@@ -29,7 +29,7 @@ const [formData, setFormData] = useState(initialValue);
 
   return (
     <Form>
-      <Left>
+      {/* <FormLeft> */}
         <h2>Add New Shipping Address</h2>
         <div >
           <div>
@@ -111,7 +111,7 @@ const [formData, setFormData] = useState(initialValue);
             <Button onClick={handleSubmit}>SAVE & CONTINUE </Button>
           </div>
         </div>
-      </Left>
+      {/* </Left> */}
     </Form>
   );
 }
