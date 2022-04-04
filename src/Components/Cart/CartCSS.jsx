@@ -17,56 +17,57 @@ export const CartLeft = styled.div`
 
 export const CartRight = styled.div`
   width: 32%;
-  border: 1px solid black;
+`;
+
+export const CoupenDiv = styled.div`
+  border: 1px solid lightgray;
+  padding: 8px;
+  position: relative;
+  margin-bottom: 15px;
+
+  & span {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+  }
 `;
 
 export const CartCountHeading = styled.div`
   margin-top: 100px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 0;
+  color: #121212;
+  line-height: 38px;
+  font-family: Manrope, sans-serif;
+  margin-left: 7%;
 `;
 
 export const PriceContainer = styled.div`
-border : 1px solid black;
+    border : 1px solid lightgray;
   box-shadow: -1px -1px 0px #e7e7e7, 1px 1px 0px #e7e7e7;
 `;
 
-export const Hr = styled.div`
-  width: 94%;
-  height: 2px;
-  border: 1px solid gary;
-  background-color: gray;
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 20px ;
-`;
-
 export const CartHeader = styled.div`
-  width: 100%;
+  width: 97%;
   background-color: #f9f9f9;
-  height: 42px;
-  border: 1px solid black;
+  border: 1px solid lightgray;
+    padding-left: 18px;
+    padding:12px;
+    font-size: 15px;
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 0;
+    margin-right: 2px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+  
 `;
 
-export const PriceWraper = styled.div`
-  padding: 22px;
-  font-family: Fira Sans;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  padding-top: 10px;
-  letter-spacing: 0.06em;
-
-  .cardDisplay {
-    display: flex;
-    justify-content: space-between;
-    width: inherit;
-    padding: 2px;
-    margin-top: 8px;
-    padding-right: 6px;
-  }
-
-
-`;
 
 export const Green = styled.div`
   color: green;
@@ -80,36 +81,6 @@ export const Orange = styled.span`
   color:  #f16521;;
 `;
 
-
-export const CartItem = styled.div`
-`
-
-export const TotalPrice = styled.div`
-  display: flex;
-  padding: 10px;
-  justify-content: space-between;
-
-  .total {
-    font-size: 14px;
-    color: #4a4a4a;
-    line-height: 15px;
-    font-weight: 600;
-  }
-
-  .totalPrice {
-    font-size: 14px;
-    color: #4a4a4a;
-    line-height: 15px;
-    font-weight: 600;
-    text-align: right;
-  }
-
-  .tax {
-    color: #848484;
-    font-weight: 600;
-    padding-top:10px;
-  }
-`;
 
 export const Emi = styled.div`
   font-size: 10px;
@@ -130,11 +101,34 @@ export const Emi = styled.div`
 
 
 export const CheckBoxDiv = styled.div`
-& Grid {
-  color:red;
-}
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  font-size: 12px;
 
-`
+  & span {
+    padding-left: 5px;
+    padding-top: 2px;
+  }
+
+  .bp {
+    padding-left: 55px;
+    padding-top: 4px;
+    margin-bottom: 20px;
+  }
+`;
+
+export const Button = styled.div`
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+  background-color: #f16521;
+  font-size: 16px;
+  box-sizing: border-box;
+`;
+
+
 
 // Cart card 
 

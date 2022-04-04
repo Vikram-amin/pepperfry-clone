@@ -25,7 +25,11 @@ export const LeftDiv = styled.div`
 
 export const RightDiv = styled.div`
   width: 32%;
-  border: 1px solid white;
+
+`;
+
+export const PriceDiv = styled.div`
+  border: 1px solid lightgray;
 `;
 
 export const Form = styled.div`

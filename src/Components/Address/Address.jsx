@@ -4,7 +4,7 @@ import React from 'react'
 
 import { Price } from '../PriceCard/Price';
 import { CheckBoxDiv, Emi } from '../PriceCard/PriceCSS';
-import { AdressContainer,  LeftDiv,  RightDiv } from './AddressCSS';
+import { AdressContainer,  LeftDiv,  PriceDiv,  RightDiv } from './AddressCSS';
 import {AddressInput} from './AddressInput'
 
 const Address = () => {
@@ -15,14 +15,18 @@ const Address = () => {
       </LeftDiv>
 
       <RightDiv>
-        <Price />
+
+        <PriceDiv>
+          <Price />
+        </PriceDiv>
+
         <Emi>
           <p>
             No Cost EMI Available starting <span>₹ 2,316/month.</span> EMI
             Starting <span> ₹ 655/month </span>
           </p>
         </Emi>
-
+        
         <CheckBoxDiv className="chekboxAddress">
           <Checkbox /> Contribute Rs.99 For COVID Relief Through GiveIndia.
         </CheckBoxDiv>

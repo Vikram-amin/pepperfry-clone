@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PriceDiv = styled.div`
   width: 100%;
-  border: 1px solid lightgray;
+ 
 `;
 
   // width: 32%;
