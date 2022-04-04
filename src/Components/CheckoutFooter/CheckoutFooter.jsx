@@ -96,7 +96,6 @@ const CheckoutFooter = () => {
         <Flex>
           <div>
             <img
-              class="footer_img31"
               src="https://ii2.pepperfry.com/images/download-1.png"
               alt=""
             />

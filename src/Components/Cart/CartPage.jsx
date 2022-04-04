@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import {IoLocationOutline }  from "react-icons/io5"
-import { BsFillBookmarksFill } from "react-icons/bs";
+import Checkbox from "@mui/material/Checkbox";
 import { Blue, CartCountHeading, CartHeader, CartLeft, CartPageWrapper, CartRight, CheckBoxDiv, Emi, Green, Hr, Orange, PriceContainer, PriceWraper, TotalPrice } from './CartCSS';
-import {Flex} from '../../Utils/Common.js'
+import {Flex,Grid} from '../../Utils/Common.js'
+import { CartCards } from './CartCards';
 
-const sofas = [
+
+const sofas = 
   {
     id: 1,
     name: "Esteban 3 Seater Half Leather Sofa in Grey Colour",
@@ -13,17 +15,8 @@ const sofas = [
     madeBy: "CasaCraft by Pepperfry",
     price: "1,13,999",
     actual_price: "1,84,999",
-  },
-  {
-    id: 2,
-    name: "Amelia 2 Seater Sofa in Charcoal Grey Colour",
-    img:  "https://ii1.pepperfry.com/media/catalog/product/a/m/800x400/amelia-2-seater-sofa-in-charcoal-grey-colour-by-casacraft-amelia-2-seater-sofa-in-charcoal-grey-colo-mc0vev.jpg",
-    
-    madeBy: "CasaCraft by Pepperfry",
-    offer_price: "1,13,999",
-    actual_price: "1,84,999",
-  },
-];
+  }
+
 
 const CartPage= () => {
   return (
@@ -41,7 +34,9 @@ const CartPage= () => {
             </Flex>
           </CartHeader>
 
-          <div></div>
+          <div>
+            <CartCards/>
+          </div>
         </CartLeft>
 
         <CartRight>
@@ -65,7 +60,7 @@ const CartPage= () => {
 
                 <div className="cardDisplay">
                   <div>
-                    Delivery <Orange> (FREE) </Orange>{" "}
+                    Delivery <Orange> (FREE) </Orange>
                   </div>
                   <div> ₹ 0 </div>
                 </div>
@@ -86,7 +81,7 @@ const CartPage= () => {
               <TotalPrice>
                 <div className="total"> Total</div>
                 <div>
-                  <div className="totalPrice">₹ dsgfd{sofas.price}</div>
+                  <div className="totalPrice">₹ {sofas.price}</div>
                   <div className="tax">(Inclusive of all taxes)</div>
                 </div>
               </TotalPrice>
@@ -100,13 +95,18 @@ const CartPage= () => {
                 </p>
               </Emi>
             </PriceContainer>
-
+            <br />
             <CheckBoxDiv>
-              <div>Contribute Rs.99 For COVID Relief Through GiveIndia.</div>
-              <div>
+              <Grid>
+                <Checkbox /> Contribute Rs.99 For COVID Relief Through
+                GiveIndia.
+              </Grid>
+
+              <Grid>
+                <Checkbox />
                 Use GSTIN For Business Purchase (Optional) Claim Tax Credit By
                 Entering Your Companies GSTIN.
-              </div>
+              </Grid>
             </CheckBoxDiv>
           </PriceWraper>
         </CartRight>

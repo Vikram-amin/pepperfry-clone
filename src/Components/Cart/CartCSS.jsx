@@ -130,6 +130,59 @@ export const Emi = styled.div`
 `;
 
 
+
 export const CheckBoxDiv = styled.div`
+& Grid {
+  color:red;
+}
 
 `
+
+// Cart card 
+
+export const CardContainer = styled.div`
+  width: 100%;
+  display:flex;
+`;
+
+
+export const CardLeft = styled.div`
+  width: 17%;
+  border: 1px solid black;
+
+  & img {
+    margin-top: 20px;
+    width: 90px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & div {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 11px;
+    color: #454545;
+    padding: 1px 10px;
+    border: 1px solid #979797;
+    border-radius: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    font-weight: 600;
+  }
+`;
+export const CardMid = styled.div`
+  width: 40%;
+  border: 1px solid black;
+`;
+export const CardRight = styled.div`
+  width:20%;
+    border: 1px solid black;
+`;
+
+export const CardIcon = styled.div`
+  width:20%;
+    border: 1px solid black;
+`;
