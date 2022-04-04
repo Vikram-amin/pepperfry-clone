@@ -1,7 +1,7 @@
 import React from 'react'
-import { Checkbox } from "@mui/material";
+import {  Checkbox } from "@mui/material";
 import { useState } from "react";
-import { Form, Left } from './AddressCSS';
+import { Form, Button, Left } from "./AddressCSS";
 
 const AddressInput = () => {
 
@@ -29,12 +29,13 @@ const [formData, setFormData] = useState(initialValue);
 
   return (
     <Form>
-      <h2>Add New Shipping Address</h2>
       <Left>
-      <div className="form">
+        <h2>Add New Shipping Address</h2>
+        <div >
           <div>
             <label>Name</label>
             <input
+              className="name"
               type="text"
               name="name"
               placeholder=" Vikram Amin "
@@ -45,6 +46,7 @@ const [formData, setFormData] = useState(initialValue);
           <div>
             <label>Mobile number</label>
             <input
+              className="mb"
               type="text"
               name="phoneNo"
               placeholder=" 9582020202"
@@ -57,6 +59,7 @@ const [formData, setFormData] = useState(initialValue);
             <input
               type="text"
               name="pincode"
+              className="pin"
               placeholder="40059"
               onChange={handleChange}
             />
@@ -66,6 +69,7 @@ const [formData, setFormData] = useState(initialValue);
             <label>Address</label>
             <input
               type="text"
+              className="address"
               name="address"
               placeholder=" House Number, Building Name, Society, Area, Road, Landmark"
               onChange={handleChange}
@@ -95,16 +99,16 @@ const [formData, setFormData] = useState(initialValue);
           </div>
 
           <div>
-            <input type="text" disabled value=" India" />
+            <input type="text" disabled value=" India" className="country" />
           </div>
 
-          <div>
+          <div className="billing">
             <Checkbox />
-            <span>Billing Address Is The Same As Shipping Address</span>
+            <span> Billing Address Is The Same As Shipping Address</span>
           </div>
 
           <div>
-            <button onClick={handleSubmit}>SAVE & CONTINUE</button>
+            <Button onClick={handleSubmit}>SAVE & CONTINUE </Button>
           </div>
         </div>
       </Left>
