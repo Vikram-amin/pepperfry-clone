@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/product.css"
+import "../../style/product.css"
 import { Button } from "./CartButton";
 export const ProductCard = (item) =>{
     return(

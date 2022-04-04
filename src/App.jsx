@@ -1,5 +1,5 @@
 
-import { ProductList } from './Components/ProductList';
+import { ProductList } from './Components/ProductList/ProductList';
 
 function App() {
   return (
