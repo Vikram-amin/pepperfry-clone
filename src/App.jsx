@@ -1,10 +1,13 @@
 
+
+// import { Routes } from './Routes/Routes'
 import './App.css';
+import { Cart } from './Components/Cart/Cart';
 
 function App() {
   return (
-    <div className="App">
-    <h1>hello </h1>
+    <div>
+      <Cart/>
     </div>
   );
 }
