@@ -1,6 +1,4 @@
 
-
-// import { Routes } from './Routes/Routes'
 import './App.css';
 import { Routing } from './Routes/Routing';
 
