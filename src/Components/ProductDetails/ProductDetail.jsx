@@ -1,27 +1,18 @@
 import React from "react";
 import "../../style/detail.css"
+import { Slider } from "./Slider";
 export const ProductDetail = () =>{
     var productData = JSON.parse(localStorage.getItem("data"));
+    const [pincode, setPincode] = React.useState("");
     var product = productData[0];
-    var slide = document.getElementById("slider");
+    const handlerChange =(e) =>{
+        setPincode(e.target.value)
+    }
     return(
         <>
         <div className="detail">
             <div className="img">
-                <div className="slider-box">
-                    <div id="slider">
-                        <img src={product.img[0]} alt="" />
-                        <img src={product.img[1]} alt="" />
-                        <img src={product.img[2]} alt="" />
-                        <img src={product.img[3]} alt="" />
-                    </div>
-                    <div className="indicator">
-                        <button onClick={()=>{slide.style.transform = "translateX(0px)"}}></button>
-                        <button onClick={()=>{slide.style.transform = "translateX(-100%)"}}></button>
-                        <button onClick={()=>{slide.style.transform = "translateX(-200%)"}}></button>
-                        <button onClick={()=>{slide.style.transform = "translateX(-300%)"}}></button>
-                    </div>
-                </div>
+                <Slider />
             </div>
             <div className="data">
                 <h3>{product.name}</h3>
@@ -35,7 +26,7 @@ export const ProductDetail = () =>{
                 <label htmlFor="">DELIVERY &emsp; &emsp; &emsp; &emsp;</label>
                 <span></span>
                 <span></span>
-                <input type="text" value={"Enter a Pincode"} className="pincode" />
+                <input type="text" placeholder="Enter a Pincode" value={pincode} onChange={(e)=>handlerChange(e)} className="pincode" />
                 <button className="pinBtn">APPLY</button>
                 <h5 className="del">Delivery charges as applicable <b>Pincode Required</b></h5>
                 <h5 className="del">Assembly Charges as applicable <b>Pincode Required</b></h5>
