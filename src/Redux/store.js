@@ -1,9 +1,13 @@
+import { createStore, combineReducers } from "redux";
+import {shopReducer} from '../Redux/ShopingCart/reducer.js'
 
-export const getData = (key) => {
-     return JSON.parse(localStorage.getItem(key)) || []
-}
+const rootReducer = combineReducers({
+  shop: shopReducer
+});
 
-export const setData = (key,payload) => {
-    return localStorage.setItem(key,JSON.stringify(payload))
-}
+ const store = createStore(
+   rootReducer,
+   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+ );
 
+export { store };
