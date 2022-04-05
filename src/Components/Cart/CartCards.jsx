@@ -29,47 +29,53 @@ const CartCards = () => {
         </CardLeft>
 
         <CardMid>
-          <p>{sofas.name}</p>
+          <p className="name">{sofas.name}</p>
           <p>
-            <Orange>12 Months' Warranty, 100% Genuine</Orange>
+            <Orange className="month">12 Months' Warranty, 100% Genuine</Orange>
           </p>
 
-          <div>
-            <div>
-              <CalendarMonthIcon /> Delivery By
+          <div className="spanItem">
+            <div className="flexset">
+              <CalendarMonthIcon className="calenderIcon" />
+              <span> Delivery By</span>
             </div>
             <p>Tue, 19 Apr</p>
             <p>Charges FREE For Today</p>
           </div>
+          <br />
 
-          <div>
-            <div>
-              <BsLayers /> Assembly
+          <div className="spanItem">
+            <div className="flexset">
+              <BsLayers className="calenderIcon" />
+              <span>Assembly</span>
             </div>
             <p>Offered By Pepperfry</p>
             <p>Charges ₹ 449 </p>
           </div>
 
+          <br />
           <div>
             <Flex>
-              <img src={safe} alt="" />
-              <Orange> Full Furniture Protection </Orange>
+              <img className="Safeitemsimg" src={safe} alt="" />
+              <div className="Safeitems">
+                <Orange> Full Furniture Protection </Orange>
+                <p>For Only ₹ 1,834</p>
+                <p>Learn More?</p>
+              </div>
             </Flex>
-            <p>For Only ₹ 1,834</p>
-            <p>Learn More?</p>
           </div>
         </CardMid>
 
         <CardRight>
           <Flex>
             <button>-</button>
-            <div>1</div>
+            <div className='quantity' >1</div>
             <button>+</button>
           </Flex>
-          <div> ₹ {sofas.price}</div>
+          <div className='qprice'> ₹ {sofas.price}</div>
           <Orange>₹ {sofas.price}</Orange>
 
-          <div>+ Add</div>
+          <div className='add'>+ Add</div>
         </CardRight>
 
         <CardIcon>

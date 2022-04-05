@@ -2,12 +2,12 @@
 
 // import { Routes } from './Routes/Routes'
 import './App.css';
-import { Cart } from './Components/Cart/Cart';
+import { Routing } from './Routes/Routing';
 
 function App() {
   return (
     <div>
-      <Cart/>
+  <Routing/>
     </div>
   );
 }

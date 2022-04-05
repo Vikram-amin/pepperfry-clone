@@ -1,10 +1,13 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import {IoLocationOutline }  from "react-icons/io5"
 import Checkbox from "@mui/material/Checkbox";
-import { Blue, CartCountHeading, CartHeader, CartLeft, CartPageWrapper, CartRight, CheckBoxDiv, Emi, Green, Hr, Orange, PriceContainer, PriceWraper, TotalPrice } from './CartCSS';
-import {Flex,Grid} from '../../Utils/Common.js'
+import { Button, CartCountHeading, CartHeader, CartLeft, CartPageWrapper, CartRight, CheckBoxDiv, CoupenDiv, Emi,  PriceContainer} from './CartCSS';
+import {Flex} from '../../Utils/Common.js'
 import { CartCards } from './CartCards';
+import { Price } from '../PriceCard/Price';
+import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+
 
 
 const sofas = 
@@ -24,91 +27,60 @@ const CartPage= () => {
       <CartCountHeading>
         <h2>IN YOUR CART(3 Items)</h2>
       </CartCountHeading>
-
       <CartPageWrapper>
         <CartLeft>
           <CartHeader>
             <Flex>
-              <IoLocationOutline /> Enter Your Pincode For Delivery & Assembly
-              Information <span> 576225</span> <span>Change</span>
+              <LocationOnIcon /> Enter Your Pincode For Delivery & Assembly
+              Information
             </Flex>
           </CartHeader>
 
           <div>
-            <CartCards/>
+            {/* cartcard */}
+            <CartCards />
           </div>
         </CartLeft>
 
         <CartRight>
-          <PriceWraper>
-            <PriceContainer>
-              <div>
-                <div className="cardDisplay">
-                  <div>Cart Value</div>
-                  <div>₹ {sofas.price}</div>
-                </div>
+          <CoupenDiv>
+            <ConfirmationNumberIcon /> <span> Apply Coupen</span>
+          </CoupenDiv>
 
-                <div className="cardDisplay">
-                  <Green>Retail Discount </Green>
-                  <Green>(-) ₹ {sofas.price}</Green>
-                </div>
+          <PriceContainer>
+            {/* PriceCard */}
+            <Price />
 
-                <div className="cardDisplay">
-                  <Blue>Cashback/Refund Credits Redeemed</Blue>
-                  <Blue>(-) ₹{sofas.price}</Blue>
-                </div>
+            <Emi>
+              <p>
+                No Cost EMI Available Starting <span> ₹ 63,184/month.</span>
+                EMI Starting <span>₹ 17,846/month</span>
+              </p>
+            </Emi>
+          </PriceContainer>
 
-                <div className="cardDisplay">
-                  <div>
-                    Delivery <Orange> (FREE) </Orange>
-                  </div>
-                  <div> ₹ 0 </div>
-                </div>
+          <br />
+          <CheckBoxDiv>
+            <Flex>
+              <Checkbox size="large" />
+              <span>Contribute Rs.99 For COVID Relief Through GiveIndia.</span>
+            </Flex>
 
-                <div className="cardDisplay">
-                  <div>Assembly</div>
-                  <div>₹ 1500</div>
-                </div>
-
-                <div className="cardDisplay">
-                  <div>GiveIndia</div>
-                  <div>₹ 99</div>
-                </div>
-              </div>
-
-              <Hr />
-
-              <TotalPrice>
-                <div className="total"> Total</div>
-                <div>
-                  <div className="totalPrice">₹ {sofas.price}</div>
-                  <div className="tax">(Inclusive of all taxes)</div>
-                </div>
-              </TotalPrice>
-
-              <Hr />
-
-              <Emi>
-                <p>
-                  No Cost EMI Available Starting <span> ₹ 63,184/month.</span>
-                  EMI Starting <span>₹ 17,846/month</span>
-                </p>
-              </Emi>
-            </PriceContainer>
-            <br />
-            <CheckBoxDiv>
-              <Grid>
-                <Checkbox /> Contribute Rs.99 For COVID Relief Through
-                GiveIndia.
-              </Grid>
-
-              <Grid>
-                <Checkbox />
+            <Flex>
+              <Checkbox size="large" />
+              <span>
                 Use GSTIN For Business Purchase (Optional) Claim Tax Credit By
                 Entering Your Companies GSTIN.
-              </Grid>
-            </CheckBoxDiv>
-          </PriceWraper>
+              </span>
+            </Flex>
+            <div className="bp">
+              None Of The Items In Your Cart Are Available For Business Purchase
+            </div>
+          </CheckBoxDiv>
+
+          <Link to={`/ckeckout`}>
+            <Button>PLACE ORDER</Button>
+          </Link>
         </CartRight>
       </CartPageWrapper>
     </>
