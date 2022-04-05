@@ -6,17 +6,16 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import  { ThemeProvider } from "styled-components";
 import theme from "./Utils/theme"
- 
-// import { store } from './Redux/store';
+ import { store } from './Redux/store';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        {/* <Provider> */}
+        <Provider store = {store}>
           <App />
-        {/* </Provider> */}
+        </Provider>
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,

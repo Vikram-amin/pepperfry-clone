@@ -20,7 +20,7 @@ import styled from "styled-components";
 
 export const LeftDiv = styled.div`
   width: 66%;
-  border: 1px solid lightgrey;
+
 `;
 
 
@@ -33,10 +33,15 @@ export const PriceDiv = styled.div`
   border: 1px solid lightgray;
 `;
 
+export const AdressInputContainer = styled.div`
+  border: 1px solid lightgray;
+`;
+
 export const Form = styled.div`
   width: 85%;
   margin: auto;
   line-height: 30px;
+ 
 
   & input {
     width: 78%;
@@ -49,7 +54,7 @@ export const Form = styled.div`
     font-weight: 700;
     line-height: 1.6;
     margin-top: 20px;
-    margin-left: 3%;
+    margin-left: -30px;
   }
 
   input[id="city"],

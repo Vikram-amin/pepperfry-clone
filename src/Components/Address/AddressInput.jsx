@@ -1,7 +1,7 @@
 import React from 'react'
 import {  Checkbox } from "@mui/material";
 import { useState } from "react";
-import { Form, Button } from "./AddressCSS";
+import { Form, Button, AdressInputContainer } from "./AddressCSS";
 
 const AddressInput = () => {
 
@@ -28,10 +28,11 @@ const [formData, setFormData] = useState(initialValue);
  };
 
   return (
-    <Form>
-      {/* <FormLeft> */}
+    <AdressInputContainer>
+      <Form>
+        {/* <FormLeft> */}
         <h2>Add New Shipping Address</h2>
-        <div >
+        <div>
           <div>
             <label>Name</label>
             <input
@@ -111,8 +112,9 @@ const [formData, setFormData] = useState(initialValue);
             <Button onClick={handleSubmit}>SAVE & CONTINUE </Button>
           </div>
         </div>
-      {/* </Left> */}
-    </Form>
+        {/* </Left> */}
+      </Form>
+    </AdressInputContainer>
   );
 }
 

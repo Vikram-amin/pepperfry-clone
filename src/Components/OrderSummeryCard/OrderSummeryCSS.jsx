@@ -13,7 +13,6 @@ export const OrderContainer = styled.div`
   padding-right: 15px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
   margin-bottom: 10px;
 
 `;

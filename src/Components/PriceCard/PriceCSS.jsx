@@ -14,10 +14,10 @@ export const PriceContainer = styled.div`
 
 export const PriceWraper = styled.div`
   padding: 22px;
-  font-family: Fira Sans;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
+  font-family: "Manrope", sans-serif;
+  color: #4a4a4a;
+  font-weight: 600;
+  font-size: 11px;
   line-height: 16px;
   padding-top: 10px;
   letter-spacing: 0.06em;
@@ -76,7 +76,7 @@ export const TotalPrice = styled.div`
 
 
 export const Hr = styled.div`
-  width: 94%;
+  width: 100%;
   height: 2px;
   border: 1px solid gary;
   background-color: gray;
