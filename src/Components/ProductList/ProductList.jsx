@@ -44,9 +44,8 @@ export const ProductList =()=>{
         <span className="list">
         {   
             data.map((items)=>
-            <>
-            <ProductCard items = {items}/>
-            </>
+            <ProductCard key={items.id} items = {items}/>
+            
             )
         }
             
