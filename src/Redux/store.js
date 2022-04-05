@@ -1,9 +1,13 @@
-import React from 'react'
+import { createStore, combineReducers } from "redux";
+import {shopReducer} from '../Redux/ShopingCart/reducer.js'
 
-function store() {
-  return (
-    <div>store</div>
-  )
-}
+const rootReducer = combineReducers({
+  shop: shopReducer
+});
 
-export{ store }
+ const store = createStore(
+   rootReducer,
+   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+ );
+
+export { store };
