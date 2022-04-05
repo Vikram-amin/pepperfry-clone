@@ -1,0 +1,27 @@
+.list{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    border: 1px solid gray;
+    overflow-y: scroll ;
+    height: 800px;
+}
+img{
+    width: 95%;
+    height: 55%;
+}
+.filter{
+    width: 25%;
+    border: 0.25px solid gray;
+    text-align: center;
+}
+.card{
+    text-align: center;
+}
+.product{
+    display: flex;
+    flex-direction: row;
+}
+.heading{
+    text-align: center;
+}
