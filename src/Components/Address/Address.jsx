@@ -1,6 +1,7 @@
 
 import { Checkbox } from '@mui/material';
 import React from 'react'
+import { OrderSummery } from '../OrderSummeryCard/OrderSummery';
 
 import { Price } from '../PriceCard/Price';
 import { CheckBoxDiv, Emi } from '../PriceCard/PriceCSS';
@@ -11,11 +12,11 @@ const Address = () => {
   return (
     <AdressContainer>
       <LeftDiv>
+        {/* <OrderSummery /> */}
         <AddressInput />
       </LeftDiv>
 
       <RightDiv>
-
         <PriceDiv>
           <Price />
         </PriceDiv>
@@ -26,7 +27,7 @@ const Address = () => {
             Starting <span> ₹ 655/month </span>
           </p>
         </Emi>
-        
+
         <CheckBoxDiv className="chekboxAddress">
           <Checkbox /> Contribute Rs.99 For COVID Relief Through GiveIndia.
         </CheckBoxDiv>
