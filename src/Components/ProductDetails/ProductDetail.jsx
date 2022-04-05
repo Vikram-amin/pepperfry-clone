@@ -26,7 +26,7 @@ export const ProductDetail = () =>{
                 <img className="offer" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Promo_Web_VIPCoupon_2X_01042022_es.jpg" alt="" />
                 <br />
                 <label htmlFor="">DELIVERY &emsp; &emsp; &emsp; &emsp;</label>
-                <input type="text" placeholder="Enter a Pincode" value={pincode} onChange={(e)=>handlerChange(e)} className="pincode" />
+                <input type="number" placeholder="Enter a Pincode" value={pincode} onChange={(e)=>handlerChange(e)} className="pincode" />
                 <button className="pinBtn">APPLY</button>
                 <h5 className="del">Delivery charges as applicable <b>Pincode Required</b></h5>
                 <h5 className="del">Assembly Charges as applicable <b>Pincode Required</b></h5>

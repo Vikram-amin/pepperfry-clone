@@ -80,7 +80,7 @@ a{
 }
 .button{
     display: grid;
-    grid-template-columns: repeat(2,50%);
+    grid-template-columns: repeat(2,40%);
 }
 .button button{
     margin: 1%;
@@ -90,8 +90,10 @@ a{
 }
 .add{
     background-color: transparent;
+    border: 0.1px solid black;
 }
 .buy{
     color: white;
     background-color: orangered;
+    border: none;
 }
