@@ -5,6 +5,7 @@ import styled from "styled-components";
  export const AdressContainer = styled.div`
    width: 85%;
    margin: auto;
+   margin-top: 120px;
    display: flex;
    flex-direction: row;
    justify-content: space-between;

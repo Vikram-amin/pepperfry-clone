@@ -5,7 +5,7 @@ import { CartPage } from './CartPage'
 
 
 
-const Cart = () => {
+const MainCart = () => {
   return (
     <div>
       <CheckoutNavbar />
@@ -17,4 +17,4 @@ const Cart = () => {
 
 
 
-export { Cart }
+export { MainCart }

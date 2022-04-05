@@ -2,18 +2,19 @@
 import { Checkbox } from '@mui/material';
 import React from 'react'
 import { OrderSummery } from '../OrderSummeryCard/OrderSummery';
-
+import PaymentMethodCard from '../PaymentMethodCard/PaymentMethod';
 import { Price } from '../PriceCard/Price';
 import { CheckBoxDiv, Emi } from '../PriceCard/PriceCSS';
 import { AdressContainer,  LeftDiv,  PriceDiv,  RightDiv } from './AddressCSS';
 import {AddressInput} from './AddressInput'
 
-const Address = () => {
+const MainAddress = () => {
   return (
     <AdressContainer>
       <LeftDiv>
-        {/* <OrderSummery /> */}
+        <OrderSummery />
         <AddressInput />
+        <PaymentMethodCard />
       </LeftDiv>
 
       <RightDiv>
@@ -36,4 +37,4 @@ const Address = () => {
   );
 }
 
-export { Address }
+export { MainAddress }

@@ -78,7 +78,9 @@ const CartPage= () => {
             </div>
           </CheckBoxDiv>
 
-          <Button>PLACE ORDER</Button>
+          <Link to={`/ckeckout`}>
+            <Button>PLACE ORDER</Button>
+          </Link>
         </CartRight>
       </CartPageWrapper>
     </>
