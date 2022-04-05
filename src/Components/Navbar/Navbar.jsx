@@ -1,6 +1,6 @@
 import React from 'react';
-import {  Header, Sale, LeftText, RightText, Dummy, DummyLeft, DummyRight, TopNav, Nav, NavLogo, SearchBar} from './NavbarElements';
-import Images from './logo.png';
+import {  Header, Sale, LeftText, RightText, Dummy, DummyLeft, DummyRight, TopNav, Nav, NavLogo, SearchBar} from './NavbarCSS';
+import Images from '../../Images/logo.png';
 
 const Navbar = () => {
   return (

@@ -1,9 +1,13 @@
 import React from 'react'
-import { ShippingDetails } from '../Checkout/ShippingDetails'
+import Footer from '../Footer/Footer'
+import Navbar from '../Navbar/Navbar'
 
 const Home = () => {
   return (
-    <ShippingDetails/>
+    <>
+      <Navbar/>
+      <Footer/>
+    </>
   )
 }
 
