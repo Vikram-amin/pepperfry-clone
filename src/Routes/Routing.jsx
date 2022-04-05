@@ -2,8 +2,9 @@
 import React from 'react'
 import { Home } from "../Components/Home/Home";
 import { Routes, Route } from "react-router-dom";
-import Checkout from '../Components/Checkout/Checkout';
-import { MainCart } from '../Components/Cart/MainCart';
+import { MainCart } from '../Components/Cart/MainCart.jsx';
+import { MainCheckout } from '../Components/Checkout/MainCheckout';
+
 
 const Routing = () => {
   return (
@@ -11,7 +12,7 @@ const Routing = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<MainCart />} />
-        <Route path="/ckeckout" element={<Checkout />} />
+        <Route path="/checkout" element={<MainCheckout />} />
       </Routes>
     </div>
   );

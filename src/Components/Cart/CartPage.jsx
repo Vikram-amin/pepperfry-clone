@@ -78,9 +78,10 @@ const CartPage= () => {
             </div>
           </CheckBoxDiv>
 
-          <Link to={`/ckeckout`}>
+          <Link to={`/checkout`}>
             <Button>PLACE ORDER</Button>
           </Link>
+          
         </CartRight>
       </CartPageWrapper>
     </>
