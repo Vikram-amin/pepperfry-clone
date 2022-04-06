@@ -1,19 +1,20 @@
 import styled from 'styled-components';
 
 export const FooterBox = styled.div`
-    height: 1440px;
+    height: 900px;
     width: 100%;
     background-color: #f3f5f7;
 
     hr{
-        margin: 0rem 9rem 9rem 9rem;
+        margin: 0rem 9rem 0rem 9rem;
         background-color: #848484;
     }
 `
 export const FooterFirstHalf = styled.div`
     display: grid;
     grid-template-columns: auto auto auto auto;
-    margin-left: 90px;
+    grid-gap:50px;
+    margin-left: 55px;
     margin-right: 90px;
     padding: 55px;
     padding-bottom: 0;
@@ -23,7 +24,7 @@ export const UsefulLinks = styled.div`
     .footer--headings{
         font-size: 16px;
         color: #121212;
-        font-weight: normal;
+        font-weight: bold;
     }
     li{
         list-style: none;
@@ -129,18 +130,47 @@ export const Cities = styled.div`
 `
 export const FooterThirdHalf = styled.div`
     display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 140px;
+    margin-right: 110px;
+    grid-gap: 20px;
     .titles{
         font-size: 16px;
         color: #121212;
         font-weight: normal;
         margin-bottom: 10px;
-        margin-top: 0;
     }
 `
 
-export const Left = styled.div`
-    margin-left: 90px;
+export const FooterLeft = styled.div`
     img{
-        padding:5px;
+        padding:10px;
+    }
+`
+
+export const FooterRight = styled.div`
+    img{
+        padding: 10px;
+    }
+`
+
+export const FooterFourthHalf = styled.div`
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 90px;
+
+    .leftside, .rightside{
+        display: flex;
+        color: #848484;
+        font-weight: lighter;
+        font-size: 13px;
+        padding-left: 190px;
+
+        h3{
+            padding-right: 10px;
+        }
     }
 `

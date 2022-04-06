@@ -1,5 +1,5 @@
 import React from 'react';
-import {FooterBox, FooterFirstHalf, UsefulLinks, Partners, NeedHelp, DownloadApp, FooterSecondHalf, PopularCategories, PopularBrands, Cities, FooterThirdHalf, Left} from './FooterCSS';
+import {FooterBox, FooterFirstHalf, UsefulLinks, Partners, NeedHelp, DownloadApp, FooterSecondHalf, PopularCategories, PopularBrands, Cities, FooterThirdHalf, FooterLeft, FooterRight, FooterFourthHalf} from './FooterCSS';
 import Apple from '../../Images/FooterImages/apple.png';
 import GooglePlay from '../../Images/FooterImages/googleplay.png';
 import Visa from '../../Images/FooterImages/footer-visacard-logo.png';
@@ -10,7 +10,13 @@ import RuPay from '../../Images/FooterImages/footer-rupaycard-logo.png'
 import DinnersCard from '../../Images/FooterImages/footer-dinnerscard-logo.png'
 import Wallet from '../../Images/FooterImages/footer-wallet-logo.png'
 import InternetBanking from '../../Images/FooterImages/footer-internet-banking-logo.png'
-
+import Facebook from '../../Images/FooterImages/footer-facebook-logo.png'
+import Twitter from '../../Images/FooterImages/footer-twitter-logo.png'
+import Youtube from '../../Images/FooterImages/footer-youtube-logo.png'
+import Instagram from '../../Images/FooterImages/footer-facebook-logo.png'
+import Linkedin from '../../Images/FooterImages/footer-linkedin-logo.png'
+import Pinterest from '../../Images/FooterImages/footer-pinterest-logo.png'
+// import { Face, Pin } from '@mui/icons-material';
 
 const Footer = () => {
   return (
@@ -45,7 +51,7 @@ const Footer = () => {
           </Partners>
           <NeedHelp>
             <ul>
-              <li className="footer--headings">Need Help</li>
+              <li className="footer--headings">Need Help?</li>
               <li>Contact Us</li>
               <li>Returns & Refund</li>
               <li>Track Your Order</li>
@@ -75,7 +81,7 @@ const Footer = () => {
         </FooterSecondHalf>
         <hr />
         <FooterThirdHalf>
-          <Left>
+          <FooterLeft>
             <h1 className="titles">We accept</h1>
             <div>
               <img src={Visa} alt={"VisaLogo"} />
@@ -87,8 +93,34 @@ const Footer = () => {
               <img src={Wallet} alt={"WalletLogo"} />
               <img src={InternetBanking} alt={"InternetBankingLogo"} />
             </div>
-          </Left>
+          </FooterLeft>
+          <FooterRight>
+          <h1 className="titles">Like what you see? You'll like us even more here</h1>
+            <div>
+              <img src={Facebook} alt={"FacebookLogo"} />
+              <img src={Twitter} alt={"TwitterLogo"} />
+              <img src={Youtube} alt={"YoutubeLogo"} />
+              <img src={Instagram} alt={"InstagramLogo"} />
+              <img src={Linkedin} alt={"LinkedinLogo"} />
+              <img src={Pinterest} alt={"PinterestLogo"} />
+            </div>
+          </FooterRight>
         </FooterThirdHalf>
+        <hr />
+        <FooterFourthHalf>
+          <div className="leftside">
+            <h3>Buy In Bulk</h3>
+            <h3>Write A Testimonial</h3>
+          </div>
+          <div className="rightside">
+            <h3>Whitehat</h3>
+            <h3>Site Map</h3>
+            <h3>Terms Of Use</h3>
+            <h3>Privacy Policy</h3>
+            <h3>Your Data & Security</h3>
+            <h3>Grievance Redressal</h3>
+          </div>
+        </FooterFourthHalf>
       </FooterBox>
     </>
   )

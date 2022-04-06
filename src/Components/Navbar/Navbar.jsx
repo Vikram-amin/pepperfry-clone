@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Header, Sale, LeftText, RightText, Dummy, DummyLeft, DummyRight, TopNav, Nav, NavLogo, SearchBar} from './NavbarCSS';
+import {  Header, Sale, LeftText, RightText, Dummy, DummyLeft, DummyRight, TopNav, Nav, NavLogo, SearchBar, NavMenu} from './NavbarCSS';
 import Images from '../../Images/logo.png';
 
 const Navbar = () => {
@@ -26,46 +26,25 @@ const Navbar = () => {
       <Nav>
         <TopNav>
           <div>
-            <NavLogo to="/"><img src={Images} alt={"logo"} height={35} width={170}/></NavLogo>
+            <NavLogo to="/"><img src={Images} alt={"logo"} height={40} width={168}/></NavLogo>
           </div>
           <div>
             <SearchBar placeholder="Your door to happiness opens with a search"></SearchBar>
           </div>
         </TopNav>
-
+        <NavMenu>
+          <div>Furniture</div>
+          <div>Sofas & Recliners</div>
+          <div>Cabinetry</div>
+          <div>Beds</div>
+          <div>Mattresses</div>
+          <div>Furnishings</div>
+          <div>Decor</div>
+          <div>Lighting</div>
+          <div>Appliances</div>
+          <div>Modular</div>
+        </NavMenu>
       </Nav>
-      {/* <NavMenu>
-        <NavItem>
-          <NavLink>Furniture</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Sofas & Recliners</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Cabinetry</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Beds</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Mattress</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Furnishings</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Decor</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Lighting</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Appliances</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Modular</NavLink>
-        </NavItem>
-      </NavMenu> */}
     </>
   )
 }

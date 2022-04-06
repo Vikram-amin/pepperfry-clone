@@ -71,7 +71,7 @@ export const DummyRight = styled.div`
     }
 `
 export const Nav = styled.div`
-    
+    border-bottom: 1px solid #d3d3d3;
 `
 
 export const TopNav = styled.div`
@@ -95,14 +95,14 @@ export const SearchBar = styled.input`
     font-weight: lighter;
 `
 
-// export const NavMenu = styled.nav`
-
-// `
-
-// export const NavItem = styled.div`
-
-// `
-
-// export const NavLink = styled(LinkR)`
-
-// `
+export const NavMenu = styled.nav`
+    display: flex;
+    margin-left: 90px;
+    margin-right: 90px;
+    div{
+        font-weight: bolder;
+        padding: 10px;
+        padding-top: 0;
+        font-size: 14px;
+    }
+`
