@@ -15,7 +15,7 @@ const ShippingDetails = () => {
   return (
     <BillingDetailContainer>
       <ShipingDetals>
-        <div>SHIPPING  DETAILS</div>
+        <div className="heading">SHIPPING DETAILS</div>
         <div className="detals">
           <div>{address.name.toUpperCase()}</div>
           <div>{address.address}</div>
@@ -23,13 +23,13 @@ const ShippingDetails = () => {
             {address.city} - {address.pincode}
           </div>
           <div>{address.state}</div>
-          <div>M: {address.phoneNo}</div>
+          <div>M: {address.mobileNumber}</div>
         </div>
       </ShipingDetals>
 
       <BillingDetals>
-        <div> BILLING DETAILS</div>
-        <div className="detals" >
+        <div className="heading"> BILLING DETAILS</div>
+        <div className="detals">
           <div>{address.name.toUpperCase()}</div>
           <div>{address.address}</div>
           <div>

@@ -4,7 +4,7 @@ import debit from "../../Images/PaymentIcons/debit.svg";
 // import credit from "../../Images/PaymentIcons/credit.svg";
 import NetBank from "../../Images/PaymentIcons/internetBanking.svg";
 import GiftCard from "../../Images/PaymentIcons/giftcard.svg";
-import UPI from "../../Images/PaymentIcons/upi.svg";
+import UPI from "../../Images/upi.svg";
 import Wallet from "../../Images/PaymentIcons/wallet.svg";
 import International from "../../Images/PaymentIcons/international.svg";
 import EMI from "../../Images/PaymentIcons/emi.svg";

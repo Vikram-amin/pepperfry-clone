@@ -61,6 +61,14 @@ export const ChekoutParent = styled.div`
     margin-top:15px;
   `;
 
+  export const Secur = styled.div`
+    font-size: 14px;
+    color: #282c34;
+    margin-top: 15px;
+    line-height: 19px;
+    font-family: Manrope, sans-serif;
+  `; 
+
 
 // shiping and Billing details
 
@@ -69,20 +77,24 @@ export const BillingDetailContainer = styled.div`
   margin: auto;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
   font-family: "Manrope", sans-serif;
   cursor: pointer;
   border: 1px solid #e7e7e7;
   background: #f5f5f5;
   padding: 16px 35px;
 
+  .heading {
+    font-size: 16px;
+    color: #121212;
+    font-weight: 500;
+    padding-bottom: 10px;
+  }
+
   .details {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
-
     letter-spacing: 0.06em;
     color: #9a9a9a;
     margin: 14px 0px;
@@ -90,7 +102,14 @@ export const BillingDetailContainer = styled.div`
 `;
 
 export const ShipingDetals = styled.div`
-`
+  color: #848484;
+  font-size: 15px;
+  padding: 10px;
+`;
 
 export const BillingDetals = styled.div`
+  margin-left: 35%;
+  color: #848484;
+  font-size: 15px;
+  padding: 10px;
 `;
