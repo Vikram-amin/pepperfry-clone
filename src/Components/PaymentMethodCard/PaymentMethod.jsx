@@ -12,6 +12,8 @@ function PaymentMethodCard() {
           How Would you Like To Pay <img src={plus} alt="plusIcon" />
         </div>
       </div>
+
+      
     </PaymetMethodContainer>
   );
 }
