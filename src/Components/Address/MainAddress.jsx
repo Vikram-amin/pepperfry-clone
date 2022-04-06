@@ -1,6 +1,8 @@
 
 import { Checkbox } from '@mui/material';
 import React from 'react'
+import { CheckoutFooter } from '../CheckoutFooter/CheckoutFooter';
+import { CheckoutNavbar } from '../CheckoutNavbar/CheckoutNavbar';
 import { OrderSummery } from '../OrderSummeryCard/OrderSummery';
 import PaymentMethodCard from '../PaymentMethodCard/PaymentMethod';
 import { Price } from '../PriceCard/Price';
@@ -10,6 +12,10 @@ import {AddressInput} from './AddressInput'
 
 const MainAddress = () => {
   return (
+    <>
+     <CheckoutNavbar />
+sdafgdsg
+
     <AdressContainer>
       <LeftDiv>
         <OrderSummery />
@@ -34,6 +40,9 @@ const MainAddress = () => {
         </CheckBoxDiv>
       </RightDiv>
     </AdressContainer>
+
+    <CheckoutFooter/>
+    </>
   );
 }
 

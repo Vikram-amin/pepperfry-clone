@@ -1,8 +1,8 @@
 
-
 import styled from "styled-components";
 
 export const PaymetMethodContainer = styled.div`
+
   width: 100%;
   padding: 17px;
   font-size: 14px;
@@ -15,10 +15,123 @@ export const PaymetMethodContainer = styled.div`
   padding-right: 15px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
 
 `;
 
   // width: 56%;
     // margin-left: 7.5%;
+
+
+    ///payment Card 
+
+    export const PaymentCardContainer = styled.div`
+
+    .heading{
+      font-weight: bold;
+      font-size: 15px;
+      color: #121212;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 0.06em;
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 32px;
+      margin-left: 18px;
+    `;
+
+
+    export const PaymentDiv = styled.div`
+      display: flex;
+      width: 95%;
+      margin: auto;
+      box-sizing: border-box;
+      font-family: Manrope, sans-serif;
+      margin: auto;
+      margin-top: -20px;
+      background: #ffffff;
+      border: 1px solid lightgray;
+    `;
+
+  
+
+     export const PaymentCardParent = styled.div`
+       width: 35%;
+       margin: auto;
+       margin-top: 10px;
+       margin-bottom: 10px;
+       box-sizing: border-box;
+       & img {
+         width: 16px;
+         height: 16px;
+       }
+
+       & div > button {
+         color: red;
+       }
+
+       .patmentBox {
+         border: 1px solid lightgray;
+         width: 100%;
+         margin-top: 1px;
+         display: flex;
+         flex-direction: row;
+         padding: 15px;
+         justify-content: left;
+         align-items: center;
+         background: #d0d0d0;
+         font-size: 14px;
+         line-height: 17px;
+         text-transform: uppercase;
+       }
+     `;
+
+
+     // Payment option
+export const FlexP = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+`;
+
+
+export const PaymentOPtionContainer = styled.div`
+  border: 1px solid lightgray;
+  width: 60%;
+  
+
+  .ImageDIv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin-top:60px;
+  }
+`;
+
+export const CardDetails = styled.div`
+  margin: 50px;
+
+  & input {
+    width: 70%;
+    margin-left: 13%;
+    height: 30px;
+    margin-top: 10px;
+  }
+
+`;
+
+export const Button = styled.button`
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 10px 5rem;
+  margin-left: 15%;
+  border: none;
+  color: white;
+  background-color: #f16521;
+  text-align: center;
+`;
