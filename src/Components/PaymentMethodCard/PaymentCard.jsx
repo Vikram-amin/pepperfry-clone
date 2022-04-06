@@ -9,7 +9,8 @@ import Wallet from "../../Images/PaymentIcons/wallet.svg";
 import International from "../../Images/PaymentIcons/international.svg";
 import EMI from "../../Images/PaymentIcons/emi.svg";
 import Money from "../../Images/PaymentIcons/money.svg";
-import { PaymentCardContainer, PaymentCardParent } from "./PaymentMethodCSS";
+import { PaymentCardContainer, PaymentCardParent, PaymentDiv } from "./PaymentMethodCSS";
+import { Payment } from "./Payment";
 
 
 
@@ -20,8 +21,8 @@ export const PaymentsCard = () => {
       <div className="heading">
         <div>SELECT PAYMENT METHOD</div>
       </div>
-
-      <PaymentCardParent>
+      <PaymentDiv>
+        <PaymentCardParent>
           <button className="patmentBox">
             <img src={debit} alt="" />
             <div>ATM/DEBIT CARD</div>
@@ -29,22 +30,22 @@ export const PaymentsCard = () => {
 
           <button className="patmentBox">
             <img src={Money} alt="" />
-            <div >CARDLESS EMI/PAYLATER</div>
+            <div>CARDLESS EMI/PAYLATER</div>
           </button>
 
           <button className="patmentBox">
             <img src={debit} alt="" />
-            <div >CREDIT card</div>
+            <div>CREDIT card</div>
           </button>
 
           <button className="patmentBox">
             <img src={EMI} alt="" />
-            <div >EMI</div>
+            <div>EMI</div>
           </button>
 
           <button className="patmentBox">
             <img src={NetBank} alt="" />
-            <div >INTERNET BANKING</div>
+            <div>INTERNET BANKING</div>
           </button>
 
           <button className="patmentBox">
@@ -54,19 +55,22 @@ export const PaymentsCard = () => {
 
           <button className="patmentBox">
             <img src={UPI} alt="" />
-            <div >GOOGLE PAY/UPI</div>
+            <div>GOOGLE PAY/UPI</div>
           </button>
 
           <button className="patmentBox">
             <img src={Wallet} alt="" />
-            <div >WALLET</div>
+            <div>WALLET</div>
           </button>
 
           <button className="patmentBox">
             <img src={International} alt="" />
-            <div >INTERNATIONAL CARDS</div>
+            <div>INTERNATIONAL CARDS</div>
           </button>
-      </PaymentCardParent>
+        </PaymentCardParent>
+        
+        <Payment />
+      </PaymentDiv>
     </PaymentCardContainer>
   );
 };

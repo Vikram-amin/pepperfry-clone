@@ -113,3 +113,4 @@ export const BillingDetals = styled.div`
   font-size: 15px;
   padding: 10px;
 `;
+

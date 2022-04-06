@@ -7,8 +7,6 @@ const address = {
     state:"Karnataka",
     city:"Udupi",
     mobileNumber : "12354355656",
-
-
 }
 
 const ShippingDetails = () => {
