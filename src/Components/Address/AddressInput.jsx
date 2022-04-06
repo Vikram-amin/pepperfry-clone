@@ -2,6 +2,7 @@ import React from 'react'
 import {  Checkbox } from "@mui/material";
 import { useState } from "react";
 import { Form, Button, AdressInputContainer } from "./AddressCSS";
+import { Link } from 'react-router-dom';
 
 const AddressInput = () => {
 
@@ -108,9 +109,9 @@ const [formData, setFormData] = useState(initialValue);
             <span> Billing Address Is The Same As Shipping Address</span>
           </div>
 
-          <div>
+          <Link to={`/checkout`}>
             <Button onClick={handleSubmit}>SAVE & CONTINUE </Button>
-          </div>
+          </Link>
         </div>
         {/* </Left> */}
       </Form>

@@ -22,7 +22,6 @@ export const PaymentsCard = () => {
       </div>
 
       <PaymentCardParent>
-        <div>
           <button className="patmentBox">
             <img src={debit} alt="" />
             <div>ATM/DEBIT CARD</div>
@@ -67,7 +66,6 @@ export const PaymentsCard = () => {
             <img src={International} alt="" />
             <div >INTERNATIONAL CARDS</div>
           </button>
-        </div>
       </PaymentCardParent>
     </PaymentCardContainer>
   );
