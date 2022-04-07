@@ -7,6 +7,7 @@ h3{
 .detail{
     display: grid;
     grid-template-columns: repeat(2,50%);
+    position: absolute;
 }
 .line{
     border-top: 0.25px solid black;
@@ -96,4 +97,11 @@ a{
     color: white;
     background-color: orangered;
     border: none;
+}
+.parent{
+    position: relative;
+}
+.child1{
+    position: absolute;
+    z-index: 40;
 }

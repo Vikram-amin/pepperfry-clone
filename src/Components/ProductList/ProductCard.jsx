@@ -12,7 +12,9 @@ const ProductCard = (item) =>{
     return(
         <div className="card">
             <img src={item.items.img[0]} alt="product image" />
+            
             <Button>ADD TO CART</Button>
+            
             <Link to={'/productlist/'+id}>    
                 <Button onClick={()=>dispatch(loadCurrentItem(item.items))}>VIEW</Button>
             </Link>

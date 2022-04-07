@@ -6,6 +6,7 @@ import { MainCart } from '../Components/Cart/MainCart.jsx';
 import { MainCheckout } from '../Components/Checkout/MainCheckout';
 import { MainProductDetail } from '../Components/ProductDetails/MainProductDetail';
 import MainProductList from '../Components/ProductList/MainProductList';
+import { MainAddress } from '../Components/Address/MainAddress';
 
 
 
@@ -17,6 +18,7 @@ const Routing = () => {
         <Route path="/cart" element={<MainCart />} />
         <Route path="/productlist" element={<MainProductList />} />
         <Route path="/checkout" element={<MainCheckout />} />
+        <Route path="/address" element={<MainAddress />} />
         <Route path="/productlist/:id" element={<MainProductDetail />} />
       </Routes>
     </div>
