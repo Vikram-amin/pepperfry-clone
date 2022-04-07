@@ -1,6 +1,12 @@
 import React from 'react';
-import {  Header, Sale, LeftText, RightText, Dummy, DummyLeft, DummyRight, TopNav, Nav, NavLogo, SearchBar, NavMenu} from './NavbarCSS';
+import {  Header, Sale, LeftText, RightText, Dummy, DummyLeft, DummyRight, TopNav, Nav, NavLogo, SearchBar} from './NavbarCSS';
 import Images from '../../Images/logo.png';
+// import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
+import { Link  } from 'react-router-dom';
+import DropdownMenu from './DropdownMenu';
 
 const Navbar = () => {
   return (
@@ -31,19 +37,24 @@ const Navbar = () => {
           <div>
             <SearchBar placeholder="Your door to happiness opens with a search"></SearchBar>
           </div>
+          <div className="iconDiv">
+            <div className="iconOne">
+              <img src="https://ii1.pepperfry.com/images/svg/web21-header-help-icon.svg" alt={"help"} className="help" />
+            </div>
+            <div className="iconOne">
+              <PermIdentityOutlinedIcon className="icon" />
+            </div>
+            <div className="iconOne">
+              <FavoriteBorderOutlinedIcon className="icon" />
+            </div>
+            <div className="iconOne">
+              <Link to="/cart">
+                <ShoppingCartOutlinedIcon className="icon" />
+              </Link>
+            </div>
+          </div>
         </TopNav>
-        <NavMenu>
-          <div>Furniture</div>
-          <div>Sofas & Recliners</div>
-          <div>Cabinetry</div>
-          <div>Beds</div>
-          <div>Mattresses</div>
-          <div>Furnishings</div>
-          <div>Decor</div>
-          <div>Lighting</div>
-          <div>Appliances</div>
-          <div>Modular</div>
-        </NavMenu>
+        <DropdownMenu />
       </Nav>
     </>
   )

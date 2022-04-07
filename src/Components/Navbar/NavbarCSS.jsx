@@ -79,6 +79,22 @@ export const TopNav = styled.div`
     height: 80px;
     width: 100%;
     padding-top: 18px;
+    .iconDiv{
+        margin-left: 20px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 15px;
+    }
+    .icon{
+        color: black;
+        width: 30px;
+        height: 38px;
+        cursor: pointer;
+    }
+    .help{
+       margin-top: 2px;
+       width: 47px;
+    }
 `
 export const NavLogo = styled(LinkR)`
     margin-left: 90px;
@@ -95,14 +111,14 @@ export const SearchBar = styled.input`
     font-weight: lighter;
 `
 
-export const NavMenu = styled.nav`
-    display: flex;
-    margin-left: 90px;
-    margin-right: 90px;
-    div{
-        font-weight: bolder;
-        padding: 10px;
-        padding-top: 0;
-        font-size: 14px;
-    }
-`
+// export const DropdownMenu = styled.nav`
+//     display: flex;
+//     margin-left: 90px;
+//     margin-right: 90px;
+//     div{
+//         font-weight: bolder;
+//         padding: 10px;
+//         padding-top: 0;
+//         font-size: 14px;
+//     }
+// `

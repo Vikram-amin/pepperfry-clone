@@ -4,7 +4,6 @@ export const FooterBox = styled.div`
     height: 900px;
     width: 100%;
     background-color: #f3f5f7;
-
     hr{
         margin: 0rem 9rem 0rem 9rem;
         background-color: #848484;

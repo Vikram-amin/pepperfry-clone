@@ -1,42 +1,64 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import styled from 'styled-components'
+import Carousel  from 'react-elastic-carousel';
 import { SliderData } from './SliderData';
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
-import './Carousel.css';
 
-const ImageSlider = ({ slides }) => {
-    const [current, setCurrent] = useState(0);
-    const length = slides.length;
+const Button = styled.button`
+  margin: 10px 5px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: ${({ active }) => (active ? "#000000" : "#c4c4c4")};
+`;
 
-    const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1);
+const ImageSlider = () => {
+    const [activeItemIndex, setActiveItemIndex] = useState(0);
+    const carouselRef = useRef();
+  
+    const next = () => {
+      if (activeItemIndex + 1 <= SliderData.length - 1) {
+        carouselRef.current.goTo(activeItemIndex + 1);
+        setActiveItemIndex(activeItemIndex + 1);
+      } else if (activeItemIndex + 1 === SliderData.length) {
+        setActiveItemIndex(0);
+        carouselRef.current.goTo(0);
+      }
     };
-
-    const prevSlide = () => {
-        setCurrent(current === 0 ? length - 1 : current - 1);
-    };
-
-    if (!Array.isArray(slides) || slides.length <= 0) {
-        return null;
-    }
-
     return (
-        <section className='slider'>
-        <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
-        <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
-        {SliderData.map((slide, index) => {
-            return (
-            <div
-                className={index === current ? 'slide active' : 'slide'}
-                key={index}
-            >
-                {index === current && (
-                <img src={slide.image} alt='furniture' className='image' />
-                )}
+      <div style={{width: "950px", height: "450px"}}>
+        <Carousel
+          ref={carouselRef}
+          itemsToShow={1}
+          showArrows={false}
+          pagination={false}
+          enableAutoPlay
+          autoPlaySpeed={3000}
+          onChange={(currentItem) => setActiveItemIndex(currentItem.index)}
+        >
+
+          {SliderData.map((item, i) => (
+            <div key={i}>
+              <div>
+                <img src={item.image} alt="splash" width="930px" height = '450px'/>
+              </div>
             </div>
-            );
-        })}
-        </section>
-    );
+          ))}
+        </Carousel>
+  
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          {SliderData.map(( _ , i) => (
+            <div>
+              <Button
+                key={i}
+                active={i === activeItemIndex}
+                onClick={() => carouselRef.current.goTo(i)}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    );  
 };
 
 export default ImageSlider;

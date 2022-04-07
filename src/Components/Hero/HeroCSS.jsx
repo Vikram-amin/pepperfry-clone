@@ -3,10 +3,19 @@ import styled from 'styled-components';
 export const HomeContainer = styled.div`
     margin-left: 90px;
     margin-right: 90px;
+    
+    .belowNavbar{
+        display: flex;
+    }
+    .sideImage{
+        height: 450px;
+        width: 330px;
+    }
 `
+
 export const RectangularBlock = styled.div`
     img{
-        margin-top: 2%;
+        margin-top: 4%;
         width:100%;
         margin-bottom: 2%;
     }
