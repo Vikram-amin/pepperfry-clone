@@ -2,10 +2,27 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../style/detail.css"
 import { Slider } from "./Slider";
+import { connect, useSelector } from "react-redux";
+
+
 export const MainProductDetail = () =>{
-    var productData = JSON.parse(localStorage.getItem("data"));
+    const Items = useSelector(state=> state.currentItem)
+    console.log(Items);
+    var product =         {
+        id: 1,
+        name: "Esteban 3 Seater Half Leather Sofa in Grey Colour",
+        img: ["https://ii1.pepperfry.com/media/catalog/product/e/s/800x400/esteban-3-seater-half-leather-sofa-in-grey-colour-by-casacraft-esteban-3-seater-half-leather-sofa-in-8akxht.jpg",
+                "https://ii1.pepperfry.com/media/catalog/product/e/s/800x400/esteban-half-leather-three-seater-sofa-in-grey-colour-by-casacraft-esteban-half-leather-three-seater-nqijeg.jpg",
+                "https://ii1.pepperfry.com/media/catalog/product/e/s/800x400/esteban-half-leather-three-seater-sofa-in-grey-colour-by-casacraft-esteban-half-leather-three-seater-qoh0xi.jpg",
+                "https://ii1.pepperfry.com/media/catalog/product/e/s/800x400/esteban-half-leather-three-seater-sofa-in-grey-colour-by-casacraft-esteban-half-leather-three-seater-ra9orm.jpg"],
+        madeBy: "CasaCraft by Pepperfry",
+        offer_price: "1,13,999",
+        actual_price: "1,84,999",
+        total_savings: "71,000 (38% Off)",
+        price: 113999,
+        brand: "CasaCraft"
+    }
     const [pincode, setPincode] = React.useState("");
-    var product = productData[0];
     const handlerChange =(e) =>{
         setPincode(e.target.value)
     }
@@ -43,3 +60,10 @@ export const MainProductDetail = () =>{
         </>
     )
 }
+// const mapStateToProps=state=>{
+//     return {
+//         currentItem: state.products.currentItem
+//     }
+// }
+
+// export default connect(mapStateToProps)(MainProductDetail);

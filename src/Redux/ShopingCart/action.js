@@ -1,4 +1,4 @@
-import { ADD_TO_CART, ADJUST_QUT, LOAD_CURRENT_ITEM, REMOVE_FROM_CART } from "./actionType";
+import { ADD_TO_CART, LOAD_CURRENT_ITEM } from "./actionType";
 
 
 export const addToCart = (itemID) => ({

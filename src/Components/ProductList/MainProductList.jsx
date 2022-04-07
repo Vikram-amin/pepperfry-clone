@@ -1,19 +1,10 @@
 import React from "react";
-import { ProductCard } from "./ProductCard";
 import "../../style/product.css"
-import { Data } from "./Data";
-
-export const ProductList =()=>{
-
+import {connect} from 'react-redux'
+import ProductCard from "./ProductCard";
+ 
+const MainProductList =({products})=>{
     const [brand,setBrand] = React.useState("");
-
-    console.log("hello");
-    var data = [];
-    for(var i=0;i<Data.length;i++){
-        if(Data[i].company.toLowerCase().includes(brand.toLowerCase())){
-            data.push(Data[i]);
-        }
-    }
     return(
     <>
     <div className="heading">
@@ -43,9 +34,8 @@ export const ProductList =()=>{
         </span>
         <span className="list">
         {   
-            data.map((items)=>
+            products.map((items)=>
             <ProductCard key={items.id} items = {items}/>
-
             )
         }
             
@@ -54,3 +44,10 @@ export const ProductList =()=>{
     </>
     )
 }
+const mapStoreToProps =state =>{
+    return {
+        products: state.product.products,
+    };
+}
+
+export default connect(mapStoreToProps)(MainProductList);
