@@ -115,13 +115,41 @@ export const PaymentOPtionContainer = styled.div`
 export const CardDetails = styled.div`
   margin: 50px;
 
-  & input {
-    width: 70%;
-    margin-left: 13%;
-    height: 30px;
+  .checkbox {
     margin-top: 10px;
+    margin-left: -14px;
+    font-family: "Fira Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #707070;
   }
 
+  .inputname {
+    width: 260px;
+    height: 44px;
+    border: 1px solid #707070;
+    margin-top: 16px;
+    padding-left: 15px;
+    background-color: #f3f5f7;
+    font-family: "Fira Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+  }
+
+  .inputexpiry {
+    max-width: 120px;
+    height: 34px;
+    padding-left: 15px;
+    background: #f3f5f7;
+    outline: none;
+    border: 1px solid #f3f5f7;
+  }
 `;
 
 export const Button = styled.button`

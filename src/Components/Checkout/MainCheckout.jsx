@@ -11,6 +11,13 @@ import { Price } from '../PriceCard/Price';
 import { BankOffer, ChekoutContainer, LeftDiv, PriceDiv, RightDiv, Secur } from './CheckoutCSS';
 import { ShippingDetails } from './ShippingDetails';
 
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { PaymetMethodContainer } from '../PaymentMethodCard/PaymentMethodCSS';
+
 
 const MainCheckout = () => {
   return (
@@ -21,8 +28,31 @@ const MainCheckout = () => {
         <LeftDiv>
           <OrderSummery />
           <ShippingDetails />
-          <PaymentMethodCard />
-          <PaymentsCard />
+
+   
+            <Accordion>
+              <AccordionSummary
+              className='PaymentAcordion'
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>How Would you Like To Pay</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  <PaymentsCard />
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+
+            {/* <div>PAYMENT</div>
+            <div>
+              <div>
+                <img src={plus} alt="plusIcon" />
+              </div>
+            </div> */}
+      
         </LeftDiv>
 
         <RightDiv>
@@ -60,10 +90,10 @@ const MainCheckout = () => {
               </div>
             </Flex>
           </div>
-
         </RightDiv>
       </ChekoutContainer>
 
+     
       <CheckoutFooter />
     </div>
   );

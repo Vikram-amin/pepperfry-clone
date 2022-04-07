@@ -19,6 +19,15 @@ import styled from 'styled-components'
  export const LeftDiv = styled.div`
    width: 66%;
    border: 1px solid lightgray;
+
+   .PaymentAcordion {
+     margin-top: 10px;
+     font-size: 14px;
+     background: #f5f5f5;
+     border: 1px solid #e7e7e7;
+     box-sizing: border-box;
+     font-family: Manrope, sans-serif;
+   }
  `;
 
  
