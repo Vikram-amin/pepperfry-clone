@@ -14,7 +14,7 @@ const MainAddress = () => {
   return (
     <>
      <CheckoutNavbar />
-sdafgdsg
+
 
     <AdressContainer>
       <LeftDiv>

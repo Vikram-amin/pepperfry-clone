@@ -2,7 +2,6 @@
 import styled from "styled-components";
 
 export const PaymetMethodContainer = styled.div`
-
   width: 100%;
   padding: 17px;
   font-size: 14px;
@@ -18,6 +17,12 @@ export const PaymetMethodContainer = styled.div`
   margin-top: 10px;
   margin-bottom: 10px;
 
+  & img {
+    width: 15px;
+    height: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `;
 
   // width: 56%;

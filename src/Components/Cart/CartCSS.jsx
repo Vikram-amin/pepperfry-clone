@@ -209,6 +209,8 @@ export const CardMid = styled.div`
 
   .Safeitemsimg {
     margin-left: -10px;
+    width:25px;
+    height:25px;
   }
 
   .calenderIcon {
@@ -248,6 +250,7 @@ export const CardRight = styled.div`
   .add {
     padding-top: 140px;
     font-size: 15px;
+    border:none;
   }
 `;
 
