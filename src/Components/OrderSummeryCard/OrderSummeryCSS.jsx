@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const OrderContainer = styled.div`
-  width:100%;
+  width: 100%;
   display: flex;
   padding: 17px;
   font-size: 14px;
@@ -12,6 +12,13 @@ export const OrderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+
+  & img {
+    width: 15px;
+    height: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `;
 
   // width: 56%;

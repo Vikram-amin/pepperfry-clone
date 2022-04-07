@@ -50,7 +50,8 @@ export const MainProductDetail = () =>{
                 <h5 className="del">Assembly Charges as applicable <b>Pincode Required</b></h5>
                 <div className="button">
                     <button className="add">ADD TO CART</button>
-                    <Link to={`/productlist`}>
+
+                    <Link to={`/cart`}>
                     <button className="buy">BUY NOW</button>
                     </Link>
                     
