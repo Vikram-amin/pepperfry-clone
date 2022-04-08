@@ -47,7 +47,7 @@ const Navbar = () => {
             </div>
             <div className="iconOne">
               <button className='log' onClick={()=>popupTrig(true)}><PermIdentityOutlinedIcon className="icon" /></button>
-              <h6 style={{margin:"0%"}}>{user.name}</h6>
+              <h6 style={{margin:"0%"}}></h6>
             </div>
             <div className="iconOne">
               <FavoriteBorderOutlinedIcon className="icon" />
