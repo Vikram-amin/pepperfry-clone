@@ -20,7 +20,7 @@ export const MainLogin =(props)=>{
             </span>
             <span className="right">
                 <div className="quit">
-                <button onClick={()=>props.setTrigger(false)}>X</button>
+                <button onClick={()=>props.setTrigger(false)} className="close">X</button>
                 </div>
                 <LoginForm trig={val} setTrig={props.setTrigger}/>
                 <SignupForm trig={val} setTrig={props.setTrigger} />

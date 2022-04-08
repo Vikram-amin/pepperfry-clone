@@ -6,9 +6,13 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import { Link  } from 'react-router-dom';
 import DropdownMenu from './DropdownMenu';
+import "../../style/slider.css"
+import "../Login/popup.css"
+import { MainLogin } from '../Login/Mainlogin';
 
 const Navbar = () => {
   var user = JSON.parse(localStorage.getItem('userData'));
+  const [popup,popupTrig] = React.useState(false);
   return (
     <>
       <Header>
@@ -42,10 +46,8 @@ const Navbar = () => {
               <img src="https://ii1.pepperfry.com/images/svg/web21-header-help-icon.svg" alt={"help"} className="help" />
             </div>
             <div className="iconOne">
-              <Link to={"/login"}>
-              <PermIdentityOutlinedIcon className="icon" />
+              <button className='log' onClick={()=>popupTrig(true)}><PermIdentityOutlinedIcon className="icon" /></button>
               <h6 style={{margin:"0%"}}>{user.name}</h6>
-              </Link>
             </div>
             <div className="iconOne">
               <FavoriteBorderOutlinedIcon className="icon" />
@@ -59,6 +61,10 @@ const Navbar = () => {
         </TopNav>
         <DropdownMenu />
       </Nav>
+      <div className='popup-container'></div>
+      <div className='popup-div'>
+        <MainLogin trigger = {popup} setTrigger={popupTrig}/>
+      </div>
     </>
   )
 }

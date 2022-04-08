@@ -95,3 +95,10 @@
     margin-left: 130px;
     margin-top: 70px;
 }
+.heading h1{
+    margin-top: 60px;
+    font-family:'Times New Roman', Times, serif;
+}
+.heading button{
+    margin-bottom: 0%;
+}
