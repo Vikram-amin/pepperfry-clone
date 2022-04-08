@@ -13,7 +13,7 @@ export const FooterFirstHalf = styled.div`
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap:50px;
-    margin-left: 55px;
+    margin-left: 90px;
     margin-right: 90px;
     padding: 55px;
     padding-bottom: 0;
@@ -70,6 +70,8 @@ export const DownloadApp = styled.div`
     }
     img{
         margin-bottom: 10px;
+        height: 60px;
+        width: 165px;
     }
 `
 export const FooterSecondHalf = styled.div`
@@ -145,13 +147,17 @@ export const FooterThirdHalf = styled.div`
 
 export const FooterLeft = styled.div`
     img{
-        padding:10px;
+        height: 60px;
+        width: 80px;
+        padding: 4px;
     }
 `
 
 export const FooterRight = styled.div`
     img{
-        padding: 10px;
+        height: 50px;
+        width: 50px;
+        padding: 5px;
     }
 `
 

@@ -56,7 +56,7 @@
     justify-content: space-evenly;
     z-index: 2;
     background-color: white;
-    /* position: fixed; */
+    position: absolute;
   }
   
   .uldiv {
@@ -89,6 +89,7 @@
     line-height: 16px;
     letter-spacing: 0.06em;
     color: #000000;
+    cursor: pointer;
   }
   
   .uldiv ul li:hover {

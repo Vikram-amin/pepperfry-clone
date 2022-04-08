@@ -75,6 +75,7 @@ export const Nav = styled.div`
 `
 
 export const TopNav = styled.div`
+    margin-left: 90px;
     display: flex;
     height: 80px;
     width: 100%;
@@ -97,8 +98,12 @@ export const TopNav = styled.div`
     }
 `
 export const NavLogo = styled(LinkR)`
-    margin-left: 90px;
-    padding-right: 15px;
+    padding-right: 20px; 
+    img{
+        height: 45px;
+        width: 170px;
+    }
+    
 `
 
 export const SearchBar = styled.input`
