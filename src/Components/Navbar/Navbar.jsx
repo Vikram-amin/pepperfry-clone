@@ -46,8 +46,15 @@ const Navbar = () => {
               <img src="https://ii1.pepperfry.com/images/svg/web21-header-help-icon.svg" alt={"help"} className="help" />
             </div>
             <div className="iconOne">
+<<<<<<< HEAD
               <button className='log' onClick={()=>popupTrig(true)}><PermIdentityOutlinedIcon className="icon" /></button>
               <h6 style={{margin:"0%"}}>{user.name}</h6>
+=======
+              <Link to={"/login"}>
+              <PermIdentityOutlinedIcon className="icon" />
+              <h6 style={{margin:"0%"}}></h6>
+              </Link>
+>>>>>>> d73c8fe4f8444f8087cfc24a83aa85cad9757619
             </div>
             <div className="iconOne">
               <FavoriteBorderOutlinedIcon className="icon" />

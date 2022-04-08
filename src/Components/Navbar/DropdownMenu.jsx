@@ -8,7 +8,6 @@ function DropdownMenu() {
 
   return (
     <>
-    <Link to={"/productlist"}>
     <div className="tabbarParent">
       <div className="mainDiv">
         <div className="category">
@@ -165,7 +164,6 @@ function DropdownMenu() {
         </div>
       ) : null
       }
-      </Link>
     </>
   );
 }
