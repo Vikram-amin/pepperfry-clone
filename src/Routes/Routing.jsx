@@ -21,7 +21,7 @@ const Routing = () => {
         <Route path="/productlist/:id" element={<MainProductDetail />} />
         <Route path="/address" element={<MainAddress />} />
         <Route path="/checkout" element={<MainCheckout />} />
-        <Route path="//paymentdone" element={<ThankYouPage />} />
+        <Route path="/paymentdone" element={<ThankYouPage />} />
       </Routes>
     </div>
   );

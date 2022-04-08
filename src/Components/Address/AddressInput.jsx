@@ -2,7 +2,8 @@ import React,{useEffect} from 'react'
 import {  Checkbox } from "@mui/material";
 import { useState } from "react";
 import { Form, Button, AdressInputContainer } from "./AddressCSS";
-import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
 
 const AddressInput = () => {
 
@@ -18,25 +19,25 @@ let initialValue = {
 
 const [formData, setFormData] = useState(initialValue);
 const [filled,setFilled] = useState(false)
+  const navigate = useNavigate();
 
  const handleChange = (e) => {
      const { name, value } = e.target;
      setFormData({ ...formData, [name]: value });
  };
 
-   const handleSubmit = (event) => {
-      
-
-    if (formData.name === "" || formData.phoneNo === "" || formData.pincode === "" && formData.address === ""
-     || formData.city === "" || formData.state === "") {
-    console.log("Please Fill all box");
+   const handleSubmit = () => {
+    if (formData.name === "" || formData.phoneNo === "" || formData.pincode === "" || formData.address === "" || formData.city === "" || formData.state === "") {
+    alert("Please Fill all box");
      }else{
        setFilled(true)
-  
+     navigate("/checkout"); 
       localStorage.setItem("address", JSON.stringify(formData));
      }
 
  };
+
+
 
   return (
     <AdressInputContainer>
@@ -50,7 +51,7 @@ const [filled,setFilled] = useState(false)
               className="name"
               type="text"
               name="name"
-              placeholder=" Vikram Amin "
+              placeholder=" Enter your name "
               onChange={handleChange}
             />
           </div>
@@ -119,9 +120,9 @@ const [filled,setFilled] = useState(false)
             <span> Billing Address Is The Same As Shipping Address</span>
           </div>
 
-          <Link to={`/checkout`}>
+         
             <Button onClick={handleSubmit}>SAVE & CONTINUE </Button>
-          </Link>
+       
         </div>
         {/* </Left> */}
       </Form>

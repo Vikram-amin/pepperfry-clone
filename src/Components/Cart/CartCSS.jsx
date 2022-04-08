@@ -233,8 +233,8 @@ export const CardRight = styled.div`
   }
 
   .quantity {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border: 1px solid black;
     text-align: center;
     padding: 5px;
