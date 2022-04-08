@@ -3,7 +3,7 @@ import "../../style/form.css"
 
 function SignupForm(props) {
 const [number, setNumber] = React.useState("");
-const [password,serPassword] = React.useState("");
+const [password,setPassword] = React.useState("");
   return (props.trig)?"":(
     <div>
       <form action="">
@@ -12,7 +12,8 @@ const [password,serPassword] = React.useState("");
           <input 
           type="text" 
           className="form" 
-          value={number} 
+          value={number}
+          onChange={(e)=>setNumber(e.target.value)} 
           />
           <br /><br />
           <label htmlFor="">Password</label>
@@ -20,7 +21,9 @@ const [password,serPassword] = React.useState("");
           <input 
           type="Password" 
           className='form'
-          value={password}/>
+          value={password}
+          onChange={(e)=>setPassword(e.target.value)}
+          />
           <br /><br />
           <button type='submit' className='reg'>LOG IN</button>
       </form>

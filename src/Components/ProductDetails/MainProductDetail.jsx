@@ -4,7 +4,6 @@ import "../../style/detail.css"
 import { Slider } from "./Slider";
 import { connect, useSelector } from "react-redux";
 
-
 export const MainProductDetail = () =>{
     const Items = useSelector(state=> state.currentItem)
     console.log(Items);
