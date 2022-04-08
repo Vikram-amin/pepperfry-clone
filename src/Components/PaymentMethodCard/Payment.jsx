@@ -1,12 +1,37 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Button, CardDetails, FlexP, PaymentOPtionContainer } from './PaymentMethodCSS';
 import Radio from "@mui/material/Radio";
 import { Link } from 'react-router-dom';
 import { Checkbox } from '@mui/material';
-import { Flex } from '../CheckoutFooter/CheckoutFooterCSS';
+import { useNavigate } from "react-router-dom";
 
 
 const Payment = () => {
+  let initialValue = {
+    number: "",
+    cvv: "",
+    expiry: "",
+    name: "",
+  };
+
+  const [formData, setFormData] = useState(initialValue);
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  
+  console.log(formData)
+
+     const handleSubmit = () => {
+        if (formData.name === "" || formData.number === "" || formData.cvv === "" || formData.expiry === "" || formData.name === "") {
+        alert("Please Fill all box");
+         }else{
+         navigate("/paymentdone");
+         }
+        }
+
   return (
     <PaymentOPtionContainer>
       <FlexP>
@@ -40,9 +65,11 @@ const Payment = () => {
           <label className="formlabel">Card Number</label>
           <input
             type="number"
+            name="number"
             required
             placeholder="Enter Card Number"
             className="formName"
+            onChange={handleChange}
           />
 
           <FlexP>
@@ -50,9 +77,11 @@ const Payment = () => {
               <label>Expiry</label> <br />
               <input
                 type="text"
+                name="expiry"
                 required
                 placeholder="MM/YY"
                 className="inputexpiry"
+                onChange={handleChange}
               />
             </div>
 
@@ -61,8 +90,10 @@ const Payment = () => {
               <input
                 type="password"
                 required
+                name="cvv"
                 placeholder="Enter CVV "
                 className="inputexpiry"
+                onChange={handleChange}
               />
             </div>
           </FlexP>
@@ -71,22 +102,22 @@ const Payment = () => {
           <label className="formlabel">Name On Card</label>
           <input
             type="text"
+            name="name"
             placeholder="Enter Name as on Card "
             className="formName"
+            onChange={handleChange}
           />
 
-          <div className='chekboxname'>
+          <div className="chekboxname">
             <Checkbox color="secondary" />
             Save this option securely for fastest payment
           </div>
 
-          <Link to="/paymentdone">
-            <Button type="submit"> PROCEED </Button>
-          </Link>
+          <Button onClick={handleSubmit}> PROCEED </Button>
         </form>
       </CardDetails>
     </PaymentOPtionContainer>
   );
 }
 
-export { Payment }
+export {Payment}
