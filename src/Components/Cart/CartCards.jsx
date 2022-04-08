@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CardContainer, CardIcon, CardLeft, CardMid, CardRight, Orange } from "./CartCSS";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { BsLayers } from "react-icons/bs";
@@ -6,6 +6,8 @@ import {Flex} from '../../Utils/Common'
 import safe from '../../Images/safe.svg'
 import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { adjustQuenty, removeFromCart } from '../../Redux/Product/product-action';
+import { connect } from 'react-redux';
 
 const sofas = 
   {
@@ -19,17 +21,21 @@ const sofas =
 
 
 
-const CartCards = () => {
+const CartCards = ({ item, totalItem, totalPrice, adjustQuenty, removeFromCart }) => {
+
+ 
+  const [input,setInput] = useState(item.qty)
+  
   return (
     <div>
       <CardContainer>
         <CardLeft>
-          <img src={sofas.img} alt="" />
+          <img src={item.img[0]} alt="" />
           <div> only 2 left </div>
         </CardLeft>
 
         <CardMid>
-          <p className="name">{sofas.name}</p>
+          <p className="name">{item.name}</p>
           <p>
             <Orange className="month">12 Months' Warranty, 100% Genuine</Orange>
           </p>
@@ -39,7 +45,7 @@ const CartCards = () => {
               <CalendarMonthIcon className="calenderIcon" />
               <span> Delivery By</span>
             </div>
-            <p>Tue, 19 Apr</p>
+            <p>Tue, 26 Apr</p>
             <p>Charges FREE For Today</p>
           </div>
           <br />
@@ -69,13 +75,13 @@ const CartCards = () => {
         <CardRight>
           <Flex>
             <button>-</button>
-            <div className='quantity' >1</div>
+            <div className="quantity">1</div>
             <button>+</button>
           </Flex>
-          <div className='qprice'> ₹ {sofas.price}</div>
-          <Orange>₹ {sofas.price}</Orange>
+          <div className="qprice"> ₹ {item.actual_price}</div>
+          <Orange>₹ {item.price}</Orange>
 
-          <div className='add'>+ Add</div>
+          <div className="add">+ Add</div>
         </CardRight>
 
         <CardIcon>
@@ -90,9 +96,16 @@ const CartCards = () => {
       </CardContainer>
     </div>
   );
-}
+};
 
-export { CartCards }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    adjustQty: (id, value) => dispatch(adjustQuenty(id, value)),
+    removeFromCart: (id) => dispatch(removeFromCart(id)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(CartCards);
 
 
 

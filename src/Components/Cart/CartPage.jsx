@@ -1,12 +1,13 @@
-import React from 'react'
+import React,{ useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import Checkbox from "@mui/material/Checkbox";
 import { Button, CartCountHeading, CartHeader, CartLeft, CartPageWrapper, CartRight, CheckBoxDiv, CoupenDiv, Emi,  PriceContainer} from './CartCSS';
 import {Flex} from '../../Utils/Common.js'
-import { CartCards } from './CartCards';
+import  CartCards  from './CartCards';
 import { Price } from '../PriceCard/Price';
 import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { connect } from 'react-redux';
 
 
 
@@ -21,11 +22,31 @@ const sofas =
   }
 
 
-const CartPage= () => {
+const CartPage= ({cart}) => {
+
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalItem,setTotalItem] = useState(0);
+
+useEffect(() => {
+  let items = 0;
+  let price = 0;
+  
+  cart.forEach((item) => {
+    items += item.qty;
+    price += item.qty * item.price;
+  })
+
+  setTotalItem(items);
+  setTotalPrice(price);
+},[cart,totalPrice,totalItem,setTotalItem,setTotalPrice])
+
+
+// console.log(totalPrice,totalItem)
+
   return (
     <>
       <CartCountHeading>
-        <h2>IN YOUR CART(3 Items)</h2>
+        <h2>IN YOUR CART(totalItem)</h2>
       </CartCountHeading>
       <CartPageWrapper>
         <CartLeft>
@@ -38,7 +59,12 @@ const CartPage= () => {
 
           <div>
             {/* cartcard */}
-            <CartCards />
+
+            {
+            cart.map((item) => (
+              <CartCards key={item.id} item={item} totalPrice = {totalPrice} totalItem={totalItem}/>
+            ))
+            }
           </div>
         </CartLeft>
 
@@ -81,11 +107,16 @@ const CartPage= () => {
           <Link to={`/address`}>
             <Button>PLACE ORDER</Button>
           </Link>
-          
         </CartRight>
       </CartPageWrapper>
     </>
   );
 }
 
-export { CartPage }
+const mapStateToProps = (state) => {
+  return {
+    cart: state.product.cart,
+  };
+};
+
+export default connect(mapStateToProps)(CartPage);
