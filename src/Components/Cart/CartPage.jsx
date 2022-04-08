@@ -4,22 +4,11 @@ import Checkbox from "@mui/material/Checkbox";
 import { Button, CartCountHeading, CartHeader, CartLeft, CartPageWrapper, CartRight, CheckBoxDiv, CoupenDiv, Emi,  PriceContainer} from './CartCSS';
 import {Flex} from '../../Utils/Common.js'
 import  CartCards  from './CartCards';
-import { Price } from '../PriceCard/Price';
+import Price  from '../PriceCard/Price';
 import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { connect } from 'react-redux';
 
-
-
-const sofas = 
-  {
-    id: 1,
-    name: "Esteban 3 Seater Half Leather Sofa in Grey Colour",
-    img: "https://ii1.pepperfry.com/media/catalog/product/e/s/800x400/esteban-3-seater-half-leather-sofa-in-grey-colour-by-casacraft-esteban-3-seater-half-leather-sofa-in-8akxht.jpg",
-    madeBy: "CasaCraft by Pepperfry",
-    price: "1,13,999",
-    actual_price: "1,84,999",
-  }
 
 
 const CartPage= ({cart}) => {
@@ -32,6 +21,7 @@ useEffect(() => {
   let price = 0;
   
   cart.forEach((item) => {
+
     items += item.qty;
     price += item.qty * item.price;
   })
@@ -41,12 +31,12 @@ useEffect(() => {
 },[cart,totalPrice,totalItem,setTotalItem,setTotalPrice])
 
 
-// console.log(totalPrice,totalItem)
+// console.log(isNaN(totalPrice) ,'abc')
 
   return (
     <>
       <CartCountHeading>
-        <h2>IN YOUR CART(totalItem)</h2>
+        <h2>IN YOUR CART({totalItem})</h2>
       </CartCountHeading>
       <CartPageWrapper>
         <CartLeft>

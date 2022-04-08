@@ -26,8 +26,11 @@ export const Navbar = styled.div`
 `;
 
 export const Flex = styled.div`
-  display:flex;
-`
+  display: flex;
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: 100;
+`;
 
 export const Img = styled.img`
   width: 130px;

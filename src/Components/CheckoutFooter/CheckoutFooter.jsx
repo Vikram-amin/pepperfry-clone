@@ -1,9 +1,9 @@
 import React from 'react'
-import { CopyRight, Flex, FooterHeader, FooterText, FooterWrapper, Grid, Img2, Wallet } from './CheckoutFooterCSS';
+import { CopyRight, Flex, FooterHeader, FooterText, FooterWrapperC, Grid, Img2, Wallet } from './CheckoutFooterCSS';
 
 const CheckoutFooter = () => {
   return (
-    <FooterWrapper>
+    <FooterWrapperC>
       <div>
         <FooterHeader> WE ACCEPT </FooterHeader>
         <Flex>
@@ -101,14 +101,14 @@ const CheckoutFooter = () => {
             />
           </div>
           <div>
-            <Img2
+            <img
               src="https://ii2.pepperfry.com/images/p-c-i-d-s-s.png"
               alt=""
             />
           </div>
         </Flex>
       </div>
-    </FooterWrapper>
+    </FooterWrapperC>
   );
 }
 

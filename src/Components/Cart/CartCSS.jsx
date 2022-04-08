@@ -50,7 +50,7 @@ export const PriceContainer = styled.div`
 `;
 
 export const CartHeader = styled.div`
-  width: 97%;
+  width: 100%;
   background-color: #f9f9f9;
   border: 1px solid lightgray;
     padding-left: 18px;

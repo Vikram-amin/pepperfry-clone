@@ -7,7 +7,8 @@ import { MainCheckout } from '../Components/Checkout/MainCheckout';
 import { MainProductDetail } from '../Components/ProductDetails/MainProductDetail';
 import MainProductList from '../Components/ProductList/MainProductList';
 import { MainAddress } from "../Components/Address/MainAddress";
-import Popup from '../Components/Login/Popup';
+import Popup from "../Components/Login/Popup"
+import ThankYouPage from '../Components/ThankYouPage';
 
 
 
@@ -22,6 +23,7 @@ const Routing = () => {
         <Route path="/address" element={<MainAddress />} />
         <Route path="/checkout" element={<MainCheckout />} />
         <Route path="/login" element={<Popup />} />
+        <Route path="/paymentdone" element={<ThankYouPage />} />
       </Routes>
     </div>
   );

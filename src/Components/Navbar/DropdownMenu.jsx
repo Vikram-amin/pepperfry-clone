@@ -14,7 +14,7 @@ function DropdownMenu() {
         <div className="category">
           <p
             className="categoryP"
-            onMouseOver={() => {
+            onClick={() => {
               setNav(!nav);
             }}
           >
@@ -55,7 +55,7 @@ function DropdownMenu() {
         <div className="subCategory">
               <div className="uldiv">
                 <p>Sofa</p>
-                <ul>
+                <Link to="/productlist"><ul>
                   <li>3-Seater sofas</li>
                   <li>2-Seater Sofas</li>
                   <li>1-seater Sofas</li>
@@ -65,10 +65,10 @@ function DropdownMenu() {
                   <li>Chaise Loungers</li>
                   <li>Sofa Cum beds</li>
                   <li>Futons</li>
-                </ul>
+                </ul></Link>
               </div>
               <div className="uldiv">
-                <p>Setting</p>
+                <p>Seating</p>
                 <ul>
                   <li>Settees</li>
                   <li>Benches</li>

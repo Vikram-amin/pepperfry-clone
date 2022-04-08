@@ -22,6 +22,7 @@ export const PaymentsCard = () => {
         <div>SELECT PAYMENT METHOD</div>
       </div>
       <PaymentDiv>
+        
         <PaymentCardParent>
           <button className="patmentBox">
             <img src={debit} alt="" />

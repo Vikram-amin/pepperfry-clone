@@ -35,6 +35,7 @@ export const PriceDiv = styled.div`
 
 export const AdressInputContainer = styled.div`
   border: 1px solid lightgray;
+  margin-bottom:30px;
 `;
 
 export const Form = styled.div`
@@ -60,28 +61,28 @@ export const Form = styled.div`
   input[id="city"],
   input[id="state"] {
     width: 37%;
-    margin-left: 3%;
+    margin-left: 4%;
   }
 
   input[id="city"] {
-    margin-left: 18%;
+    margin-left: 19%;
   }
 
   .name {
-    margin-left: 17%;
+    margin-left: 18%;
   }
 
   .mb {
-    margin-left: 8.5%;
+    margin-left: 9%;
   }
   .pin {
-    margin-left: 15%;
+    margin-left: 15.5%;
   }
   .address {
-    margin-left: 15%;
+    margin-left: 15.5%;
   }
   .country {
-    margin-left: 18%;
+    margin-left: 19%;
   }
 
   .billing {
@@ -100,8 +101,8 @@ export const Form = styled.div`
 
  export const Button = styled.div`
    width: 30%;
-   height: 30px;
-   padding: 10px;
+   height: 40px;
+   padding: 5px;
    margin-left: 18%;
    text-align: center;
    background: #f16521;

@@ -1,7 +1,6 @@
 import React from 'react';
 import {  Header, Sale, LeftText, RightText, Dummy, DummyLeft, DummyRight, TopNav, Nav, NavLogo, SearchBar} from './NavbarCSS';
 import Images from '../../Images/logo.png';
-// import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
@@ -33,7 +32,7 @@ const Navbar = () => {
       <Nav>
         <TopNav>
           <div>
-            <NavLogo to="/"><img src={Images} alt={"logo"} height={40} width={168}/></NavLogo>
+            <NavLogo to="/"><img src={Images} alt={"logo"}/></NavLogo>
           </div>
           <div>
             <SearchBar placeholder="Your door to happiness opens with a search"></SearchBar>
