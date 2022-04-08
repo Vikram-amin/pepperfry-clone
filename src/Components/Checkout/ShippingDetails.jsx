@@ -1,13 +1,9 @@
 import React from 'react'
 import { BillingDetailContainer, BillingDetals, ShipingDetals } from './CheckoutCSS';
 
-const address = {
-    name:"vikram",
-    address:"abcdefghijklm",
-    state:"Karnataka",
-    city:"Udupi",
-    mobileNumber : "12354355656",
-}
+
+const address = JSON.parse(localStorage.getItem("address"));
+console.log(address)
 
 const ShippingDetails = () => {
   return (
@@ -21,7 +17,7 @@ const ShippingDetails = () => {
             {address.city} - {address.pincode}
           </div>
           <div>{address.state}</div>
-          <div>M: {address.mobileNumber}</div>
+          <div>M: {address.phoneNo}</div>
         </div>
       </ShipingDetals>
 
@@ -34,7 +30,7 @@ const ShippingDetails = () => {
             {address.city} - {address.pincode}
           </div>
           <div>{address.state}</div>
-          <div>M: {address.mobileNumber}</div>
+          <div>M: {address.phoneNo}</div>
         </div>
       </BillingDetals>
     </BillingDetailContainer>

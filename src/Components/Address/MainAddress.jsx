@@ -5,7 +5,7 @@ import { CheckoutFooter } from '../CheckoutFooter/CheckoutFooter';
 import { CheckoutNavbar } from '../CheckoutNavbar/CheckoutNavbar';
 import { OrderSummery } from '../OrderSummeryCard/OrderSummery';
 import PaymentMethodCard from '../PaymentMethodCard/PaymentMethod';
-import { Price } from '../PriceCard/Price';
+import  Price  from '../PriceCard/Price';
 import { CheckBoxDiv, Emi } from '../PriceCard/PriceCSS';
 import { AdressContainer,  LeftDiv,  PriceDiv,  RightDiv } from './AddressCSS';
 import {AddressInput} from './AddressInput'

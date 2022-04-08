@@ -7,7 +7,7 @@ import { CheckoutNavbar } from '../CheckoutNavbar/CheckoutNavbar'
 import { OrderSummery } from '../OrderSummeryCard/OrderSummery';
 import { PaymentsCard } from '../PaymentMethodCard/PaymentCard';
 import PaymentMethodCard from '../PaymentMethodCard/PaymentMethod';
-import { Price } from '../PriceCard/Price';
+import  Price  from '../PriceCard/Price';
 import { BankOffer, ChekoutContainer, LeftDiv, PriceDiv, RightDiv, Secur } from './CheckoutCSS';
 import { ShippingDetails } from './ShippingDetails';
 

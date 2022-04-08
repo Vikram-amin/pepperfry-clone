@@ -16,6 +16,20 @@ export const removeFromCart = (itemID) => ({
   },
 });
 
+export const increment = (itemID) => ({
+  type: actionTypes.INCREMENT,
+  payload: {
+    id: itemID,
+  },
+});
+// decrement the item
+export const decrement = (itemID) => ({
+  type: actionTypes.DECREMENT,
+  payload: {
+    id: itemID,
+  },
+});
+
 export const adjustQuenty = (itemID,value) => {
     return {
       type: actionTypes.ADJUST_QUT,

@@ -6,25 +6,23 @@ import {Flex} from '../../Utils/Common'
 import safe from '../../Images/safe.svg'
 import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import { adjustQuenty, removeFromCart } from '../../Redux/Product/product-action';
+import { adjustQuenty, decrement, increment, removeFromCart } from '../../Redux/Product/product-action';
 import { connect } from 'react-redux';
 
-const sofas = 
-  {
-    id: 1,
-    name: "Esteban 3 Seater Half Leather Sofa in Grey Colour",
-    img: "https://ii1.pepperfry.com/media/catalog/product/e/s/800x400/esteban-3-seater-half-leather-sofa-in-grey-colour-by-casacraft-esteban-3-seater-half-leather-sofa-in-8akxht.jpg",
-    madeBy: "CasaCraft by Pepperfry",
-    price: "1,13,999",
-    actual_price: "1,84,999",
-  }
 
 
 
-const CartCards = ({ item, totalItem, totalPrice, adjustQuenty, removeFromCart }) => {
+const CartCards = ({ item, adjustQty, removeFromCarts ,increment,decrement}) => {
 
+//     const [count, setCount] = React.useState(item.qty);
+
+
+// React.useEffect(() => {
+//  adjustQty(item.id, count);
+// }, [count]); 
  
-  const [input,setInput] = useState(item.qty)
+console.log(item.quantity);
+
   
   return (
     <div>
@@ -74,10 +72,11 @@ const CartCards = ({ item, totalItem, totalPrice, adjustQuenty, removeFromCart }
 
         <CardRight>
           <Flex>
-            <button>-</button>
-            <div className="quantity">1</div>
-            <button>+</button>
+            <button onClick={() => decrement(item.id)}> - </button>
+            <div className="quantity"> {item.qty}</div>
+            <button onClick={() => increment(item.id)}> + </button>
           </Flex>
+
           <div className="qprice"> ₹ {item.actual_price}</div>
           <Orange>₹ {item.price}</Orange>
 
@@ -86,7 +85,7 @@ const CartCards = ({ item, totalItem, totalPrice, adjustQuenty, removeFromCart }
 
         <CardIcon>
           <span>
-            <DeleteIcon />
+            <DeleteIcon onClick={() => removeFromCarts(item.id)} />
           </span>
 
           <span>
@@ -100,8 +99,10 @@ const CartCards = ({ item, totalItem, totalPrice, adjustQuenty, removeFromCart }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    adjustQty: (id, value) => dispatch(adjustQuenty(id, value)),
-    removeFromCart: (id) => dispatch(removeFromCart(id)),
+    // adjustQty: (id, value) => dispatch(adjustQuenty(id, value)),
+    increment: (id) => dispatch(increment(id)),
+    decrement: (id) => dispatch(decrement(id)),
+    removeFromCarts: (id) => dispatch(removeFromCart(id)),
   };
 };
 

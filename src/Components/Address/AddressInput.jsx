@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {  Checkbox } from "@mui/material";
 import { useState } from "react";
 import { Form, Button, AdressInputContainer } from "./AddressCSS";
@@ -17,15 +17,25 @@ let initialValue = {
 };
 
 const [formData, setFormData] = useState(initialValue);
+const [filled,setFilled] = useState(false)
 
  const handleChange = (e) => {
      const { name, value } = e.target;
      setFormData({ ...formData, [name]: value });
  };
 
-   const handleSubmit = () => {
-       console.log("submit");
-       console.log(formData);
+   const handleSubmit = (event) => {
+      
+
+    if (formData.name === "" || formData.phoneNo === "" || formData.pincode === "" && formData.address === ""
+     || formData.city === "" || formData.state === "") {
+    console.log("Please Fill all box");
+     }else{
+       setFilled(true)
+  
+      localStorage.setItem("address", JSON.stringify(formData));
+     }
+
  };
 
   return (
