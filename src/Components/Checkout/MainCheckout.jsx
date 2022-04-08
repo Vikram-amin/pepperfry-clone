@@ -6,7 +6,7 @@ import { Flex,  Img2 } from '../CheckoutFooter/CheckoutFooterCSS';
 import { CheckoutNavbar } from '../CheckoutNavbar/CheckoutNavbar'
 import { OrderSummery } from '../OrderSummeryCard/OrderSummery';
 import { PaymentsCard } from '../PaymentMethodCard/PaymentCard';
-import PaymentMethodCard from '../PaymentMethodCard/PaymentMethod';
+
 import  Price  from '../PriceCard/Price';
 import { BankOffer, ChekoutContainer, LeftDiv, PriceDiv, RightDiv, Secur } from './CheckoutCSS';
 import { ShippingDetails } from './ShippingDetails';
@@ -16,7 +16,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { PaymetMethodContainer } from '../PaymentMethodCard/PaymentMethodCSS';
+
 
 
 const MainCheckout = () => {

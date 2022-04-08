@@ -25,11 +25,19 @@ const Payment = () => {
             alt=""
           />
         </div>
+
+        <div className="ImageDIv">
+          <Radio />
+          <img
+            src="https://ii2.pepperfry.com/images/220-px-ru-paysvg.png"
+            alt=""
+          />
+        </div>
       </FlexP>
 
       <CardDetails>
-        <form >
-          <label>Card Number</label>
+        <form>
+          <label className="formlabel">Card Number</label>
           <input
             type="number"
             required
@@ -37,8 +45,8 @@ const Payment = () => {
             className="formName"
           />
 
-          <FlexP >
-            <div >
+          <FlexP>
+            <div>
               <label>Expiry</label>
               <input
                 type="text"
@@ -58,7 +66,6 @@ const Payment = () => {
             </div>
           </FlexP>
 
-          
           <label>Name On Card</label>
           <input
             type="text"
