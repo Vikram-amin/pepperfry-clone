@@ -46,8 +46,8 @@ const Payment = () => {
           />
 
           <FlexP>
-            <div>
-              <label>Expiry</label>
+            <div className="cvv">
+              <label>Expiry</label> <br />
               <input
                 type="text"
                 required
@@ -55,8 +55,9 @@ const Payment = () => {
                 className="inputexpiry"
               />
             </div>
-            <div className="inputexpiry">
-              <label>CVV</label>
+
+            <div className="cvv">
+              <label>CVV</label> <br />
               <input
                 type="password"
                 required
@@ -65,15 +66,16 @@ const Payment = () => {
               />
             </div>
           </FlexP>
+          <br />
 
-          <label>Name On Card</label>
+          <label className="formlabel">Name On Card</label>
           <input
             type="text"
             placeholder="Enter Name as on Card "
-            className="inputname"
+            className="formName"
           />
 
-          <div className="checkbox">
+          <div className='chekboxname'>
             <Checkbox color="secondary" />
             Save this option securely for fastest payment
           </div>

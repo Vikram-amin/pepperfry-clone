@@ -67,13 +67,22 @@ export const PaymetMethodContainer = styled.div`
        margin-top: 10px;
        margin-bottom: 10px;
        box-sizing: border-box;
+
        & img {
-         width: 16px;
-         height: 16px;
+         width: 15px;
+         height: 15px;
+         object-fit: cover;
        }
 
-       & div > button {
-         color: red;
+       & div {
+         padding-left: 15px;
+         color: #848484;
+         display: block;
+         font-size: 14px;
+         font-weight: 600;
+         letter-spacing: normal;
+         text-transform: uppercase;
+         font-family: Manrope, sans-serif;
        }
 
        .patmentBox {
@@ -93,75 +102,63 @@ export const PaymetMethodContainer = styled.div`
      `;
 
 
-     // Payment option
+// Payment option
+
 export const FlexP = styled.div`
   display: flex;
   justify-content: space-around;
   flex-direction: row;
+
+  & label {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  & input {
+    width: 140px;
+    height:35px;
+  }
+
+  .cvv{
+    margin-top:20px;
+    margin-left:-10px;
+  }
 `;
 
 
 export const PaymentOPtionContainer = styled.div`
   border: 1px solid lightgray;
   width: 60%;
-  
 
   .ImageDIv {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
+    width: 120px;
     border: 1px solid lightgray;
     padding: 10px;
-    margin-top:30px;
+    margin-top: 30px;
+    margin-bottom: -20px;
   }
 `;
 
 export const CardDetails = styled.div`
   margin: 50px;
 
-  .checkbox {
-    margin-top: 10px;
-    margin-left: -14px;
-    font-family: "Fira Sans", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: #707070;
-  }
-
-  .inputname {
-    width: 260px;
-    height: 44px;
-    border: 1px solid #707070;
-    margin-top: 15px;
-    padding-left: 15px;
-    background-color: #f3f5f7;
-    font-family: "Fira Sans", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.06em;
-    border-radius: 4px;
-  }
-
-  .inputexpiry {
-    max-width: 120px;
-    height: 34px;
-    padding-left: 15px;
-    background: #f3f5f7;
-    outline: none;
-    border: 1px solid #f3f5f7;
-  }
-
   .formlabel {
     margin-left: -15px;
     padding: 15px;
+    margin-top: -100px;
+    font-weight: 600;
   }
   .formName {
     padding: 8px;
+  }
+
+  .chekboxname {
+    font-size: 12px;
+    margin-top:20px;
+
   }
 `;
 
@@ -175,4 +172,7 @@ export const Button = styled.button`
   color: white;
   background-color: #f16521;
   text-align: center;
+  margin-top: 20px;
 `;
+
+
