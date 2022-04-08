@@ -21,6 +21,7 @@ const MainProductList =({products})=>{
         <span className="filter">
             <div className="sort">
             <h4>Sort by</h4>
+            <br />
             <Button onClick={()=>setBrand("")}>Clear</Button>
             <br />
             <input type="radio" name="money" value="50000" onChange={()=>setPrice(50000)}/>
@@ -31,6 +32,7 @@ const MainProductList =({products})=>{
             <br />
             <input type="radio" name="money" value="150000" onChange={()=>setPrice(150000)}/>
             <label htmlFor="1,50,000">{"< 1,50,000"}</label>
+            <br /><br />
             <h4>Brand</h4>
             <input type="radio" name="brand" value="CasaCraft" onChange={(e)=>setBrand(e.target.value)}/>
             <label htmlFor="CasaCraft">CasaCraft</label>
