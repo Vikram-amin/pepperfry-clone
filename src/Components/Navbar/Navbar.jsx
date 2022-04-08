@@ -44,7 +44,7 @@ const Navbar = () => {
             <div className="iconOne">
               <Link to={"/login"}>
               <PermIdentityOutlinedIcon className="icon" />
-              <h6 style={{margin:"0%"}}>{user.name}</h6>
+              <h6 style={{margin:"0%"}}></h6>
               </Link>
             </div>
             <div className="iconOne">
