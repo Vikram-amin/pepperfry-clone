@@ -23,7 +23,7 @@ export const MainLogin =(props)=>{
                 <button onClick={()=>props.setTrigger(false)}>X</button>
                 </div>
                 <LoginForm trig={val} setTrig={props.setTrigger}/>
-                <SignupForm trig={val}/>
+                <SignupForm trig={val} setTrig={props.setTrigger} />
                 <div>
                 <button className="signup" onClick={()=>set()}>Existing User? Log In</button>
             </div>

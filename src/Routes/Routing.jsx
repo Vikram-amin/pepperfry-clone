@@ -7,6 +7,7 @@ import { MainCheckout } from '../Components/Checkout/MainCheckout';
 import { MainProductDetail } from '../Components/ProductDetails/MainProductDetail';
 import MainProductList from '../Components/ProductList/MainProductList';
 import { MainAddress } from "../Components/Address/MainAddress";
+import Popup from '../Components/Login/Popup';
 
 
 
@@ -20,6 +21,7 @@ const Routing = () => {
         <Route path="/productlist/:id" element={<MainProductDetail />} />
         <Route path="/address" element={<MainAddress />} />
         <Route path="/checkout" element={<MainCheckout />} />
+        <Route path="/login" element={<Popup />} />
       </Routes>
     </div>
   );

@@ -30,3 +30,15 @@ export const loadCurrentItem = (item) => ({
   type : actionTypes.LOAD_CURRENT_ITEM,
   payload : item,
 });
+export const getUser = (data) =>{
+  return{
+      type: actionTypes.GET_USER,
+      payload:data
+  }
+};
+export const setUser = (data) =>{
+  return{
+      type: actionTypes.SET_USER,
+      payload:data
+  }
+};

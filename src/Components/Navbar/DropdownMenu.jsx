@@ -1,12 +1,14 @@
 import React from "react";
 import "./Dropdown.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function DropdownMenu() {
   const [nav, setNav] = useState(false);
 
   return (
     <>
+    <Link to={"/productlist"}>
     <div className="tabbarParent">
       <div className="mainDiv">
         <div className="category">
@@ -163,6 +165,7 @@ function DropdownMenu() {
         </div>
       ) : null
       }
+      </Link>
     </>
   );
 }

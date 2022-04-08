@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import styled from 'styled-components'
-import Carousel  from 'react-elastic-carousel';
+import styled from 'styled-components';
+import { Carousel } from 'react-responsive-carousel';
 import { SliderData } from './SliderData';
 
 const Button = styled.button`

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "../../style/detail.css"
 import { Slider } from "./Slider";
 import { connect, useSelector } from "react-redux";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 export const MainProductDetail = () =>{
     const product = useSelector((state) => state.product.currentItem);
@@ -15,6 +17,7 @@ export const MainProductDetail = () =>{
     // console.log(product.img)
     return (
       <>
+      <Navbar />
         <div className="detail">
           <div className="img">
             <Slider {...product} />
@@ -60,6 +63,7 @@ export const MainProductDetail = () =>{
             </div>
           </div>
         </div>
+        <Footer />
       </>
     );
 }

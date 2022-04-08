@@ -1,9 +1,19 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import "../../style/form.css"
-
 function SignupForm(props) {
 const [number, setNumber] = React.useState("");
 const [password,setPassword] = React.useState("");
+const getData =()=>{
+  var user = JSON.parse(localStorage.getItem('userData'));
+  if(user.email===number&&user.password===password){
+    alert("Welcome Back! "+ user.name);
+  }
+  else{
+    alert("Entered Wrong Credentials!!!")
+  }
+}
+
   return (props.trig)?"":(
     <div>
       <form action="">
@@ -25,7 +35,9 @@ const [password,setPassword] = React.useState("");
           onChange={(e)=>setPassword(e.target.value)}
           />
           <br /><br />
-          <button type='submit' className='reg'>LOG IN</button>
+          <Link to={"/"}>
+          <button className='reg' onClick={()=>getData()}>LOG IN</button>
+          </Link>
       </form>
     </div>
   )

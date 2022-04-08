@@ -1,15 +1,28 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../../style/form.css"
+
 export const LoginForm = (props) =>{
+  
     
     const [name,setName] = React.useState("");
     const [number,setNumber] = React.useState("");
     const [email,setEmail] = React.useState("");
     const [password,setPassword] = React.useState("");
+    const saveData =()=>{
+        localStorage.clear();
+        var user ={
+            name,
+            number,
+            email,
+            password
+        }
+        localStorage.setItem("userData",JSON.stringify(user));
+        alert("Welcome! " +name);
+    }
     return(props.trig)?(
         <div className="full">
             <div>
-                <form action="">
                     <br />
                     <label htmlFor="name">Name</label>
                     <br />
@@ -52,8 +65,9 @@ export const LoginForm = (props) =>{
                     />
                     <br />
                     <br />
-                    <button className="reg">REGISTER</button>
-                </form>
+                    <Link to={"/"}>
+                    <button className="reg" onClick={()=>saveData()}>REGISTER</button>
+                    </Link>
             </div>
             <br /><br />
         </div>

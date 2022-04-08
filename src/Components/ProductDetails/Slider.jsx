@@ -7,7 +7,7 @@ import "../../style/slider.css"
 export const Slider=({img})=>{
  
     return(
-        <>
+        <div className="slider">
             <Carousel>
                 <div>
                     <img src={img[0]} alt="" />
@@ -22,6 +22,6 @@ export const Slider=({img})=>{
                     <img src={img[3]} alt="" />
                 </div>
             </Carousel>
-        </>
+        </div>
     )
 }

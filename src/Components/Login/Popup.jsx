@@ -1,14 +1,17 @@
+import { Button } from '@mui/material';
 import React from 'react'
 import { MainLogin } from './Mainlogin'
 import "./popup.css"
 
 function Popup() {
-    const [buttonPopup, setButtonPopup] = React.useState(false);
+  const [popup,popupTrig] = React.useState(false);
   return (
     <>
-    <button onClick={()=>setButtonPopup(true)}>Login</button>
+    <div className='login-btn'>
+      <Button onClick={()=>popupTrig(true)}>Login</Button>
+    </div>
     <div className='popup-div'>
-        <MainLogin trigger = {buttonPopup} setTrigger={setButtonPopup}/>
+        <MainLogin trigger = {popup} setTrigger={popupTrig}/>
     </div>
     </>
   )

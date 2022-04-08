@@ -9,6 +9,7 @@ import { Link  } from 'react-router-dom';
 import DropdownMenu from './DropdownMenu';
 
 const Navbar = () => {
+  var user = JSON.parse(localStorage.getItem('userData'));
   return (
     <>
       <Header>
@@ -42,7 +43,10 @@ const Navbar = () => {
               <img src="https://ii1.pepperfry.com/images/svg/web21-header-help-icon.svg" alt={"help"} className="help" />
             </div>
             <div className="iconOne">
+              <Link to={"/login"}>
               <PermIdentityOutlinedIcon className="icon" />
+              <h6 style={{margin:"0%"}}>{user.name}</h6>
+              </Link>
             </div>
             <div className="iconOne">
               <FavoriteBorderOutlinedIcon className="icon" />
