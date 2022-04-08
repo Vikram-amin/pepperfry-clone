@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const FooterWrapper = styled.div`
-  width: 90%;
-  height: 220px;
+export const FooterWrapperC = styled.div`
+  width: 100%;
+  height: 250px;
   padding: 5% 0 0 10%;
   margin-top: 60px;
   padding-bottom: 50px;
@@ -37,6 +37,7 @@ export const FooterText = styled.span`
   line-height: 17px;
   color: #969696;
   font-family: Manrope, sans-serif;
+
 `;
 
 export const Wallet = styled.div`
@@ -95,5 +96,6 @@ export const FooterHeader = styled.div`
   font-size: 15px;
   line-height: 19px;
   padding-bottom: 15px;
+ margin-top: -40px;
 }
 `;

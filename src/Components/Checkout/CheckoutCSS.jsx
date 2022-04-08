@@ -82,7 +82,7 @@ export const ChekoutParent = styled.div`
 // shiping and Billing details
 
 export const BillingDetailContainer = styled.div`
-  width: 90%;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: row;
