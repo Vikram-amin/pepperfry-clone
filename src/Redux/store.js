@@ -1,8 +1,10 @@
 import { createStore, combineReducers } from "redux";
 import {shopReducer} from '../Redux/ShopingCart/reducer.js'
 import productReducer from '../Redux/Product/product-reducer.js'
+
+
+
 const rootReducer = combineReducers({
-  shop: shopReducer,
   product: productReducer
 });
 

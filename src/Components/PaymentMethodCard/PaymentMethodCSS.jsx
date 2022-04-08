@@ -110,10 +110,10 @@ export const PaymentOPtionContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    width: 80px;
     border: 1px solid lightgray;
     padding: 10px;
-    margin-top:60px;
+    margin-top:30px;
   }
 `;
 
@@ -135,7 +135,7 @@ export const CardDetails = styled.div`
     width: 260px;
     height: 44px;
     border: 1px solid #707070;
-    margin-top: 16px;
+    margin-top: 15px;
     padding-left: 15px;
     background-color: #f3f5f7;
     font-family: "Fira Sans", sans-serif;
@@ -154,6 +154,14 @@ export const CardDetails = styled.div`
     background: #f3f5f7;
     outline: none;
     border: 1px solid #f3f5f7;
+  }
+
+  .formlabel {
+    margin-left: -15px;
+    padding: 15px;
+  }
+  .formName {
+    padding: 8px;
   }
 `;
 

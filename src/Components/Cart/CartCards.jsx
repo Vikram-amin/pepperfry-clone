@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CardContainer, CardIcon, CardLeft, CardMid, CardRight, Orange } from "./CartCSS";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { BsLayers } from "react-icons/bs";
@@ -6,30 +6,34 @@ import {Flex} from '../../Utils/Common'
 import safe from '../../Images/safe.svg'
 import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-
-const sofas = 
-  {
-    id: 1,
-    name: "Esteban 3 Seater Half Leather Sofa in Grey Colour",
-    img: "https://ii1.pepperfry.com/media/catalog/product/e/s/800x400/esteban-3-seater-half-leather-sofa-in-grey-colour-by-casacraft-esteban-3-seater-half-leather-sofa-in-8akxht.jpg",
-    madeBy: "CasaCraft by Pepperfry",
-    price: "1,13,999",
-    actual_price: "1,84,999",
-  }
+import { adjustQuenty, decrement, increment, removeFromCart } from '../../Redux/Product/product-action';
+import { connect } from 'react-redux';
 
 
 
-const CartCards = () => {
+
+const CartCards = ({ item, adjustQty, removeFromCarts ,increment,decrement}) => {
+
+//     const [count, setCount] = React.useState(item.qty);
+
+
+// React.useEffect(() => {
+//  adjustQty(item.id, count);
+// }, [count]); 
+ 
+console.log(item.quantity);
+
+  
   return (
     <div>
       <CardContainer>
         <CardLeft>
-          <img src={sofas.img} alt="" />
+          <img src={item.img[0]} alt="" />
           <div> only 2 left </div>
         </CardLeft>
 
         <CardMid>
-          <p className="name">{sofas.name}</p>
+          <p className="name">{item.name}</p>
           <p>
             <Orange className="month">12 Months' Warranty, 100% Genuine</Orange>
           </p>
@@ -39,7 +43,7 @@ const CartCards = () => {
               <CalendarMonthIcon className="calenderIcon" />
               <span> Delivery By</span>
             </div>
-            <p>Tue, 19 Apr</p>
+            <p>Tue, 26 Apr</p>
             <p>Charges FREE For Today</p>
           </div>
           <br />
@@ -68,19 +72,20 @@ const CartCards = () => {
 
         <CardRight>
           <Flex>
-            <button>-</button>
-            <div className='quantity' >1</div>
-            <button>+</button>
+            <button onClick={() => decrement(item.id)}> - </button>
+            <div className="quantity"> {item.qty}</div>
+            <button onClick={() => increment(item.id)}> + </button>
           </Flex>
-          <div className='qprice'> ₹ {sofas.price}</div>
-          <Orange>₹ {sofas.price}</Orange>
 
-          <div className='add'>+ Add</div>
+          <div className="qprice"> ₹ {item.actual_price}</div>
+          <Orange>₹ {item.price}</Orange>
+
+          <div className="add">+ Add</div>
         </CardRight>
 
         <CardIcon>
           <span>
-            <DeleteIcon />
+            <DeleteIcon onClick={() => removeFromCarts(item.id)} />
           </span>
 
           <span>
@@ -90,9 +95,18 @@ const CartCards = () => {
       </CardContainer>
     </div>
   );
-}
+};
 
-export { CartCards }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // adjustQty: (id, value) => dispatch(adjustQuenty(id, value)),
+    increment: (id) => dispatch(increment(id)),
+    decrement: (id) => dispatch(decrement(id)),
+    removeFromCarts: (id) => dispatch(removeFromCart(id)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(CartCards);
 
 
 

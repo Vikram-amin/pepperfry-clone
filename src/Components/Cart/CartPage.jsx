@@ -1,31 +1,42 @@
-import React from 'react'
+import React,{ useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import Checkbox from "@mui/material/Checkbox";
 import { Button, CartCountHeading, CartHeader, CartLeft, CartPageWrapper, CartRight, CheckBoxDiv, CoupenDiv, Emi,  PriceContainer} from './CartCSS';
 import {Flex} from '../../Utils/Common.js'
-import { CartCards } from './CartCards';
-import { Price } from '../PriceCard/Price';
+import  CartCards  from './CartCards';
+import Price  from '../PriceCard/Price';
 import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { connect } from 'react-redux';
 
 
 
-const sofas = 
-  {
-    id: 1,
-    name: "Esteban 3 Seater Half Leather Sofa in Grey Colour",
-    img: "https://ii1.pepperfry.com/media/catalog/product/e/s/800x400/esteban-3-seater-half-leather-sofa-in-grey-colour-by-casacraft-esteban-3-seater-half-leather-sofa-in-8akxht.jpg",
-    madeBy: "CasaCraft by Pepperfry",
-    price: "1,13,999",
-    actual_price: "1,84,999",
-  }
+const CartPage= ({cart}) => {
+
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalItem,setTotalItem] = useState(0);
+
+useEffect(() => {
+  let items = 0;
+  let price = 0;
+  
+  cart.forEach((item) => {
+
+    items += item.qty;
+    price += item.qty * item.price;
+  })
+
+  setTotalItem(items);
+  setTotalPrice(price);
+},[cart,totalPrice,totalItem,setTotalItem,setTotalPrice])
 
 
-const CartPage= () => {
+// console.log(isNaN(totalPrice) ,'abc')
+
   return (
     <>
       <CartCountHeading>
-        <h2>IN YOUR CART(3 Items)</h2>
+        <h2>IN YOUR CART({totalItem})</h2>
       </CartCountHeading>
       <CartPageWrapper>
         <CartLeft>
@@ -38,7 +49,12 @@ const CartPage= () => {
 
           <div>
             {/* cartcard */}
-            <CartCards />
+
+            {
+            cart.map((item) => (
+              <CartCards key={item.id} item={item} totalPrice = {totalPrice} totalItem={totalItem}/>
+            ))
+            }
           </div>
         </CartLeft>
 
@@ -81,11 +97,16 @@ const CartPage= () => {
           <Link to={`/address`}>
             <Button>PLACE ORDER</Button>
           </Link>
-          
         </CartRight>
       </CartPageWrapper>
     </>
   );
 }
 
-export { CartPage }
+const mapStateToProps = (state) => {
+  return {
+    cart: state.product.cart,
+  };
+};
+
+export default connect(mapStateToProps)(CartPage);

@@ -35,7 +35,7 @@ const MainProductList =({products})=>{
         <span className="list">
         {   
             products.map((items)=>
-            <ProductCard key={items.id} items = {items}/>
+            <ProductCard key={items.id} product={items} />
             )
         }
             
