@@ -47,7 +47,7 @@ const Navbar = () => {
             </div>
             <div className="iconOne">
               <button className='log' onClick={()=>popupTrig(true)}><PermIdentityOutlinedIcon className="icon" /></button>
-              <h6 style={{margin:"0%"}}></h6>
+              <h6 style={{margin:"0%"}}>{user.name}</h6>
             </div>
             <div className="iconOne">
               <FavoriteBorderOutlinedIcon className="icon" />
@@ -59,12 +59,13 @@ const Navbar = () => {
             </div>
           </div>
         </TopNav>
+        <div className='popup-div'>
+          <MainLogin trigger = {popup} setTrigger={popupTrig}/>
+        </div>
         <DropdownMenu />
+        
       </Nav>
-      <div className='popup-container'></div>
-      <div className='popup-div'>
-        <MainLogin trigger = {popup} setTrigger={popupTrig}/>
-      </div>
+      
     </>
   )
 }

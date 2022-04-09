@@ -29,7 +29,7 @@ h3{
 }
 .img{
     width:100vh;
-    height: 100vh;
+    height: 85vh;
     margin: 30px auto;
     position: relative;
 }
@@ -57,9 +57,11 @@ a{
     padding: 5px;
     height: 44px;
     width: 35%;
+    font-weight: 900;
     border-right: none;
     cursor: pointer;
     margin-left: 115px;
+    border: 0.1px solid gray;
 }
 .pinBtn{
     border-left: none;
@@ -68,6 +70,8 @@ a{
     background-color: transparent;
     color: orange;
     transition: 1s;
+    border: 0.1px solid gray;
+    font-weight: 900;
 }
 .del{
     font-weight: 100;
@@ -93,12 +97,16 @@ a{
 .add{
     background-color: transparent;
     border: 0.1px solid black;
+    padding: 10px;
+    font-weight: 900;
 }
 .buy{
     color: white;
     background-color: orangered;
     border: none;
-    width: 50vh;
+    width: 45vh;
+    padding: 10px;
+    font-weight: 900;
 }
 
 .product-name{
@@ -107,4 +115,7 @@ a{
 }
 .heart{
     margin-left: 40px;
+}
+.data{
+    padding: 30px;
 }

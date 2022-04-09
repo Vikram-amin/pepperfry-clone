@@ -62,8 +62,9 @@ const [filled,setFilled] = useState(false)
               className="mb"
               type="text"
               name="phoneNo"
-              placeholder=" 9582020202"
+              placeholder=" 95820XXXXX"
               onChange={handleChange}
+              style={{marginLeft:"70px"}}
             />
           </div>
 

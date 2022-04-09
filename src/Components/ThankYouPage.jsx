@@ -9,6 +9,7 @@ function ThankYouPage() {
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQOgPDsimZKtc8WK8xbLmU9MHw-yvshFfbloDWMj400q2ZQ6f_ekYn_5_pGGK80sjg0-8&usqp=CAU"
         alt=""
       />
+      <br /><br /><br /><br /><br />
       <Links id="btn" to="/">
         Continue Shopping
       </Links>
@@ -25,18 +26,25 @@ const Container = styled.div`
   position: relative;
 
   & img {
-    object-fit: contain;
+    width: 100vh 
   }
 `;
 
 const Links = styled(Link)`
   padding: 15px;
-  border: 1px solid black;
+  border: none;
   font-size: 18px;
   font-weight: 600;
   position: absolute;
-  top: 350px;
-  left: 470px;
-  background-color: antiquewhite;
+  top: 375px;
+  left: 550px;
+  background-color: orangered;
   color: black;
+  border-radius: 5px;
+  :hover{
+    border: 0.1px solid orangered;
+    background-color: orangered;
+    border-radius: 5px;
+    color: white;
+  }
 `;
