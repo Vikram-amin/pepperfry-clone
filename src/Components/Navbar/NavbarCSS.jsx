@@ -71,18 +71,39 @@ export const DummyRight = styled.div`
     }
 `
 export const Nav = styled.div`
-    
+    border-bottom: 1px solid #d3d3d3;
 `
 
 export const TopNav = styled.div`
+    margin-left: 90px;
     display: flex;
     height: 80px;
     width: 100%;
     padding-top: 18px;
+    .iconDiv{
+        margin-left: 20px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 15px;
+    }
+    .icon{
+        color: black;
+        width: 30px;
+        height: 38px;
+        cursor: pointer;
+    }
+    .help{
+       margin-top: 2px;
+       width: 47px;
+    }
 `
 export const NavLogo = styled(LinkR)`
-    margin-left: 90px;
-    padding-right: 15px;
+    padding-right: 20px; 
+    img{
+        height: 45px;
+        width: 170px;
+    }
+    
 `
 
 export const SearchBar = styled.input`
@@ -95,14 +116,14 @@ export const SearchBar = styled.input`
     font-weight: lighter;
 `
 
-// export const NavMenu = styled.nav`
-
-// `
-
-// export const NavItem = styled.div`
-
-// `
-
-// export const NavLink = styled(LinkR)`
-
+// export const DropdownMenu = styled.nav`
+//     display: flex;
+//     margin-left: 90px;
+//     margin-right: 90px;
+//     div{
+//         font-weight: bolder;
+//         padding: 10px;
+//         padding-top: 0;
+//         font-size: 14px;
+//     }
 // `

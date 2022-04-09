@@ -1,8 +1,18 @@
 import React from 'react';
-import {  Header, Sale, LeftText, RightText, Dummy, DummyLeft, DummyRight, TopNav, Nav, NavLogo, SearchBar} from './NavbarElements';
-import Images from './logo.png';
+import {  Header, Sale, LeftText, RightText, Dummy, DummyLeft, DummyRight, TopNav, Nav, NavLogo, SearchBar} from './NavbarCSS';
+import Images from '../../Images/logo.png';
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
+import { Link  } from 'react-router-dom';
+import DropdownMenu from './DropdownMenu';
+import "../../style/slider.css"
+import "../Login/popup.css"
+import { MainLogin } from '../Login/Mainlogin';
 
 const Navbar = () => {
+  var user = JSON.parse(localStorage.getItem('userData'));
+  const [popup,popupTrig] = React.useState(false);
   return (
     <>
       <Header>
@@ -26,46 +36,36 @@ const Navbar = () => {
       <Nav>
         <TopNav>
           <div>
-            <NavLogo to="/"><img src={Images} alt={"logo"} height={35} width={170}/></NavLogo>
+            <NavLogo to="/"><img src={Images} alt={"logo"}/></NavLogo>
           </div>
           <div>
             <SearchBar placeholder="Your door to happiness opens with a search"></SearchBar>
           </div>
+          <div className="iconDiv">
+            <div className="iconOne">
+              <img src="https://ii1.pepperfry.com/images/svg/web21-header-help-icon.svg" alt={"help"} className="help" />
+            </div>
+            <div className="iconOne">
+              <button className='log' onClick={()=>popupTrig(true)}><PermIdentityOutlinedIcon className="icon" /></button>
+              <h6 style={{margin:"0%"}}>{user.name}</h6>
+            </div>
+            <div className="iconOne">
+              <FavoriteBorderOutlinedIcon className="icon" />
+            </div>
+            <div className="iconOne">
+              <Link to="/cart">
+                <ShoppingCartOutlinedIcon className="icon" />
+              </Link>
+            </div>
+          </div>
         </TopNav>
-
+        <div className='popup-div'>
+          <MainLogin trigger = {popup} setTrigger={popupTrig}/>
+        </div>
+        <DropdownMenu />
+        
       </Nav>
-      {/* <NavMenu>
-        <NavItem>
-          <NavLink>Furniture</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Sofas & Recliners</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Cabinetry</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Beds</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Mattress</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Furnishings</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Decor</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Lighting</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Appliances</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>Modular</NavLink>
-        </NavItem>
-      </NavMenu> */}
+      
     </>
   )
 }
