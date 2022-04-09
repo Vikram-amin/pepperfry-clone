@@ -64,7 +64,7 @@ const [filled,setFilled] = useState(false)
               name="phoneNo"
               placeholder=" 95820XXXXX"
               onChange={handleChange}
-              style={{marginLeft:"70px"}}
+              style={{marginLeft:"72px"}}
             />
           </div>
 
@@ -76,6 +76,7 @@ const [filled,setFilled] = useState(false)
               className="pin"
               placeholder="40059"
               onChange={handleChange}
+              style={{marginLeft:"115px"}}
             />
           </div>
 
@@ -87,6 +88,7 @@ const [filled,setFilled] = useState(false)
               name="address"
               placeholder=" House Number, Building Name, Society, Area, Road, Landmark"
               onChange={handleChange}
+              style={{marginLeft:"115px"}}
             />
           </div>
 
