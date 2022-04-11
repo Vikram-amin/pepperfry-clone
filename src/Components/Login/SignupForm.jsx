@@ -35,7 +35,7 @@ const getData =()=>{
           onChange={(e)=>setPassword(e.target.value)}
           />
           <br /><br />
-          <Link to={"/"}>
+          <Link to={'/'}>
           <button className='reg' onClick={()=>getData()}>LOG IN</button>
           </Link>
       </form>

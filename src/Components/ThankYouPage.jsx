@@ -22,7 +22,7 @@ export default ThankYouPage
 const Container = styled.div`
   width: 50%;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 50px;
   position: relative;
 
   & img {
@@ -31,13 +31,13 @@ const Container = styled.div`
 `;
 
 const Links = styled(Link)`
-  padding: 15px;
+  padding: 10px;
   border: none;
   font-size: 18px;
   font-weight: 600;
   position: absolute;
-  top: 375px;
-  left: 550px;
+  top: 330px;
+  left: 450px;
   background-color: orangered;
   color: black;
   border-radius: 5px;

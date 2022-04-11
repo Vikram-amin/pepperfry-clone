@@ -65,24 +65,24 @@ export const Form = styled.div`
   }
 
   input[id="city"] {
-    margin-left: 19%;
+    margin-left: 21%;
   }
 
   .name {
-    margin-left: 18%;
+    margin-left: 20%;
   }
 
   .mb {
     margin-left: 9%;
   }
   .pin {
-    margin-left: 15.5%;
+    margin-left: 18%;
   }
   .address {
-    margin-left: 15.5%;
+    margin-left: 18%;
   }
   .country {
-    margin-left: 19%;
+    margin-left: 21%;
   }
 
   .billing {
