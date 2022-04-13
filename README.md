@@ -32,9 +32,9 @@ You can also take a glimpse of our Project, just follow the below steps:
 ## Demo :movie_camera:
 Deployed Link: [Pepperfry Clone](https://clone-pepperfry.netlify.app/)
 ## Team Members and Contributors :innocent:
-:bust_in_silhouette: Vikram Amin
-- Github : [Vikram Amin](https://github.com/Vikram-amin)
-:bust_in_silhouette: Yash Verma
-- Github : [Yash Verma](https://github.com/Yashverma1814)
-:bust_in_silhouette: Aditi Shimple
-- Github : [Aditi Shimple](https://github.com/aditishimple)
+
+:bust_in_silhouette: Vikram Amin - Github : [Vikram Amin](https://github.com/Vikram-amin)
+
+:bust_in_silhouette: Yash Verma - Github : [Yash Verma](https://github.com/Yashverma1814)
+
+:bust_in_silhouette: Aditi Shimple - Github : [Aditi Shimple](https://github.com/aditishimple)
