@@ -20,7 +20,7 @@ You can also take a glimpse of our Project, just follow the below steps:
 3. Product list Page
 ![Product List Page](/src/Images/productlist.png)
 4. Product Details Page
-![Product Detail Page](/src/Images/product%20detail.png)
+![Product Detail Page](/src/Images/productdetail.png)
 5. Cart
 ![Cart](/src/Images/cart.png)
 6. Checkout Page
