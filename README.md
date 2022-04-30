@@ -14,7 +14,7 @@ You can also take a glimpse of our Project, just follow the below steps:
 ```
 ## Snapshots :camera:
 1. Home Page
-![Home Page](/src/Images/homepage.png)
+![Home Page](/Frontend/src/Images/homepage.png)
 2. Register popup
 ![Register Popup](/src/Images/login.png)
 3. Product list Page
