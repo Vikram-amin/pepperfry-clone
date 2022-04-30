@@ -2,7 +2,7 @@ import { Checkbox } from '@mui/material';
 import React from 'react'
 import { CheckBoxDiv, Emi } from '../Cart/CartCSS';
 import { CheckoutFooter } from '../CheckoutFooter/CheckoutFooter'
-import { Flex,  Img2 } from '../CheckoutFooter/CheckoutFooterCSS';
+import { Flex } from '../CheckoutFooter/CheckoutFooterCSS';
 import { CheckoutNavbar } from '../CheckoutNavbar/CheckoutNavbar'
 import  OrderSummery  from '../OrderSummeryCard/OrderSummery';
 import { PaymentsCard } from '../PaymentMethodCard/PaymentCard';

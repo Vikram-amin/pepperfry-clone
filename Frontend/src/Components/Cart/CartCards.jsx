@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { CardContainer, CardIcon, CardLeft, CardMid, CardRight, Orange } from "./CartCSS";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { BsLayers } from "react-icons/bs";
@@ -96,6 +96,9 @@ console.log(item.quantity);
     </div>
   );
 };
+
+
+
 
 const mapDispatchToProps = (dispatch) => {
   return {
