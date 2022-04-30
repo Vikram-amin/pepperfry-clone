@@ -14,17 +14,17 @@ You can also take a glimpse of our Project, just follow the below steps:
 ```
 ## Snapshots :camera:
 1. Home Page
-![Home Page](/Frontend/src/Images/homepage.png)
+![Home Page](/Frontend/src/Images/Readme/homepage.png)
 2. Register popup
-![Register Popup](/src/Images/login.png)
+![Register Popup](/Frontend/src/Images/Readme/login.png)
 3. Product list Page
-![Product List Page](/src/Images/productlist.png)
+![Product List Page](/Frontend/src/Images/Readme/productlist.png)
 4. Product Details Page
-![Product Detail Page](/src/Images/productdetail.png)
+![Product Detail Page](/Frontend/src/Images/Readme/productdetail.png)
 5. Cart
-![Cart](/src/Images/cart.png)
+![Cart](/Frontend/src/Images/Readme/cart.png)
 6. Checkout Page
-![Checkout Page](/src/Images/checkout.png)
+![Checkout Page](/Frontend/src/Images/Readme/checkout.png)
 ## Features :sparkles:
 - We have added sort and filter functionality for the product list page.
 - You can view and add any product to the cart.
