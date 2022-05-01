@@ -9,6 +9,7 @@ import MainProductList from '../Components/ProductList/MainProductList';
 import { MainAddress } from "../Components/Address/MainAddress";
 import Popup from "../Components/Login/Popup"
 import ThankYouPage from '../Components/ThankYouPage';
+import Success from '../Components/SucessPage/Success';
 
 
 
@@ -23,7 +24,7 @@ const Routing = () => {
         <Route path="/address" element={<MainAddress />} />
         <Route path="/checkout" element={<MainCheckout />} />
         <Route path="/login" element={<Popup />} />
-        <Route path="/paymentdone" element={<ThankYouPage />} />
+        <Route path="/paymentdone" element={<Success />} />
       </Routes>
     </div>
   );
