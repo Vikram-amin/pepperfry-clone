@@ -25,6 +25,7 @@ const ImageSlider = () => {
         carouselRef.current.goTo(0);
       }
     };
+    
     return (
       <div style={{width: "950px", height: "450px"}}>
         <Carousel

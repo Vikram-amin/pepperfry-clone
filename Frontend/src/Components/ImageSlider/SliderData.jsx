@@ -1,3 +1,5 @@
+
+
 export const SliderData = [
     {
         image : 'https://ii1.pepperfry.com/media/wysiwyg/banners/Promo_Web_2X_01042022_es.jpg'
