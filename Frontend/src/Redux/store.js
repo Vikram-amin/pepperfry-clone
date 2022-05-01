@@ -1,8 +1,9 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import {} from ""
+
 
 import productReducer from '../Redux/Product/product-reducer.js'
-
-
 
 const rootReducer = combineReducers({
   product: productReducer
