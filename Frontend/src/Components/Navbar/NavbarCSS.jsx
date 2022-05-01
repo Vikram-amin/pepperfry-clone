@@ -75,7 +75,8 @@ export const Nav = styled.div`
 `
 
 export const TopNav = styled.div`
-  width: 100%;
+  width: 88%;
+  margin: auto;
   display: flex;
   height: 80px;
 
