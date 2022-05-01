@@ -4,9 +4,10 @@ const connectToDB = require("./config/dbConnect");
 const app = require("./index");
 
 
+
 const server = app.listen(PORT, () => {
   new connectToDB();
-  console.log(`Server is listening on port: ${PORT}`);
+  console.log(`Server is listening at port: ${PORT}`);
 });
 
 
