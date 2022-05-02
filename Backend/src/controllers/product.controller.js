@@ -1,12 +1,16 @@
 
 const Product = require("../model/product.model");
-const constantObj = require("../commonLib/constant")
+const constantObj = require("../commonLib/constant");
+const APIfeatures = require("../utils/apiFeatures");
+
 
 
 // Get All Product
 const getAllProducts = async (req, res, next) => {
   try {
-  const product = await Product.find({});
+  const apiFeatures = new APIfeatures(Product.find(),req.query).serarch()
+  
+  const product = await apiFeatures.query;
   res.status(200).json({
     success: true,
     message: constantObj.success.DATA_FETCH,
