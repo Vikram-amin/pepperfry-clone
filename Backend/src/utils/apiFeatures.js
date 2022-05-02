@@ -12,6 +12,7 @@ function APIfeatures(query,queryString){
         return this;
     }
 
+    //searching
     this.serarch = () => {
       const keyword = this.queryString.keyword
         ? {
@@ -27,6 +28,26 @@ function APIfeatures(query,queryString){
       this.query = this.query.find({ ...keyword });
       return this;
     };
+
+// filtering
+ this.filter = () => {
+   let queryObj = { ...this.queryString };
+
+   // reomve some fieled for catogery
+   const reomveField = ["keyword", "page", "limit"];
+   reomveField.forEach((el) => delete queryObj[el]);
+
+   // filter for price and rating
+   let queryStr = JSON.stringify(queryObj); // covert to string
+   queryStr = queryStr.replace(/\b(gt|gte|lt|lte)\b/g, (key) => `$${key}`); // put in inside $ symobol o/p {"price":{"$gt":"2000","$lt":"25000"}}
+
+   this.query = this.query.find(JSON.parse(queryStr)); // convert to obj
+//    console.log(queryStr);
+
+   return this;
+
+ }
+
 }
 
 
