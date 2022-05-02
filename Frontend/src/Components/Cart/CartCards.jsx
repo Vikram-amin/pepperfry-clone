@@ -6,8 +6,7 @@ import {Flex} from '../../Utils/Common'
 import safe from '../../Images/safe.svg'
 import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import { adjustQuenty, decrement, increment, removeFromCart } from '../../Redux/Product/product-action';
-import { connect } from 'react-redux';
+
 
 
 
@@ -100,17 +99,6 @@ console.log(item.quantity);
 
 
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    // adjustQty: (id, value) => dispatch(adjustQuenty(id, value)),
-    increment: (id) => dispatch(increment(id)),
-    decrement: (id) => dispatch(decrement(id)),
-    removeFromCarts: (id) => dispatch(removeFromCart(id)),
-  };
-};
-
-export default connect(null, mapDispatchToProps)(CartCards);
-
-
+export default  CartCards
 
 

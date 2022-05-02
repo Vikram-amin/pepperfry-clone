@@ -8,13 +8,15 @@ const APIfeatures = require("../utils/apiFeatures");
 // Get All Product
 const getAllProducts = async (req, res, next) => {
   try {
-  const apiFeatures = new APIfeatures(Product.find(),req.query).serarch().filter()
+  const productCount = await Product.countDocuments()
+  const apiFeatures = new APIfeatures(Product.find(),req.query).serarch().pagination().filter()
   
-  const product = await apiFeatures.query;
+  const products = await apiFeatures.query;
   res.status(200).json({
     success: true,
     message: constantObj.success.DATA_FETCH,
-    product,
+    products,
+    productCount,
   });
   } catch (error) {
     res.status(500).json({

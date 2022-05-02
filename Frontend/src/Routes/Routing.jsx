@@ -8,7 +8,6 @@ import { MainProductDetail } from '../Components/ProductDetails/MainProductDetai
 import MainProductList from '../Components/ProductList/MainProductList';
 import { MainAddress } from "../Components/Address/MainAddress";
 import Popup from "../Components/Login/Popup"
-import ThankYouPage from '../Components/ThankYouPage';
 import Success from '../Components/SucessPage/Success';
 
 

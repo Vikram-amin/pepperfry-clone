@@ -2,3 +2,5 @@
 
 npm i redux-devtools-extension
 npm i axios
+npm i react-rating-stars-component
+npm i react-helmet  // dynamically title change
