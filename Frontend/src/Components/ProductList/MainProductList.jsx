@@ -7,6 +7,7 @@ import { Button, modalUnstyledClasses } from "@mui/material";
 import MetaData from "../layout/MetaData";
 import { getProduct } from "../../Redux/Product/product_action";
 import { useSelector, useDispatch } from "react-redux";
+import { ProductCardList, ProductListContainer, ProductListHeading } from "./ProductListCSS";
 
 
 const MainProductList =()=>{
@@ -28,16 +29,17 @@ const dispatch = useDispatch();
 
     return (
       <>
-        
         <MetaData title="Prduct lists" />
         <Navbar />
-        <div className="heading">
+
+        <ProductListHeading>
           <h1>Velvet Affairs</h1>
           <button className="btn-f">Furniture</button>
-        </div>
+        </ProductListHeading>
+
         <br />
 
-        <div className="product">
+        <ProductListContainer>
           <span className="filter">
             <div className="sort">
               <h4>Sort by</h4>
@@ -104,8 +106,18 @@ const dispatch = useDispatch();
             </div>
           </span>
 
-          <span className="list">
-            {/* {products
+          <ProductCardList>
+            {loading
+              ? "loading"
+              : products &&
+                products.map((items) => (
+                  <ProductCard key={items.id} product={items} />
+                ))}
+          </ProductCardList>
+        </ProductListContainer>
+        <Footer />
+
+        {/* {products
               .filter((items) => {
                 if ( items.brand.toLowerCase().includes(brand.toLocaleLowerCase()) && items.price < prices) {
                   return items;
@@ -114,15 +126,6 @@ const dispatch = useDispatch();
               .map((items) => (
                 <ProductCard key={items.id} product={items} />
               ))}  */}
-              
-            { loading ? "loading" : products &&
-              products.map((items) => (
-                <ProductCard key={items.id} product={items} />
-              ))}
-
-          </span>
-        </div>
-        <Footer />
       </>
     );
 }

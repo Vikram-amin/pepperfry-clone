@@ -2,7 +2,6 @@ import React from "react";
 import "../../style/product.css"
 import { Button, CardWrapper } from "./ProductListCSS";
 import { Link } from "react-router-dom";
-import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 
 
@@ -25,9 +24,9 @@ const options = {
       </div>
 
       <Button>ADD TO CART</Button>
-      <Link to={"/productlist/" + product.id}>
+      {/* <Link to={"/productlist/" + product.id}>
         <Button> VIEW </Button>
-      </Link>
+      </Link> */}
 
       <h4>{product.description}</h4>
       <h5 className="card-brand">{product.name}</h5>
