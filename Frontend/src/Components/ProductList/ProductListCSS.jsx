@@ -109,13 +109,10 @@ export const ProductCardList = styled.div`
 
 
 export const Button = styled.button`
-  border: none;
   border-radius: 2px;
-  color: transparent;
-  background-color: transparent;
   width: 15vh;
   height: 4vh;
   margin-left: 25px;
-  transition: background-color 1s, color 1s;
+  color : red;
 
 `;

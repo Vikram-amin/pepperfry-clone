@@ -3,7 +3,7 @@ import "../../style/product.css"
 import ProductCard from "./ProductCard";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
-import { Button, modalUnstyledClasses } from "@mui/material"; 
+import { Button, CircularProgress, modalUnstyledClasses } from "@mui/material"; 
 import MetaData from "../layout/MetaData";
 import { getProduct } from "../../Redux/Product/product_action";
 import { useSelector, useDispatch } from "react-redux";
@@ -107,11 +107,9 @@ const dispatch = useDispatch();
           </span>
 
           <ProductCardList>
-            {loading
-              ? "loading"
-              : products &&
+            { loading ? <CircularProgress /> : products &&
                 products.map((items) => (
-                  <ProductCard key={items.id} product={items} />
+                  <ProductCard key={items.id} product={items} loading = { loading } />
                 ))}
           </ProductCardList>
         </ProductListContainer>
