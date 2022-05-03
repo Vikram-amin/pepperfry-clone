@@ -28,8 +28,8 @@ const dispatch = useDispatch();
 
     return (
       <>
+        
         <MetaData title="Prduct lists" />
-
         <Navbar />
         <div className="heading">
           <h1>Velvet Affairs</h1>
@@ -115,7 +115,7 @@ const dispatch = useDispatch();
                 <ProductCard key={items.id} product={items} />
               ))}  */}
               
-            {products &&
+            { loading ? "loading" : products &&
               products.map((items) => (
                 <ProductCard key={items.id} product={items} />
               ))}
