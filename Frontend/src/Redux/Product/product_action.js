@@ -12,6 +12,7 @@ try {
      type: ALL_PRODUCT_SUCCESS,
      payload: data
    });
+   
   
 } catch (error) {
   dispatch({

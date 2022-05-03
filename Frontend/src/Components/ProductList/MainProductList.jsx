@@ -12,7 +12,7 @@ import { useSelector, useDispatch } from "react-redux";
 const MainProductList =()=>{
 
 const dispatch = useDispatch();
-// const [loading, error, products, productsCount] = useSelector((state) => state.products)
+ const { loading, error, products, productsCount} = useSelector((state) => state.products)
 
     const [brand,setBrand] = React.useState("");
     const [prices,setPrice] = React.useState(500000);
@@ -29,7 +29,6 @@ const dispatch = useDispatch();
     return (
       <>
         <MetaData title="Prduct lists" />
-      
 
         <Navbar />
         <div className="heading">
@@ -105,8 +104,6 @@ const dispatch = useDispatch();
             </div>
           </span>
 
-
-
           <span className="list">
             {/* {products
               .filter((items) => {
@@ -116,9 +113,14 @@ const dispatch = useDispatch();
               })
               .map((items) => (
                 <ProductCard key={items.id} product={items} />
-              ))} */}
-          </span>
+              ))}  */}
+              
+            {products &&
+              products.map((items) => (
+                <ProductCard key={items.id} product={items} />
+              ))}
 
+          </span>
         </div>
         <Footer />
       </>

@@ -19,10 +19,10 @@ const productSchema = mongoose.Schema({
     maxLength: [8, "Price cannot exceed 8 characters"],
   },
 
-  discount_percentage: { 
-    type: Number, 
-    required: true 
-},
+  discount_percentage: {
+    type: Number,
+    required: true,
+  },
 
   ratings: {
     type: Number,
@@ -32,7 +32,7 @@ const productSchema = mongoose.Schema({
   images: [
     {
       public_id: { type: String, required: true },
-      url: { type: String, required: true },
+      url: { type: Array, required: true },
     },
   ],
 
@@ -48,7 +48,7 @@ const productSchema = mongoose.Schema({
     default: 1,
   },
 
-  numOfReviews: {
+  numOfRatings : {
     type: Number,
     default: 0,
   },
@@ -62,7 +62,7 @@ const productSchema = mongoose.Schema({
       // },
 
       name: { type: String, required: true },
-      rating: { type: Number,  required: true },
+      rating: { type: Number, required: true },
       comment: { type: String, required: true },
     },
   ],
