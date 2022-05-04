@@ -3,7 +3,7 @@ import "../../style/product.css"
 import ProductCard from "./ProductCard";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
-import { Button, CircularProgress, modalUnstyledClasses } from "@mui/material"; 
+import { Button, CircularProgress} from "@mui/material"; 
 import MetaData from "../layout/MetaData";
 import { getProduct } from "../../Redux/Product/product_action";
 import { useSelector, useDispatch } from "react-redux";
@@ -12,7 +12,7 @@ import { ProductCardList, ProductListContainer, ProductListHeading } from "./Pro
 
 const MainProductList =()=>{
 
-const dispatch = useDispatch();
+ const dispatch = useDispatch();
  const { loading, error, products, productsCount} = useSelector((state) => state.products)
 
     const [brand,setBrand] = React.useState("");

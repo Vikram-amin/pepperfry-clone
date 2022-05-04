@@ -1,92 +1,119 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import { Link } from "react-router-dom";
 import "../../style/detail.css"
-import { Slider } from "./Slider";
-import { connect, useSelector } from "react-redux";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { FavoriteBorderOutlined } from "@mui/icons-material";
+import { useParams } from "react-router-dom";
+import Carousel from "react-material-ui-carousel";
+import { useSelector, useDispatch } from "react-redux";
+import { getProductDetails } from '../../Redux/ProductDetails/action' 
+import axios from "axios";
+import { Slider } from "./Slider";
+
+
 
 export const MainProductDetail = () =>{
-    const product = useSelector((state) => state.product.currentItem);
+  const { id } = useParams();
+ // const { product, loading, error } = useSelector((state) => state.productDetail);
+  // const dispatch = useDispatch();
 
-    const [pincode, setPincode] = React.useState("");
-    const handlerChange =(e) =>{
-        setPincode(e.target.value)
-    }
+    const [product, setProduct] = useState([]);
 
-    // console.log(product.img)
-    return (
-      <>
+  useEffect(() => {
+    getData()
+  },[])
+
+   const getData = async() => {
+     const { data } = await axios.get(`/api/v1/product/${id}`);
+       setProduct(data.product);
+   }
+
+     console.log(product.images)
+
+
+  // useEffect(() => {
+  //   dispatch(getProductDetails(id));
+  // }, [dispatch, id]);
+
+  const [pincode, setPincode] = React.useState("");
+  const handlerChange = (e) => {
+    setPincode(e.target.value);
+  };
+
+  return (
+    <>
       <Navbar />
       <br />
       <br />
-        <div className="detail">
-          <div className="img">
-            <Slider {...product} />
+      <div className="detail">
+        <div className="img">
+
+            {product.images && product.images.map((item, i) => (
+                <Slider  img={item.url}/>
+              ))}
+      
+        </div>
+        <div className="data">
+          <div className="product-name">
+            <h2>{product.description}</h2>
+            <FavoriteBorderOutlined className="heart" />
           </div>
-          <div className="data">
-            <div className="product-name">
-            <h2>{product.name}</h2>
-            <FavoriteBorderOutlined className="heart"/>
-            </div>
-            <h4 className="company">{product.madeBy}</h4>
-            <br />
-            <h6>36 Month's Warranty</h6>
-            <br />
-            <h1>₹{product.offer_price}</h1>
-            <h5>Save ₹{product.total_savings}</h5>
-            <div className="line"></div>
-            <br />
-            <h4>
-              Last Day to <a href="">Earn Cashback upto 5%</a>
-            </h4>
+          <h4 className="company">{product.name}</h4>
+          <br />
+          <h6>36 Month's Warranty</h6>
+          <br />
+          <h1>₹{product.price}</h1>
+          <h5>Save ₹{product.price}</h5>
+          <div className="line"></div>
+          <br />
+          <h4>
+            Last Day to <a href="">Earn Cashback upto 5%</a>
+          </h4>
 
-            <a href="">EMI option</a>
-            <br />
-            <br />
-            <img
-              className="offer"
-              src="https://ii2.pepperfry.com/media/wysiwyg/banners/Promo_Web_VIPCoupon_2X_01042022_es.jpg"
-              alt=""
-            />
-            <br /><br />
-            <label htmlFor="">DELIVERY &emsp; &emsp; &emsp; &emsp;Enter Pincode to get Delivery Date, Assembly Information and other details</label>
-            <h6></h6>
-            <input
-              type="number"
-              placeholder="Enter a Pincode"
-              value={pincode}
-              onChange={(e) => handlerChange(e)}
-              className="pincode"
-            />
-            <button className="pinBtn">APPLY</button>
-            <br />
-            <br />
-            <h4 className="del">
-              Delivery charges as applicable <b>Pincode Required</b>
-            </h4>
-            <h4 className="del">
-              Assembly Charges as applicable <b>Pincode Required</b>
-            </h4>
-            <br />
-            <div className="button">
-              <button className="add">ADD TO CART</button>
+          <a href="">EMI option</a>
+          <br />
+          <br />
+          <img
+            className="offer"
+            src="https://ii2.pepperfry.com/media/wysiwyg/banners/Promo_Web_VIPCoupon_2X_01042022_es.jpg"
+            alt=""
+          />
+          <br />
+          <br />
+          <label htmlFor="">
+            DELIVERY &emsp; &emsp; &emsp; &emsp;Enter Pincode to get Delivery
+            Date, Assembly Information and other details
+          </label>
+          <h6></h6>
+          <input
+            type="number"
+            placeholder="Enter a Pincode"
+            value={pincode}
+            onChange={(e) => handlerChange(e)}
+            className="pincode"
+          />
+          <button className="pinBtn">APPLY</button>
+          <br />
+          <br />
+          <h4 className="del">
+            Delivery charges as applicable <b>Pincode Required</b>
+          </h4>
+          <h4 className="del">
+            Assembly Charges as applicable <b>Pincode Required</b>
+          </h4>
+          <br />
+          <div className="button">
+            <button className="add">ADD TO CART</button>
 
-              <Link to={`/cart`}>
-                <button className="buy">BUY NOW</button>
-              </Link>
-            </div>
+            <Link to={`/cart`}>
+              <button className="buy">BUY NOW</button>
+            </Link>
           </div>
         </div>
-        <Footer />
-      </>
-    );
+      </div>
+      <Footer />
+    </>
+  );
 }
-// const mapStateToProps=state=>{
-//     return {
-//         currentItem: state.products.currentItem
-//     }
-// }
 
-// export default connect(mapStateToProps)(MainProductDetail);
