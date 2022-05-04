@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterBox = styled.div`
-    height: 900px;
+    height: 130vh;
     width: 100%;
     background-color: #f3f5f7;
     hr{
@@ -13,8 +13,8 @@ export const FooterFirstHalf = styled.div`
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap:50px;
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-left: 7%;
+    margin-right: 7%;
     padding: 55px;
     padding-bottom: 0;
 `
@@ -77,8 +77,8 @@ export const DownloadApp = styled.div`
 export const FooterSecondHalf = styled.div`
     display: grid;
     grid-template-columns: auto auto auto;
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-left: 7%;
+    margin-right: 7%;
     padding: 55px;
     grid-gap: 50px;
 `
@@ -134,8 +134,8 @@ export const FooterThirdHalf = styled.div`
     grid-template-columns: auto auto;
     margin-top: 2%;
     margin-bottom: 2%;
-    margin-left: 140px;
-    margin-right: 110px;
+    margin-left: 10%;
+    margin-right: 7%;
     grid-gap: 20px;
     .titles{
         font-size: 16px;

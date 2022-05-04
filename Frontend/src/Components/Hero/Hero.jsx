@@ -9,9 +9,9 @@ const Hero = () => {
         <HomeContainer>
             <div className="belowNavbar">
                 <ImageSlider slides={SliderData}/>
-                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/New-Beginning_RHS.gif" alt={"SideImage"} className="sideImage"/>
+                <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Web_Scandinavian_RHS_26042022.jpg" alt={"SideImage"} className="sideImage"/>
             </div>
-            <RectangularBlock><img src="https://ii3.pepperfry.com/media/wysiwyg/banners/2021_web_regBanner_05042022.jpg" alt={"T&C"}/></RectangularBlock>
+            <RectangularBlock><img src="https://ii3.pepperfry.com/media/wysiwyg/banners/2021_web_regBanner_21042022.jpg" alt={"T&C"}/></RectangularBlock>
             <h1>Shop By Room</h1>
             <Shop>
                 <div>

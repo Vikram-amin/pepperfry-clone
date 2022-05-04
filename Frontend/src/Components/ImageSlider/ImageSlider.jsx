@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
-import { Carousel } from 'react-responsive-carousel';
+import Carousel from 'react-elastic-carousel';
 import { SliderData } from './SliderData';
 
 const Button = styled.button`
@@ -48,12 +48,12 @@ const ImageSlider = () => {
         </Carousel>
   
         <div style={{ display: "flex", justifyContent: "center" }}>
-          {SliderData.map(( _ , i) => (
+          {SliderData.map(( _ , idx) => (
             <div>
               <Button
-                key={i}
-                active={i === activeItemIndex}
-                onClick={() => carouselRef.current.goTo(i)}
+                key={idx}
+                active={idx === activeItemIndex}
+                onClick={() => carouselRef.current.goTo(idx)}
               />
             </div>
           ))}

@@ -270,3 +270,150 @@
 //       },
 
 //     ],
+
+// [
+//    {
+//             "name" : "Bohemiana",
+//             "description" : "Somova Upholstered Cafe Chair In Yellow Colour",
+//             "price" : "17999",
+//             "discount_percentage" : "38",
+//             "category" : "Chairs",
+//              "ratings" : "5",
+//              "numOfRatings" : "2",
+//              "Stock" : "9",
+            
+//         "images" : {
+//             "public_id" : "3" ,
+//             "url" : ["https://ii1.pepperfry.com/media/catalog/product/s/o/70x77/somova-upholstered-cafe-chair-in-yellow-colour--bohemiana-by-pepperfry-somova-upholstered-cafe-chair-in4o9m.jpg",
+//                         "https://ii3.pepperfry.com/media/catalog/product/s/o/70x77/somova-upholstered-cafe-chair-in-yellow-colour-bohemiana-by-pepperfry-somova-upholstered-cafe-chair--h62kti.jpg",
+//                         "https://ii1.pepperfry.com/media/catalog/product/s/o/70x77/somova-upholstered-cafe-chair-in-yellow-colour-bohemiana-by-pepperfry-somova-upholstered-cafe-chair--wus9fr.jpg",
+//                         "https://ii2.pepperfry.com/media/catalog/product/s/o/70x77/somova-upholstered-cafe-chair-in-yellow-colour-bohemiana-by-pepperfry-somova-upholstered-cafe-chair--98mfce.jpg"]
+//         }
+//     },
+    // {
+    //     "name" : "Orange Tree",
+    //     "description" : "Yoho Cafe Chairs (Set Of 2) In Natural Finish",
+    //     "price" : "34162",
+    //     "discount_percentage" : "5",
+    //     "category" : "Chairs",
+    //     "ratings" : "5",
+    //     "numOfRatings" : "6",
+    //     "Stock" : "12",
+        
+    //     "images" : {
+    //         "public_id" : "4" ,
+    //         "url" : ["https://ii1.pepperfry.com/media/catalog/product/y/o/70x77/yoho-cafe-chair--set-of-2--in-natural-finish-by-orange-tree-yoho-cafe-chair--set-of-2--in-natural-fi-pqgnrh.jpg",
+    //                    "https://ii3.pepperfry.com/media/catalog/product/y/o/70x77/yoho-cafe-chair-in-natural-finish-by-orange-tree-yoho-cafe-chair-in-natural-finish-by-orange-tree-272cg1.jpg",
+    //                    "https://ii3.pepperfry.com/media/catalog/product/y/o/70x77/yoho-cafe-chair-in-natural-finish-by-orange-tree-yoho-cafe-chair-in-natural-finish-by-orange-tree-7qxbf0.jpg",
+    //                    "https://ii1.pepperfry.com/media/catalog/product/y/o/70x77/yoho-cafe-chair-in-natural-finish-by-orange-tree-yoho-cafe-chair-in-natural-finish-by-orange-tree-qdzlw2.jpg"]
+    //     }
+    // },
+//     {
+//         "name" : "Amberville",
+//         "description" : "Clifford Solid Wood Nest Of Tables In Honey Oak Finish",
+//         "price" : "14999",
+//         "discount_percentage" : "35",
+//         "category" : "Tables",
+//         "ratings" : "4.5",
+//         "numOfRatings" : "47",
+//         "Stock" : "6",
+        
+//         "images" : {
+//             "public_id" : "5" ,
+//             "url" : ["https://ii1.pepperfry.com/media/catalog/product/c/l/70x77/clifford-solid-wood-nest-of-tables-in-honey-oak-finish---amberville-by-pepperfry-clifford-solid-wood-aixzs7.jpg",
+//                        "https://ii3.pepperfry.com/media/catalog/product/c/l/70x77/clifford-set-of-table-in-honey-oak-finish-by-amberville-clifford-set-of-table-in-honey-oak-finish-by-gcpvnf.jpg",
+//                        "https://ii3.pepperfry.com/media/catalog/product/c/l/70x77/clifford-set-of-table-in-honey-oak-finish-by-amberville-clifford-set-of-table-in-honey-oak-finish-by-yh3ypt.jpg",
+//                        "https://ii1.pepperfry.com/media/catalog/product/c/l/70x77/clifford-set-of-table-in-honey-oak-finish-by-amberville-clifford-set-of-table-in-honey-oak-finish-by-cwo5l4.jpg"]
+//         }
+//     },
+//     {
+//         "name" : "Crystal Furnitech",
+//         "description" : "Scion Dresser in White Lily & Walnut Finish",
+//         "price" : "14018",
+//         "discount_percentage" : "41",
+//         "category" : "Tables",
+//         "ratings" : "4.5",
+//         "numOfRatings" : "1035",
+//         "Stock" : "5",
+        
+//         "images" : {
+//             "public_id" : "6" ,
+//             "url" : ["https://ii1.pepperfry.com/media/catalog/product/s/c/70x77/scion-dresser-in-white-lily---walnut-finish-by-crystal-furnitech-scion-dresser-in-white-lily---walnu-byi7mg.jpg",
+//                        "https://ii2.pepperfry.com/media/catalog/product/s/c/70x77/scion-dresser-in-white-lily---walnut-finish-by-crystal-furnitech-scion-dresser-in-white-lily---walnu-vmtmdj.jpg",
+//                        "https://ii3.pepperfry.com/media/catalog/product/s/c/70x77/scion-dressing-table-in-white-lily---walnut-finish-by-crystal-furnitech-scion-dressing-table-in-whit-rdfa9g.jpg",
+//                        "https://ii1.pepperfry.com/media/catalog/product/s/i/70x77/simon-dressing-table-in-white-lily---walnut-colour-by-crystal-furnitech-simon-dressing-table-in-whit-kpmayy.jpg"]
+//         }
+//     },
+//     {
+//         "name" : "CasaCraft",
+//         "description" : "Brayan Upholstered King Size Bed with Hydraulic Storage in Light Grey",
+//         "price" : "42499",
+//         "discount_percentage" : "43",
+//         "category" : "Beds",
+//         "ratings" : "4",
+//         "numOfRatings" : "75",
+//         "Stock" : "3",
+        
+//         "images" : {
+//             "public_id" : "7" ,
+//             "url" : ["https://ii2.pepperfry.com/media/catalog/product/b/r/70x77/brayan-upholstered-king-size-bed-with-hydraulic-storage-in-light-grey-colour-by-casacraft-brayan-uph-2tlcn3.jpg",
+//                        "https://ii3.pepperfry.com/media/catalog/product/b/r/70x77/brayan-upholstered-king-size-bed-with-hydraulic-storage-in-light-grey-colour---casacraft-by-pepperfr-6vdxoc.jpg",
+//                        "https://ii3.pepperfry.com/media/catalog/product/b/r/70x77/brayan-upholstered-king-size-bed-with-hydraulic-storage-in-light-grey-colour-by-casacraft-brayan-uph-cnpes9.jpg",
+//                        "https://ii1.pepperfry.com/media/catalog/product/b/r/70x77/brayan-upholstered-king-size-bed-with-hydraulic-storage-in-light-grey-colour-by-casacraft-brayan-uph-ehwiqr.jpg"]
+//         }
+//     },
+//     {
+//         "name" : "CasaCraft",
+//         "description" : "Alonso Upholstered Queen Size Bed in Beige Colour",
+//         "price" : "32963",
+//         "discount_percentage" : "43",
+//         "category" : "Beds",
+//         "ratings" : "5",
+//         "numOfRatings" : "28",
+//         "Stock" : "4",
+        
+//         "images" : {
+//             "public_id" : "8" ,
+//             "url" : ["https://ii1.pepperfry.com/media/catalog/product/a/l/70x77/alonso-upholstered-queen-size-bed-in-beige-colour-by-casacraft-alonso-upholstered-queen-size-bed-in--nag5il.jpg",
+//                        "https://ii3.pepperfry.com/media/catalog/product/a/l/70x77/alonso-upholstered-queen-size-bed-in-beige-colour-by-casacraft-alonso-upholstered-queen-size-bed-in--93kx9e.jpg",
+//                        "https://ii3.pepperfry.com/media/catalog/product/a/l/70x77/alonso-upholstered-queen-size-bed-in-beige-colour-by-casacraft-alonso-upholstered-queen-size-bed-in--wvbjey.jpg",
+//                        "https://ii1.pepperfry.com/media/catalog/product/a/l/70x77/alonso-upholstered-queen-size-bed-in-beige-colour-by-casacraft-alonso-upholstered-queen-size-bed-in--xy69rs.jpg"]
+//         }
+//     },
+//     {
+//         "name" : "Woodsworth",
+//         "description" : "Biscay Solid Wood 6 Seater Dining Set With Bench In Rustic Teak Finish",
+//         "price" : "55999",
+//         "discount_percentage" : "38",
+//         "category" : "Dining sets",
+//         "ratings" : "5",
+//         "numOfRatings" : "63",
+//         "Stock" : "10",
+        
+//         "images" : {
+//             "public_id" : "9" ,
+//             "url" : ["https://ii1.pepperfry.com/media/catalog/product/b/i/70x77/biscay-solid-wood-6-seater-dining-set-with-bench-in-rustic-teak-finish---woodsworth-by-pepperfry-bis-ozjnxn.jpg",
+//                        "https://ii2.pepperfry.com/media/catalog/product/b/i/70x77/biscay-solid-wood-6-seater-dining-set-with-bench-in-rustic-teak-finish---woodsworth-by-pepperfry-bis-qm5sjh.jpg",
+//                        "https://ii3.pepperfry.com/media/catalog/product/b/i/70x77/biscay-solid-wood-6-seater-dining-set-with-bench-in-rustic-teak-finish-by-woodsworth-biscay-solid-wo-zd0hvt.jpg"]
+//         }
+//     },
+//     {
+//         "name" : "Woodsworth",
+//         "description" : "Nuevo Solid Wood 6 Seater Dining Set With Bench In Rustic Teak Finish",
+//         "price" : "49999",
+//         "discount_percentage" : "38",
+//         "category" : "Dining sets",
+//         "ratings" : "4.5",
+//         "numOfRatings" : "60",
+//         "Stock" : "2",
+        
+//         "images" : {
+//             "public_id" : "10" ,
+//             "url" : ["https://ii1.pepperfry.com/media/catalog/product/n/u/70x77/nuevo-solid-wood-6-seater-dining-set-with-bench-in-rustic-teak-finish---woodsworth-by-pepperfry-nuev-lqaruj.jpg",
+//                        "https://ii2.pepperfry.com/media/catalog/product/n/u/70x77/nuevo-solid-wood-6-seater-dining-set-in-rustic-teak-finish-by-woodsworth-nuevo-solid-wood-6-seater-d-jzrbsl.jpg",
+//                        "https://ii3.pepperfry.com/media/catalog/product/n/u/70x77/nuevo-solid-wood-6-seater-dining-set-in-rustic-teak-finish-by-woodsworth-nuevo-solid-wood-6-seater-d-s1idrv.jpg",
+//                        "https://ii2.pepperfry.com/media/catalog/product/n/u/70x77/nuevo-solid-wood-6-seater-dining-set-in-rustic-teak-finish-by-woodsworth-nuevo-solid-wood-6-seater-d-urfk8v.jpg"
+//                     ]
+//         }
+//     },
+// ]
