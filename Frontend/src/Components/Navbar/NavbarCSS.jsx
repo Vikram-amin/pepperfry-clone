@@ -18,7 +18,7 @@ export const Sale = styled.div`
 `
 
 export const LeftText = styled.div`
-    margin-left: 90px;
+    margin-left: 7%;
 
     span {
         color: #FF7035;
@@ -26,14 +26,16 @@ export const LeftText = styled.div`
 `
 
 export const RightText = styled.div`
-    margin-right: 90px;
+    margin-right: 7%;
     font-weight: normal;
 
     a{
         color: #FF7035;
     }
 `
-
+export const WholeNavbar = styled.div`
+    width:100%;
+`
 export const Dummy = styled.nav`
     background: #f5f5f5;
     height: 40px;
@@ -45,7 +47,7 @@ export const Dummy = styled.nav`
 
 export const DummyLeft = styled.div`
     display: flex;
-    margin-left: 90px;
+    margin-left: 7%;
     padding: 11px 0;
     span {
         padding-right: 20px;
@@ -56,7 +58,7 @@ export const DummyLeft = styled.div`
 
 export const DummyRight = styled.div`
     display: flex;
-    margin-right: 90px;
+    margin-right: 7%;
     padding-right: 0px;
     padding: 11px;
     font-weight: lighter;
@@ -75,17 +77,17 @@ export const Nav = styled.div`
 `
 
 export const TopNav = styled.div`
-  width: 88%;
+  width: 87%;
   margin: auto;
   display: flex;
-  height: 80px;
+  height: 8vh;
 
   padding-top: 18px;
   .iconDiv {
     margin-left: 20px;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-gap: 15px;
+    grid-gap: 12px;
   }
   .icon {
     color: black;
@@ -108,23 +110,11 @@ export const NavLogo = styled(LinkR)`
 `
 
 export const SearchBar = styled.input`
-    height: 38px;
-    width: 880px;
+    height: 6vh;
+    width: 850px;
     padding: 10px;
     background: #f5f5f5;
     border: none;
     font-size: 15px;
     font-weight: lighter;
 `
-
-// export const DropdownMenu = styled.nav`
-//     display: flex;
-//     margin-left: 90px;
-//     margin-right: 90px;
-//     div{
-//         font-weight: bolder;
-//         padding: 10px;
-//         padding-top: 0;
-//         font-size: 14px;
-//     }
-// `

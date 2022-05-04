@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Header, Sale, LeftText, RightText, Dummy, DummyLeft, DummyRight, TopNav, Nav, NavLogo, SearchBar} from './NavbarCSS';
+import {  Header, Sale, LeftText, RightText, Dummy, DummyLeft, DummyRight, TopNav, Nav, NavLogo, SearchBar, WholeNavbar} from './NavbarCSS';
 import Images from '../../Images/logo.png';
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -17,10 +17,11 @@ const Navbar = () => {
     <>
       <Header>
         <Sale>
-          <LeftText>Shubh Aarambh Sale | Up to 60% Off | Use Code <span>SHUBH</span></LeftText>
+          <LeftText>Super Momma Sale | Up to 60% Off | Use Code <span>MOM</span></LeftText>
           <RightText>Extra 20% Cashback On All Orders | T&C Apply <a href="/">Sign Up</a></RightText>
         </Sale>
       </Header>
+    <WholeNavbar>
       <Dummy>
         <DummyLeft>
             <span>Sell on Pepperfry</span>
@@ -63,9 +64,8 @@ const Navbar = () => {
           <MainLogin trigger = {popup} setTrigger={popupTrig}/>
         </div>
         <DropdownMenu />
-        
       </Nav>
-      
+    </WholeNavbar>
     </>
   )
 }
