@@ -20,7 +20,7 @@ const CartCards = ({ item, adjustQty, removeFromCarts ,increment,decrement}) => 
 //  adjustQty(item.id, count);
 // }, [count]); 
  
-console.log(item.quantity);
+// console.log(item.quantity);
 
   
   return (

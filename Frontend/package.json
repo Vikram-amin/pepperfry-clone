@@ -22,6 +22,7 @@
     "react-elastic-carousel": "^0.11.5",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
+    "react-material-ui-carousel": "^3.3.3",
     "react-rating-stars-component": "^2.2.0",
     "react-redux": "^7.2.8",
     "react-responsive-carousel": "^3.2.23",

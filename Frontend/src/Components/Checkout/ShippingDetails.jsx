@@ -3,7 +3,6 @@ import { BillingDetailContainer, BillingDetals, ShipingDetals } from './Checkout
 
 
 const address = JSON.parse(localStorage.getItem("address"));
-console.log(address)
 
 const ShippingDetails = () => {
   return (

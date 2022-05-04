@@ -22,7 +22,7 @@ const Payment = () => {
     setFormData({ ...formData, [name]: value });
   };
   
-  console.log(formData)
+  // console.log(formData)
 
      const handleSubmit = () => {
         if (formData.name === "" || formData.number === "" || formData.cvv === "" || formData.expiry === "" || formData.name === "") {

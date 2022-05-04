@@ -49,10 +49,6 @@ const Price = ({cart}) => {
     setTotalPrice (price + 99 + 1500)
   }, [cart, price, totalItem, setTotalItem, setPrice,discount,setDiscount]);
 
-
-
-
- console.log(discount);
   return (
     <PriceDiv>
       <PriceWraper>

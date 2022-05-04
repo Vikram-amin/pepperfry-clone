@@ -14,9 +14,8 @@ const options = {
 };
 
 
-
   return (
-    <>
+    <Link to={`/product/${product._id}`}>
       <CardWrapper>
         <img src={product.images[0].url[0]} alt="productImage" />
 
@@ -37,7 +36,7 @@ const options = {
         <h4 className="card-savings">{product.discount_percentage}% Off</h4>
         <h6>Ships in 1 day</h6>
       </CardWrapper>
-    </>
+    </Link>
   );
 };
 
