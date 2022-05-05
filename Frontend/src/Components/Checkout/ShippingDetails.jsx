@@ -1,10 +1,14 @@
 import React from 'react'
 import { BillingDetailContainer, BillingDetals, ShipingDetals } from './CheckoutCSS';
+import { useSelector } from "react-redux";
 
-
-const address = JSON.parse(localStorage.getItem("address"));
+ 
 
 const ShippingDetails = () => {
+
+   const { shippingInfo } = useSelector((state) => state.cart);
+   const address = shippingInfo;
+
   return (
     <BillingDetailContainer>
       <ShipingDetals>

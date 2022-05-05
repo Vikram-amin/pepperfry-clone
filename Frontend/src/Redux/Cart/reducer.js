@@ -1,17 +1,20 @@
-import { ADD_TO_CART, REMOVE_CART_ITEM } from "./actionType";
+import { ADDRESS_INFO_SAVE, ADD_TO_CART, REMOVE_CART_ITEM } from "./actionType";
 
 export const cartReducer = (
-  state = { cartItems: [] },action) => {
+  state = { cartItems: [], shippingInfo : {}},action) => {
   switch (action.type) {
     case ADD_TO_CART:
       const item = action.payload;
 
-      const isItemExist = state.cartItems.find((i) => i.product === item.product);
+      const isItemExist = state.cartItems.find(
+        (i) => i.product === item.product
+      );
 
       if (isItemExist) {
         return {
           ...state,
-          cartItems: state.cartItems.map((i) => i.product === isItemExist.product ? item : i
+          cartItems: state.cartItems.map((i) =>
+            i.product === isItemExist.product ? item : i
           ),
         };
       } else {
@@ -25,6 +28,12 @@ export const cartReducer = (
       return {
         ...state,
         cartItems: state.cartItems.filter((i) => i.product !== action.payload),
+      };
+
+    case ADDRESS_INFO_SAVE:
+      return {
+        ...state,
+        shippingInfo: action.payload,
       };
 
     default:
