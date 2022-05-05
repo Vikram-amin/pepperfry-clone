@@ -5,7 +5,7 @@ const { isAuthenticatedUser } = require('../middleware/authentication');
 
  
 router.post('/products/new', createProduct)
-router.get("/products", isAuthenticatedUser, getAllProducts);
+router.get("/products", getAllProducts);
 router.get("/product/:id", getProductDetail);
 router.put("/product/:id", updateProduct);
 router.delete("/product/:id", deleteProduct);

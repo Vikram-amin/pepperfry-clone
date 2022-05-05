@@ -10,37 +10,27 @@ import {
   Hr,
   PriceDiv,
 } from "./PriceCSS";
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 
-
-
-// const sofas = {
-//   id: 1,
-//   name: "Esteban 3 Seater Half Leather Sofa in Grey Colour",
-//   img: "https://ii1.pepperfry.com/media/catalog/product/e/s/800x400/esteban-3-seater-half-leather-sofa-in-grey-colour-by-casacraft-esteban-3-seater-half-leather-sofa-in-8akxht.jpg",
-//   madeBy: "CasaCraft by Pepperfry",
-//   price: "1,13,999",
-//   actual_price: "1,84,999",
-// };
 
 const Price = ({cart}) => {
+  const { cartItems } = useSelector((state) => state.cart);
   const [price, setPrice] = useState(0);
   const [totalItem, setTotalItem] = useState(0);
-    const [discount, setDiscount] = useState(0);
-     const [totalPrice, setTotalPrice] = useState(0);
+  const [discount, setDiscount] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     let items = 0;
     let price = 0;
     let discount = 0;
 
-    cart.forEach((item) => {
+    cartItems.forEach((item) => {
       // console.log(item.qty,"hjfghf")
-      items += item.qty;
-      price += item.qty * item.price;
-      discount = item.actual_price - item.price;
-   
+      items += item.quantity;
+      price += item.quantity * item.price;
+      discount = item.price - item.price;
     });
 
     setTotalItem(items);
@@ -92,7 +82,14 @@ const Price = ({cart}) => {
           <TotalPrice>
             <div className="total"> Total</div>
             <div>
-              <div className="totalPrice">₹ {totalPrice}</div>
+              <div className="totalPrice">
+                ₹
+                {cartItems.reduce(
+                  (acc, item) => acc + item.quantity * item.price,
+                  0
+                )}
+                
+              </div>
               <div className="tax">(Inclusive of all taxes)</div>
             </div>
           </TotalPrice>
@@ -100,15 +97,9 @@ const Price = ({cart}) => {
           <Hr />
         </PriceContainer>
       </PriceWraper>
-
     </PriceDiv>
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    cart: state.product.cart,
-  };
-};
 
-export default connect(mapStateToProps)(Price);
+export default Price;

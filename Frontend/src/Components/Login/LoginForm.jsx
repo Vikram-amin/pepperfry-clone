@@ -9,6 +9,8 @@ export const LoginForm = (props) =>{
     const [number,setNumber] = React.useState("");
     const [email,setEmail] = React.useState("");
     const [password,setPassword] = React.useState("");
+
+
     const saveData =()=>{
         localStorage.clear();
         var user ={
@@ -20,6 +22,7 @@ export const LoginForm = (props) =>{
         localStorage.setItem("userData",JSON.stringify(user));
         alert("Welcome! " +name);
     }
+    
     return(props.trig)?(
         <div className="full">
             <div>

@@ -1,4 +1,3 @@
-export const ADD_TO_CART = 'ADD_TO_CART';
-export const REMOVE_FROM_CART = " REMOVE_FROM_CART";
-export const ADJUST_QUT = "ADJUST_QUT";
-export const LOAD_CURRENT_ITEM = "LOAD_CURRENT_ITEM";
+export const ADD_TO_CART = "ADD_TO_CART";
+export const REMOVE_CART_ITEM = "REMOVE_CART_ITEM";
+export const SAVE_SHIPPING_INFO = "SAVE_SHIPPING_INFO";

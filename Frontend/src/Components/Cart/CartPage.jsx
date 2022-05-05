@@ -7,31 +7,12 @@ import  CartCards  from './CartCards';
 import Price  from '../PriceCard/Price';
 import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { connect } from 'react-redux';
 
-
-
-const CartPage= ({cart}) => {
+const CartPage= () => {
 
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalItem,setTotalItem] = useState(0);
 
-useEffect(() => {
-  let items = 0;
-  let price = 0;
-  
-  cart.forEach((item) => {
-
-    items += item.qty;
-    price += item.qty * item.price;
-  })
-
-  setTotalItem(items);
-  setTotalPrice(price);
-},[cart,totalPrice,totalItem,setTotalItem,setTotalPrice])
-
-
-// console.log(isNaN(totalPrice) ,'abc')
 
   return (
     <>
@@ -48,13 +29,7 @@ useEffect(() => {
           </CartHeader>
 
           <div>
-            {/* cartcard */}
-
-            {
-            cart.map((item) => (
-              <CartCards key={item.id} item={item} totalPrice = {totalPrice} totalItem={totalItem}/>
-            ))
-            }
+            <CartCards />
           </div>
         </CartLeft>
 
@@ -62,6 +37,7 @@ useEffect(() => {
           <CoupenDiv>
             <ConfirmationNumberIcon /> <span> Apply Coupen</span>
           </CoupenDiv>
+    
 
           <PriceContainer>
             {/* PriceCard */}
@@ -103,10 +79,6 @@ useEffect(() => {
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    cart: state.product.cart,
-  };
-};
 
-export default connect(mapStateToProps)(CartPage);
+
+export default CartPage

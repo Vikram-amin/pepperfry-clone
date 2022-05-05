@@ -2,11 +2,8 @@ const {body, validationResult} = require('express-validator');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require("../model/user.model");
+const sendToken = require('../utils/jwtToken');
 
-// const client = require("twilio")(
-//     process.env.ACCOUNT_SID,
-//     process.env.AUTH_TOKEN
-// );
 
 
 // //Create or Register User
@@ -19,13 +16,14 @@ const registerUser = async(req, res, next) => {
             password: req.body.password
         });
 
-        const token = user.getJWTtoken()
+        // const token = user.getJWTtoken()
 
-        res.status(201).json({
-            success : true, 
-            user,
-            token
-        })
+        // res.status(201).json({
+        //     success : true, 
+        //     user,
+        //     token
+        // })
+          sendToken(user, 201, res);
 
     }catch(error){
         res.status(500).json({message : error.message});
@@ -51,13 +49,14 @@ const userLogin = async(req,res,next) => {
             return res.status(401).json({status : "failed" , message : "Invalid email or password"})
         }
 
-        const token = user.getJWTtoken();
+      //  const token = user.getJWTtoken();
 
-        res.status(200).json({
-            success: true,
-            user,
-            token,
-        });
+        // res.status(200).json({
+        //     success: true,
+        //     user,
+        //     token,
+        // });
+        sendToken(user, 200, res);
 
     } catch (error) {
         res.status(500).json({ message: error.message });

@@ -10,13 +10,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { getProductDetails } from '../../Redux/ProductDetails/action' 
 import axios from "axios";
 import { Slider } from "./Slider";
+import { addItemsToCart } from "../../Redux/Cart/action"
 
 
 
 export const MainProductDetail = () =>{
   const { id } = useParams();
  // const { product, loading, error } = useSelector((state) => state.productDetail);
-  // const dispatch = useDispatch();
+   const dispatch = useDispatch();
 
     const [product, setProduct] = useState([]);
 
@@ -41,6 +42,11 @@ export const MainProductDetail = () =>{
     setPincode(e.target.value);
   };
 
+  
+  const addToCartHandler = () => {
+    dispatch(addItemsToCart (id,1));
+  };
+
   return (
     <>
       <Navbar />
@@ -48,11 +54,8 @@ export const MainProductDetail = () =>{
       <br />
       <div className="detail">
         <div className="img">
-
-            {product.images && product.images.map((item, i) => (
-                <Slider  img={item.url}/>
-              ))}
-      
+          {product.images &&
+            product.images.map((item, i) => <Slider img={item.url} />)}
         </div>
         <div className="data">
           <div className="product-name">
@@ -104,7 +107,9 @@ export const MainProductDetail = () =>{
           </h4>
           <br />
           <div className="button">
-            <button className="add">ADD TO CART</button>
+            <button className="add" onClick={addToCartHandler}>
+              ADD TO CART
+            </button>
 
             <Link to={`/cart`}>
               <button className="buy">BUY NOW</button>

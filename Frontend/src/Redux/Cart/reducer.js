@@ -1,28 +1,33 @@
-import { ADD_TO_CART, ADJUST_QUT, LOAD_CURRENT_ITEM, REMOVE_FROM_CART } from "./actionType";
+import { ADD_TO_CART, REMOVE_CART_ITEM } from "./actionType";
 
-const initaialState = {
-  products : [],
-  cart : [],
-  currentItem : null,
-};
-
-const shopReducer = (state = initaialState, action) => {
+export const cartReducer = (
+  state = { cartItems: [] },action) => {
   switch (action.type) {
     case ADD_TO_CART:
-      return {};
+      const item = action.payload;
 
-    case REMOVE_FROM_CART:
-      return {};
+      const isItemExist = state.cartItems.find((i) => i.product === item.product);
 
-    case ADJUST_QUT:
-      return {};
+      if (isItemExist) {
+        return {
+          ...state,
+          cartItems: state.cartItems.map((i) => i.product === isItemExist.product ? item : i
+          ),
+        };
+      } else {
+        return {
+          ...state,
+          cartItems: [...state.cartItems, item],
+        };
+      }
 
-    case LOAD_CURRENT_ITEM:
-      return {};
+    case REMOVE_CART_ITEM:
+      return {
+        ...state,
+        cartItems: state.cartItems.filter((i) => i.product !== action.payload),
+      };
 
     default:
       return state;
   }
 };
-
-export { shopReducer };

@@ -4,6 +4,7 @@ import "../../style/form.css"
 function SignupForm(props) {
 const [number, setNumber] = React.useState("");
 const [password,setPassword] = React.useState("");
+
 const getData =()=>{
   var user = JSON.parse(localStorage.getItem('userData'));
   if(user.email===number&&user.password===password){

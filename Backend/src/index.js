@@ -3,10 +3,15 @@ const app = express()
 const orderRoute = require('./Routes/order.route')
 const productRoute = require("./Routes/product.route");
 const userRoute = require("./Routes/user.route")
+const cookieParser = require("cookie-parser");
+
+
 app.use(express.json());
+app.use(cookieParser());
 
 
-app.use("/api/v1/order",orderRoute)
+
+app.use("/api/v1/",orderRoute)
 app.use("/api/v1", productRoute);
 app.use("/api/v1/user" , userRoute)
 
