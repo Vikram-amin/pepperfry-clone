@@ -9,7 +9,7 @@ import MainProductList from '../Components/ProductList/MainProductList';
 import { MainAddress } from "../Components/Address/MainAddress";
 import Popup from "../Components/Login/Popup"
 import Success from '../Components/SucessPage/Success';
-
+import CardPayment from '../Components/CardPayment/CardPayment';
 
 
 const Routing = () => {
@@ -23,6 +23,7 @@ const Routing = () => {
         <Route path="/address" element={<MainAddress />} />
         <Route path="/checkout" element={<MainCheckout />} />
         <Route path="/login" element={<Popup />} />
+        <Route path="/cardpayment" element={<CardPayment />} />
         <Route path="/paymentdone" element={<Success />} />
       </Routes>
     </div>

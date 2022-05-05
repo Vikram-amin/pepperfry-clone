@@ -1,6 +1,9 @@
 .slider{
-    height: 60vh;
+    height: 48vh;
+    width: 90%;
+    padding-left: 5%;
 }
+
 .log{
     background-color: transparent;
     border: none;
