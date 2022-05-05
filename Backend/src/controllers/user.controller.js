@@ -23,6 +23,7 @@ const registerUser = async(req, res, next) => {
 
         res.status(201).json({
             success : true, 
+            user,
             token
         })
 
@@ -54,6 +55,7 @@ const userLogin = async(req,res,next) => {
 
         res.status(200).json({
             success: true,
+            user,
             token,
         });
 
@@ -63,9 +65,21 @@ const userLogin = async(req,res,next) => {
 
 }
 
+//logout
+
+const userLogout = async(req, res, next) => {
+  const token = req.body("token", null, {
+      expires : new Date(Date.now()),
+      httpOnly : true,
+  })
+  
+  res.status(200).json({ status : true, message: "Logout" });
+}
+
 
 
 module.exports = {
   registerUser,
   userLogin,
+  userLogout,
 };

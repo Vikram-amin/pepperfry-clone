@@ -13,7 +13,7 @@ function DropdownMenu() {
         <div className="category">
           <p
             className="categoryP"
-            onClick={() => {
+            onMouseOver={() => {
               setNav(!nav);
             }}
           >

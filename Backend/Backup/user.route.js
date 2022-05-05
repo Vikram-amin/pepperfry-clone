@@ -20,6 +20,8 @@ const fetchUser = (req, res, next) => {
   }
 };
 
+
+
 // Route 1:
 router.post('/user/register', [
     body("name", "Please enter a name"),
