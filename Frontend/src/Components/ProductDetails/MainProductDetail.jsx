@@ -79,7 +79,7 @@ export const MainProductDetail = () =>{
           <br />
           <img
             className="offer"
-            src="https://ii2.pepperfry.com/media/wysiwyg/banners/Promo_Web_VIPCoupon_2X_01042022_es.jpg"
+            src="https://ii2.pepperfry.com/media/wysiwyg/banners/Promo_Web_VIPCoupon_2X_05042022_nd.jpg"
             alt=""
           />
           <br />
@@ -89,6 +89,7 @@ export const MainProductDetail = () =>{
             Date, Assembly Information and other details
           </label>
           <h6></h6>
+          <br/>
           <input
             type="number"
             placeholder="Enter a Pincode"

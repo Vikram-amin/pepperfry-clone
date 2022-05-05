@@ -28,17 +28,26 @@ const Payment = () => {
         if (formData.name === "" || formData.number === "" || formData.cvv === "" || formData.expiry === "" || formData.name === "") {
         alert("Please Fill all box");
          }else{
-         navigate("/paymentdone");
+         navigate("/cardpayment");
          }
         }
 
   return (
     <PaymentOPtionContainer>
+      <h4 className="chooseCard-heading">CHOOSE YOUR DEBIT CARD</h4>
       <FlexP>
         <div className="ImageDIv">
           <Radio />
           <img
-            src="https://ii2.pepperfry.com/images/new-visa-logo.png"
+            src="https://ii1.pepperfry.com/images/master-card-img.png"
+            alt=""
+          />
+        </div>
+
+        <div className="ImageDIv">
+          <Radio />
+          <img
+            src="https://ii2.pepperfry.com/images/220-px-ru-paysvg.png"
             alt=""
           />
         </div>
@@ -54,13 +63,14 @@ const Payment = () => {
         <div className="ImageDIv">
           <Radio />
           <img
-            src="https://ii2.pepperfry.com/images/220-px-ru-paysvg.png"
+            src="https://ii2.pepperfry.com/images/new-visa-logo.png"
             alt=""
           />
         </div>
+
       </FlexP>
 
-      <CardDetails>
+      {/* <CardDetails>
         <form>
           <label className="formlabel">Card Number</label>
           <input
@@ -113,9 +123,11 @@ const Payment = () => {
             Save this option securely for fastest payment
           </div>
 
-          <Button onClick={handleSubmit}> PROCEED </Button>
+          
         </form>
-      </CardDetails>
+      </CardDetails> */}
+      <Button onClick={handleSubmit}> PROCEED TO PAY</Button>
+      <div className="note">Note: You Will Be Asked To Enter Your Card Details On Proceeding With The Selected Payment Options.</div>
     </PaymentOPtionContainer>
   );
 }

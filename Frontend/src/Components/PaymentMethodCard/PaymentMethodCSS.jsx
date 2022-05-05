@@ -32,6 +32,16 @@ export const PaymetMethodContainer = styled.div`
     ///payment Card 
 
     export const PaymentCardContainer = styled.div`
+    .chooseCard-heading{
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .note{
+      font-size: 13px;
+      padding: 4%;
+      color: gray;
+    }
 
     .heading{
       font-weight: bold;
@@ -105,9 +115,10 @@ export const PaymetMethodContainer = styled.div`
 // Payment option
 
 export const FlexP = styled.div`
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-left: 13%;
+  grid-gap:10%;
 
   & label {
     font-weight: 600;
@@ -167,12 +178,12 @@ export const Button = styled.button`
   text-transform: uppercase;
   font-size: 16px;
   padding: 10px 5rem;
-  margin-left: 15%;
+  margin-left: 18%;
   border: none;
   color: white;
   background-color: #f16521;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 100px;
 `;
 
 

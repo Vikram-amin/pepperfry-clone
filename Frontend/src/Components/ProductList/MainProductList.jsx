@@ -29,7 +29,7 @@ const MainProductList =()=>{
 
     return (
       <>
-        <MetaData title="Prduct lists" />
+        <MetaData title="Product lists" />
         <Navbar />
 
         <ProductListHeading>
@@ -52,7 +52,7 @@ const MainProductList =()=>{
                 value="50000"
                 onChange={() => setPrice(50000)}
               />
-              <label htmlFor="50,000">{"< 50,000"}</label>
+              <label htmlFor="50,000">{" < 50,000"}</label>
               <br />
               <input
                 type="radio"
@@ -60,7 +60,7 @@ const MainProductList =()=>{
                 value="100000"
                 onChange={() => setPrice(100000)}
               />
-              <label htmlFor="1,00,000">{"< 1,00,000"}</label>
+              <label htmlFor="1,00,000">{" < 1,00,000"}</label>
               <br />
               <input
                 type="radio"
@@ -68,7 +68,7 @@ const MainProductList =()=>{
                 value="150000"
                 onChange={() => setPrice(150000)}
               />
-              <label htmlFor="1,50,000">{"< 1,50,000"}</label>
+              <label htmlFor="1,50,000">{" < 1,50,000"}</label>
               <br />
               <br />
               <h4>Brand</h4>
@@ -78,7 +78,7 @@ const MainProductList =()=>{
                 value="CasaCraft"
                 onChange={(e) => setBrand(e.target.value)}
               />
-              <label htmlFor="CasaCraft">CasaCraft</label>
+              <label htmlFor="CasaCraft"> CasaCraft</label>
               <br />
               <input
                 type="radio"
@@ -86,7 +86,7 @@ const MainProductList =()=>{
                 value="Woodsworth"
                 onChange={(e) => setBrand(e.target.value)}
               />
-              <label htmlFor="Woodsworth">Woodsworth</label>
+              <label htmlFor="Woodsworth"> Woodsworth</label>
               <br />
               <input
                 type="radio"
@@ -94,7 +94,7 @@ const MainProductList =()=>{
                 value="Bohemiana"
                 onChange={(e) => setBrand(e.target.value)}
               />
-              <label htmlFor="Bohemiana">Bohemiana</label>
+              <label htmlFor="Bohemiana"> Bohemiana</label>
               <br />
               <input
                 type="radio"
@@ -102,7 +102,7 @@ const MainProductList =()=>{
                 value="Stories"
                 onChange={(e) => setBrand(e.target.value)}
               />
-              <label htmlFor="Stories">Stories</label>
+              <label htmlFor="Stories"> Stories</label>
             </div>
           </span>
 

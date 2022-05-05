@@ -37,7 +37,7 @@ const addToCartHandler = () => {
       <h4>{product.description}</h4>
       <h5 className="card-brand">{product.name}</h5>
       <h4 className="card-price">
-        ₹{product.price} <span>₹{product.price}</span>
+        ₹{product.price} 
       </h4>
       <h4 className="card-savings">{product.discount_percentage}% Off</h4>
       <h6>Ships in 1 day</h6>

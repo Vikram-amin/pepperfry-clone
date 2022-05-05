@@ -38,13 +38,15 @@ export const ProductListContainer = styled.div`
     font-weight: 800;
     font-size: large;
     border: 0.1px solid gray;
+    border-bottom: 0;
   }
 `;
 
 
 
 export const ProductListHeading = styled.div`
-  margin-top: 60px;
+  margin-top: 20px;
+  text-align: center;
   font-family: "Times New Roman", Times, serif;
 `;
 
@@ -103,7 +105,12 @@ export const ProductCardList = styled.div`
   width: 75%;
   display: grid;
   grid-template-columns: repeat(3, 33%);
-  border: 1px solid gray;
+  border: 0.1px solid gray;
+  border-bottom: 0;
+  border-left: 0;
+  padding: 1%;
+  margin-bottom: 100px;
+  grid-gap: 1%;
 `;
 
 
@@ -112,7 +119,6 @@ export const Button = styled.button`
   border-radius: 2px;
   width: 15vh;
   height: 4vh;
-  margin-left: 25px;
+  /* margin-left: 100px; */
   color : red;
-
 `;

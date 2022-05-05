@@ -29,7 +29,7 @@ h3{
 }
 .img{
     width:100vh;
-    height: 85vh;
+    height: 90vh;
     margin: 30px auto;
     position: relative;
 }
@@ -104,7 +104,7 @@ a{
     color: white;
     background-color: orangered;
     border: none;
-    width: 45vh;
+    width: 35vh;
     padding: 10px;
     font-weight: 900;
 }
