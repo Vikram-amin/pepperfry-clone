@@ -74,26 +74,31 @@ export const DummyRight = styled.div`
 `
 export const Nav = styled.div`
     border-bottom: 1px solid #d3d3d3;
+     
 `
 
 export const TopNav = styled.div`
-  width: 87%;
+  width: 93%;
   margin: auto;
   display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
   height: 8vh;
 
   padding-top: 18px;
   .iconDiv {
     margin-left: 20px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .icon {
     color: black;
     width: 30px;
     height: 38px;
     cursor: pointer;
+    margin-left: 10px;
   }
   .help {
     margin-top: 2px;

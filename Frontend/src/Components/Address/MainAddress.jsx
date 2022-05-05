@@ -10,12 +10,11 @@ import { CheckBoxDiv, Emi } from '../PriceCard/PriceCSS';
 import { AdressContainer,  LeftDiv,  PriceDiv,  RightDiv } from './AddressCSS';
 import {AddressInput} from './AddressInput'
 
+
 const MainAddress = () => {
   return (
     <>
      <CheckoutNavbar />
-
-
     <AdressContainer>
       <LeftDiv>
         <OrderSummery />

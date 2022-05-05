@@ -3,9 +3,14 @@ import {  Checkbox } from "@mui/material";
 import { useState } from "react";
 import { Form, Button, AdressInputContainer } from "./AddressCSS";
 import { useNavigate } from "react-router-dom";
+import { saveShippingInfo } from "../../Redux/Cart/action"
+import { useSelector, useDispatch } from "react-redux";
+
 
 
 const AddressInput = () => {
+
+
 
 let initialValue = {
   name: "",
@@ -20,6 +25,7 @@ let initialValue = {
 const [formData, setFormData] = useState(initialValue);
 const [filled,setFilled] = useState(false)
   const navigate = useNavigate();
+  const dispatch = useDispatch()
 
  const handleChange = (e) => {
      const { name, value } = e.target;
@@ -30,9 +36,10 @@ const [filled,setFilled] = useState(false)
     if (formData.name === "" || formData.phoneNo === "" || formData.pincode === "" || formData.address === "" || formData.city === "" || formData.state === "") {
     alert("Please Fill all box");
      }else{
-       setFilled(true)
+       setFilled(true);
+       dispatch( saveShippingInfo(formData) );
      navigate("/checkout"); 
-      localStorage.setItem("address", JSON.stringify(formData));
+      
      }
 
  };

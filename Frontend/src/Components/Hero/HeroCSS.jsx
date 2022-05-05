@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const HomeContainer = styled.div`
-    margin-left: 7%;
-    margin-right: 7%;
+    width: 90%;
+    margin:auto;
     cursor: pointer;
     
     .belowNavbar{
