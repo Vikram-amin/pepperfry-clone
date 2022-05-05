@@ -4,19 +4,23 @@ const constantObj = require("../commonLib/constant");
 const APIfeatures = require("../utils/apiFeatures");
 
 
-
 // Get All Product
 const getAllProducts = async (req, res, next) => {
   try {
-  const productCount = await Product.countDocuments()
-  const apiFeatures = new APIfeatures(Product.find(),req.query).serarch().pagination().filter()
+  const resultPerPage = 9;
+  const productsCount = await Product.countDocuments()
+  const apiFeatures = new APIfeatures(Product.find(),req.query).serarch().pagination(resultPerPage).filter()
   
   const products = await apiFeatures.query;
+  let filteredProductsCount = products.length;
+
   res.status(200).json({
     success: true,
     message: constantObj.success.DATA_FETCH,
     products,
-    productCount,
+    productsCount,
+    resultPerPage,
+    filteredProductsCount,
   });
   } catch (error) {
     res.status(500).json({

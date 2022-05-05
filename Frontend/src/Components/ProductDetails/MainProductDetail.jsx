@@ -16,26 +16,26 @@ import { addItemsToCart } from "../../Redux/Cart/action"
 
 export const MainProductDetail = () =>{
   const { id } = useParams();
- // const { product, loading, error } = useSelector((state) => state.productDetail);
+   const { product, loading, error } = useSelector((state) => state. productDetails);
    const dispatch = useDispatch();
 
-    const [product, setProduct] = useState([]);
-
-  useEffect(() => {
-    getData()
-  },[])
-
-   const getData = async() => {
-     const { data } = await axios.get(`/api/v1/product/${id}`);
-       setProduct(data.product);
-   }
-
-     console.log(product.images)
-
+  //   const [product, setProduct] = useState([]);
 
   // useEffect(() => {
-  //   dispatch(getProductDetails(id));
-  // }, [dispatch, id]);
+  //   getData()
+  // },[])
+
+  //  const getData = async() => {
+  //    const { data } = await axios.get(`/api/v1/product/${id}`);
+  //      setProduct(data.product);
+  //  }
+
+  //    console.log(product.images)
+
+
+  useEffect(() => {
+    dispatch(getProductDetails(id));
+  }, []);
 
   const [pincode, setPincode] = React.useState("");
   const handlerChange = (e) => {

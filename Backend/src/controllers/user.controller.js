@@ -4,8 +4,6 @@ const jwt = require('jsonwebtoken');
 const User = require("../model/user.model");
 const sendToken = require('../utils/jwtToken');
 
-
-
 // //Create or Register User
 const registerUser = async(req, res, next) => {
     try{

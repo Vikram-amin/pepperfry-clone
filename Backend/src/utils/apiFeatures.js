@@ -5,13 +5,12 @@ function APIfeatures(query,queryString){
     this.queryString = queryString; // req.query
 
     // pagination
-    this.pagination = () => {
-        const page = Number(this.queryString.page) || 1;
-        const limit = Number(this.queryString.limit) || 10;
-        const skip = limit * (page - 1)
-        this.query = this.query.limit(limit).skip(skip);
-        return this;
-    }
+    this.pagination = (resultPerPage) => {
+      const currentPage = Number(this.queryString.page) || 1;
+      const skip = resultPerPage * (currentPage - 1);
+      this.query = this.query.limit(resultPerPage).skip(skip);
+      return this;
+    };
 
     //searching
     this.serarch = () => {

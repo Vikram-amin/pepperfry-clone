@@ -45,7 +45,7 @@ userSchema.pre('save', async function(next) {
 // do login along with register
 
 userSchema.methods.getJWTtoken = function(){
-    return jwt.sign({ id: this._id.toString() }, process.env.JWT_SECRET_KEY, {
+    return jwt.sign({ id: this._id.toString()}, process.env.JWT_SECRET_KEY, {
       expiresIn: process.env.JWT_EXPIRES,
     });
 }

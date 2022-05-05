@@ -1,5 +1,5 @@
-import {ALL_PRODUCT_FAIL, ALL_PRODUCT_REQUEST, ALL_PRODUCT_SUCCESS, CLEAR_ERRORS,} from './product_types'
 
+import {ALL_PRODUCT_FAIL, ALL_PRODUCT_REQUEST, ALL_PRODUCT_SUCCESS, CLEAR_ERRORS,} from './product_types'
 
 const productReducer = (state = { products : [] }, action) => {
   switch (action.type) {
@@ -13,7 +13,8 @@ const productReducer = (state = { products : [] }, action) => {
       return {
         loading: false,
         products: action.payload.products,
-        productsCount: action.payload.productCount,
+        productsCount: action.payload.productsCount,
+        resultPerPage: action.payload.resultPerPage,
       };
 
     case ALL_PRODUCT_FAIL:

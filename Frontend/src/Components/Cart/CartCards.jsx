@@ -45,7 +45,7 @@ const CartCards = () => {
           <CardContainer>
             <CardLeft>
               <img src={item.image[0]} alt="" />
-              <div> only 2 left </div>
+              <div> only {item.stock} left</div>
             </CardLeft>
 
             <CardMid>
@@ -95,7 +95,12 @@ const CartCards = () => {
                 >
                   -
                 </button>
-                <input  className="quantity" type="number" value={item.quantity} readOnly />
+                <input
+                  className="quantity"
+                  type="number"
+                  value={item.quantity}
+                  readOnly
+                />
                 <button
                   onClick={() =>
                     increaseQuantity(item.product, item.quantity, item.stock)
