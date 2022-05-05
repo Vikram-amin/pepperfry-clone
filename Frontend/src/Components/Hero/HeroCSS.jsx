@@ -56,7 +56,7 @@ export const Eyeing = styled.div`
         grid-gap: 3%;
     }
     .quadraImage{
-        height: 31vh;
+        height: 27vh;
         width: 100%;
     }
 `
