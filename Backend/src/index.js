@@ -5,16 +5,25 @@ const productRoute = require("./Routes/product.route");
 const userRoute = require("./Routes/user.route")
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+const path = require("path");
 
-app.use(cors());
-app.use(express.json());
-app.use(cookieParser());
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  require("dotenv").config({ path: "Backend/src/config/config.env" });
 
+  app.use(cors());
+  app.use(express.json());
+  app.use(cookieParser());
 
+  app.use("/api/v1/", orderRoute);
+  app.use("/api/v1", productRoute);
+  app.use("/api/v1/user", userRoute);
 
-app.use("/api/v1/",orderRoute)
-app.use("/api/v1", productRoute);
-app.use("/api/v1/user" , userRoute)
+  app.use(express.static(path.join(__dirname, "../Frontend/build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../Frontend/build/index.html"));
+  });
+}
 
 
 module.exports = app
