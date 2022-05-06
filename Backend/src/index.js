@@ -8,7 +8,7 @@ const cors = require("cors");
 const path = require("path");
 
 if (process.env.NODE_ENV !== "PRODUCTION") {
-  require("dotenv").config({ path: "Backend/src/config/config.env" });
+  require("dotenv").config({ path: "config.env" });
 
   app.use(cors());
   app.use(express.json());
@@ -18,11 +18,12 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
   app.use("/api/v1", productRoute);
   app.use("/api/v1/user", userRoute);
 
-  app.use(express.static(path.join(__dirname, "../../Frontend/build")));
+  // app.use(express.static(path.join(__dirname, "../../Frontend/build")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../../Frontend/build/index.html"));
-  });
+  // app.get("*", (req, res) => {
+  //   res.sendFile(path.resolve(__dirname, "../../Frontend/build/index.html"));
+  // });
+  
 }
 
 

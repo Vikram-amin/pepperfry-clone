@@ -10,7 +10,6 @@ export const Register = (props) => {
   const navigate = useNavigate();
 
 
-
   const { error, loading, isAuthenticated } = useSelector(
     (state) => state.user
   );
