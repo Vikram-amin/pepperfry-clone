@@ -266,3 +266,24 @@ export const CardIcon = styled.div`
     padding-right: 8px;
   }
 `;
+
+export const EmptyCart = styled.div`
+  margin-top: 25vh;
+  margin-bottom: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  & span {
+    width: 20px;
+    border: 1px solid black;
+    padding: 6px;
+    margin-top: 20px;
+  }
+`;

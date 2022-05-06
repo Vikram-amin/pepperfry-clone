@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { ALL_PRODUCT_FAIL, ALL_PRODUCT_REQUEST, ALL_PRODUCT_SUCCESS, CLEAR_ERRORS } from './product_types'
 
-export const getProduct = (keyword = "", currentPage = 1, price = [0, 2500000]) => async (dispatch) => {
+export const getProduct = (keyword = "", currentPage = 1, price = 1000000) => async (dispatch) => {
   try {
     dispatch({ type: ALL_PRODUCT_REQUEST });
 

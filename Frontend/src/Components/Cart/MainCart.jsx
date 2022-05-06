@@ -2,12 +2,10 @@ import React from 'react'
 import { CheckoutFooter } from '../CheckoutFooter/CheckoutFooter'
 import { CheckoutNavbar } from '../CheckoutNavbar/CheckoutNavbar'
 import CartPage from './CartPage';
-import { useSelector, useDispatch } from "react-redux";
-
-
-
-
-
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
+import { EmptyCart } from './CartCSS';
 
 
 const MainCart = () => {
@@ -18,12 +16,11 @@ const MainCart = () => {
       <CheckoutNavbar />
 
       {cartItems.length === 0 ? (
-        <div className="emptyCart">
-          <h1>No Product in Your Cart</h1>
-          <h1>No Product in Your Cart</h1>
-          <h1>No Product in Your Cart</h1>
-          <h1>No Product in Your Cart</h1>
-        </div>
+        <EmptyCart>
+          <RemoveShoppingCartIcon  className='icon'/> <br />
+          <h2>No Product in Your Cart</h2> <br /> 
+          <Link to="/productlist"> <span> View Products </span></Link>
+        </EmptyCart>
       ) : (
         <CartPage />
       )}

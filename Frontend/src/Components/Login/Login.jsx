@@ -1,25 +1,44 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import "../../style/form.css"
 import { useSelector, useDispatch } from "react-redux";
 import { login } from '../../Redux/Login/action';
 
+
 function Login(props) {
 const dispatch = useDispatch();
+const navigate = useNavigate();
+
+
 const { error, loading, isAuthenticated } = useSelector((state) => state.user);
 
 const [email, setEmail] = React.useState("");
 const [password,setPassword] = React.useState("");
 
-const getData =()=>{
+
+const getData =(e)=>{
+    e.preventDefault();
  dispatch(login (email, password));
+
 }
+
+  useEffect(() => {
+ 
+  }, [dispatch]);
+
+      //  if (isAuthenticated) {
+      //    navigate("/");
+      //  }
+
+   if (error) {
+     alert(error);
+   }
 
   return props.trig ? (
     ""
   ) : (
     <div>
-      <form action="">
+      <form onSubmit={(e) => getData(e)}>
         <label htmlFor="">Email ID/Number</label>
         <br />
         <input
@@ -40,11 +59,8 @@ const getData =()=>{
         />
         <br />
         <br />
-        <Link to={"/"}>
-          <button className="reg" onClick={() => getData()}>
-            LOG IN
-          </button>
-        </Link>
+
+        <input className="reg" type="submit" value="LOG IN" />
       </form>
     </div>
   ); 
