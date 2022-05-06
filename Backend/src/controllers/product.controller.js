@@ -30,7 +30,7 @@ const getAllProducts = async (req, res, next) => {
 };
 
 
-// craete product
+// create product
 const createProduct = async (req, res, next) => {
   try {
     const product = await Product.create(req.body);
