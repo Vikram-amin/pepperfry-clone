@@ -119,9 +119,8 @@ export const ProductCardList = styled.div`
 
 
 export const Button = styled.button`
-  display: none;
   position:absolute;
-  top: 57%;
+  top: 55%;
   left: 30%;
   border: none;
   width: 15vh;

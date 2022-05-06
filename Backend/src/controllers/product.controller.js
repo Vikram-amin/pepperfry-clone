@@ -7,7 +7,7 @@ const APIfeatures = require("../utils/apiFeatures");
 // Get All Product
 const getAllProducts = async (req, res, next) => {
   try {
-  const resultPerPage = 9;
+  const resultPerPage = 25;
   const productsCount = await Product.countDocuments()
   const apiFeatures = new APIfeatures(Product.find(),req.query).serarch().pagination(resultPerPage).filter()
   
@@ -30,7 +30,7 @@ const getAllProducts = async (req, res, next) => {
 };
 
 
-// craete product
+// create product
 const createProduct = async (req, res, next) => {
   try {
     const product = await Product.create(req.body);
