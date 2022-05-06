@@ -1,7 +1,7 @@
 import React from "react";
-import { LoginForm } from "./LoginForm";
 import "../../style/form.css"
-import SignupForm from "./SignupForm";
+import { Register } from "./Register";
+import Login from "./Login";
 
 export const MainLogin =(props)=>{
     const [val,setVal] = React.useState(true);
@@ -22,8 +22,8 @@ export const MainLogin =(props)=>{
                 <div className="quit">
                 <button onClick={()=>props.setTrigger(false)} className="close">X</button>
                 </div>
-                <LoginForm trig={val} setTrig={props.setTrigger}/>
-                <SignupForm trig={val} setTrig={props.setTrigger} />
+                <Register trig={val} setTrig={props.setTrigger}/>
+                <Login trig={val} setTrig={props.setTrigger} />
                 <div>
                 <button className="signup" onClick={()=>set()}>Existing User? Log In</button>
             </div>

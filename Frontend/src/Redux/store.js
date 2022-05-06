@@ -14,6 +14,7 @@ const rootReducer = combineReducers({
   login : loginReducer,
   cart : cartReducer,
   address : addressReducer,
+  user : loginReducer,
 });
 
 let initialState = {
