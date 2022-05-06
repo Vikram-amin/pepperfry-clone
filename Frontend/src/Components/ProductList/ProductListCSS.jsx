@@ -51,8 +51,8 @@ export const ProductListHeading = styled.div`
 `;
 
 
-
 export const CardWrapper = styled.div`
+  position: relative;
   .card-price {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -72,6 +72,10 @@ export const CardWrapper = styled.div`
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     color: rgb(8, 171, 8);
     margin: 3px;
+  }
+
+  .count{
+    padding-left: 10px;
   }
 
   & img {
@@ -114,15 +118,19 @@ export const ProductCardList = styled.div`
 `;
 
 
-
 export const Button = styled.button`
-  border-radius: 2px;
+  display: none;
+  position:absolute;
+  top: 57%;
+  left: 30%;
+  border: none;
   width: 15vh;
   height: 4vh;
   /* margin-left: 100px; */
-  color : red;
-
+  color: white;
+  background-color : #ff7035;
 `;
+
 
 
 export const PaginationWrapper = styled.div`

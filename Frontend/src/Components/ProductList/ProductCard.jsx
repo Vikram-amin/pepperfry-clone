@@ -27,12 +27,11 @@ const addToCartHandler = () => {
       <Link to={`/product/${product._id}`}>
         <img src={product.images[0].url[0]} alt="productImage" />
       </Link>
-
+      <Button onClick={addToCartHandler} >ADD TO CART</Button>
       <div>
-        <Rating {...options} /> ({product.numOfRatings})
+        <Rating {...options} className="ratings"/> <span className="count">({product.numOfRatings})</span>
       </div>
 
-      <Button onClick={addToCartHandler}>ADD TO CART</Button>
 
       <h4>{product.description}</h4>
       <h5 className="card-brand">{product.name}</h5>

@@ -96,7 +96,7 @@ function CardPayment(){
                     <Checkbox color="secondary" />
                     Secure this option for faster checkouts
                   </div>
-                  <Link to=""><button type="submit" className={styles.proceedbtn}>PROCEED</button></Link>
+                  <Link to="/paymentdone"><button type="submit" className={styles.proceedbtn}>PROCEED</button></Link>
                   {/* LINK THIS TO THE NEXT PAGE AFTER CLICKING ON PROCEED BUTTON*/}
                 </form>
               </div>
