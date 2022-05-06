@@ -380,23 +380,23 @@
 //                        "https://ii1.pepperfry.com/media/catalog/product/a/l/70x77/alonso-upholstered-queen-size-bed-in-beige-colour-by-casacraft-alonso-upholstered-queen-size-bed-in--xy69rs.jpg"]
 //         }
 //     },
-//     {
-//         "name" : "Woodsworth",
-//         "description" : "Biscay Solid Wood 6 Seater Dining Set With Bench In Rustic Teak Finish",
-//         "price" : "55999",
-//         "discount_percentage" : "38",
-//         "category" : "Dining sets",
-//         "ratings" : "5",
-//         "numOfRatings" : "63",
-//         "Stock" : "10",
+    // {
+    //     "name" : "Woodsworth",
+    //     "description" : "Biscay Solid Wood 6 Seater Dining Set With Bench In Rustic Teak Finish",
+    //     "price" : "55999",
+    //     "discount_percentage" : "38",
+    //     "category" : "Dining sets",
+    //     "ratings" : "5",
+    //     "numOfRatings" : "63",
+    //     "Stock" : "10",
         
-//         "images" : {
-//             "public_id" : "9" ,
-//             "url" : ["https://ii1.pepperfry.com/media/catalog/product/b/i/70x77/biscay-solid-wood-6-seater-dining-set-with-bench-in-rustic-teak-finish---woodsworth-by-pepperfry-bis-ozjnxn.jpg",
-//                        "https://ii2.pepperfry.com/media/catalog/product/b/i/70x77/biscay-solid-wood-6-seater-dining-set-with-bench-in-rustic-teak-finish---woodsworth-by-pepperfry-bis-qm5sjh.jpg",
-//                        "https://ii3.pepperfry.com/media/catalog/product/b/i/70x77/biscay-solid-wood-6-seater-dining-set-with-bench-in-rustic-teak-finish-by-woodsworth-biscay-solid-wo-zd0hvt.jpg"]
-//         }
-//     },
+    //     "images" : {
+    //         "public_id" : "9" ,
+    //         "url" : ["https://ii1.pepperfry.com/media/catalog/product/b/i/70x77/biscay-solid-wood-6-seater-dining-set-with-bench-in-rustic-teak-finish---woodsworth-by-pepperfry-bis-ozjnxn.jpg",
+    //                    "https://ii2.pepperfry.com/media/catalog/product/b/i/70x77/biscay-solid-wood-6-seater-dining-set-with-bench-in-rustic-teak-finish---woodsworth-by-pepperfry-bis-qm5sjh.jpg",
+    //                    "https://ii3.pepperfry.com/media/catalog/product/b/i/70x77/biscay-solid-wood-6-seater-dining-set-with-bench-in-rustic-teak-finish-by-woodsworth-biscay-solid-wo-zd0hvt.jpg"]
+    //     }
+    // },
 //     {
 //         "name" : "Woodsworth",
 //         "description" : "Nuevo Solid Wood 6 Seater Dining Set With Bench In Rustic Teak Finish",

@@ -25,11 +25,7 @@ const Payment = () => {
   // console.log(formData)
 
      const handleSubmit = () => {
-        if (formData.name === "" || formData.number === "" || formData.cvv === "" || formData.expiry === "" || formData.name === "") {
-        alert("Please Fill all box");
-         }else{
          navigate("/cardpayment");
-         }
         }
 
   return (
