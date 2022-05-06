@@ -66,8 +66,21 @@ export const MainProductDetail = () =>{
           <br />
           <h6>36 Month's Warranty</h6>
           <br />
-          <h1>₹{product.price}</h1>
-          <h5>Save ₹{product.price}</h5>
+          <h1>
+            ₹
+            {Math.round(
+              product.price -
+                (product.price * product.discount_percentage) / 100
+            )}
+          </h1>
+          <h5>
+            Save ₹
+            {product.price -
+              Math.round(
+                product.price -
+                  (product.price * product.discount_percentage) / 100
+              )}
+          </h5>
           <div className="line"></div>
           <br />
           <h4>
@@ -89,7 +102,7 @@ export const MainProductDetail = () =>{
             Date, Assembly Information and other details
           </label>
           <h6></h6>
-          <br/>
+          <br />
           <input
             type="number"
             placeholder="Enter a Pincode"

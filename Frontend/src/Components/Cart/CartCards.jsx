@@ -18,6 +18,8 @@ const CartCards = () => {
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);
 
+    
+
   const increaseQuantity = (id, quantity, stock) => {
     const newQty = quantity + 1;
     if (stock <= quantity) {
@@ -111,7 +113,13 @@ const CartCards = () => {
               </Flex>
 
               <div className="qprice"> ₹ {item.price}</div>
-              <Orange>₹ {item.price}</Orange>
+              <Orange>
+                ₹
+                {Math.round(
+                  item.price -
+                    (item.price * item.discount) / 100
+                )}
+              </Orange>
 
               <div className="add">+ Add</div>
             </CardRight>

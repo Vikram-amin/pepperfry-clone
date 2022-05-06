@@ -5,7 +5,7 @@ export const getProduct = (keyword = "", currentPage = 1, price = [0, 2500000]) 
   try {
     dispatch({ type: ALL_PRODUCT_REQUEST });
 
-    const { data } = await axios.get(`/api/v1/products`);
+    const { data } = await axios.get(`/api/v1/products?page=4`);
     //?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}
 
     dispatch({

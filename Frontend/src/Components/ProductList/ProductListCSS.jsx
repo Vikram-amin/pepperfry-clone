@@ -74,7 +74,14 @@ export const CardWrapper = styled.div`
     margin: 3px;
   }
 
-  .count{
+  .card-original-price {
+    font-weight: 500;
+    color: #848484;
+    font-size: small;
+    margin-left: 8px;
+    text-decoration: line-through;
+  }
+  .count {
     padding-left: 10px;
   }
 

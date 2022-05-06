@@ -115,14 +115,16 @@ const MainProductList =()=>{
           </span>
 
           <ProductCardList>
-            {loading ? (
-              <CircularProgress />
-            ) : (
-              products &&
-              products.map((items) => (
-                <ProductCard key={items.id} product={items} loading={loading} />
-              ))
-            )}
+            {loading
+              ? "."
+              : products &&
+                products.map((items) => (
+                  <ProductCard
+                    key={items.id}
+                    product={items}
+                    loading={loading}
+                  />
+                ))}
           </ProductCardList>
         </ProductListContainer>
 
@@ -154,6 +156,8 @@ const MainProductList =()=>{
               .map((items) => (
                 <ProductCard key={items.id} product={items} />
               ))}  */}
+
+        {/* <CircularProgress /> */}
       </>
     );
 }

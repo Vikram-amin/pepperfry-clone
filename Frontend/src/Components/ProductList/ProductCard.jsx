@@ -27,16 +27,20 @@ const addToCartHandler = () => {
       <Link to={`/product/${product._id}`}>
         <img src={product.images[0].url[0]} alt="productImage" />
       </Link>
-      <Button onClick={addToCartHandler} >ADD TO CART</Button>
+      <Button onClick={addToCartHandler}>ADD TO CART</Button>
       <div>
-        <Rating {...options} className="ratings"/> <span className="count">({product.numOfRatings})</span>
+        <Rating {...options} className="ratings" />{" "}
+        <span className="count">({product.numOfRatings})</span>
       </div>
-
 
       <h4>{product.description}</h4>
       <h5 className="card-brand">{product.name}</h5>
       <h4 className="card-price">
-        ₹{product.price} 
+        ₹
+        {Math.round(
+          product.price - (product.price * product.discount_percentage) / 100
+        )}
+        <span className="card-original-price"> ₹{product.price}</span>
       </h4>
       <h4 className="card-savings">{product.discount_percentage}% Off</h4>
       <h6>Ships in 1 day</h6>

@@ -26,12 +26,9 @@ const Price = ({cart}) => {
     let price = 0;
     let discount = 0;
 
-    cartItems.forEach((item) => {
-      // console.log(item.qty,"hjfghf")
-      items += item.quantity;
-      price += item.quantity * item.price;
-      discount = item.price - item.price;
-    });
+ cartItems && cartItems.map((el) => {
+   price+= el.price
+ })
 
     setTotalItem(items);
     setPrice(price);
@@ -56,7 +53,7 @@ const Price = ({cart}) => {
 
             <div className="cardDisplay">
               <Blue>Cashback/Refund Credits Redeemed</Blue>
-              <Blue>(-) ₹{price}</Blue>
+              <Blue>(-) ₹{0}</Blue>
             </div>
 
             <div className="cardDisplay">
@@ -82,14 +79,7 @@ const Price = ({cart}) => {
           <TotalPrice>
             <div className="total"> Total</div>
             <div>
-              <div className="totalPrice">
-                ₹
-                {cartItems.reduce(
-                  (acc, item) => acc + item.quantity * item.price,
-                  0
-                )}
-                
-              </div>
+              <div className="totalPrice">₹ {totalPrice}</div>
               <div className="tax">(Inclusive of all taxes)</div>
             </div>
           </TotalPrice>
