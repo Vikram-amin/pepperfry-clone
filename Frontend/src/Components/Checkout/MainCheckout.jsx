@@ -29,7 +29,6 @@ const MainCheckout = () => {
           <OrderSummery />
           <ShippingDetails />
 
-   
             <Accordion>
               <AccordionSummary
               className='PaymentAcordion'

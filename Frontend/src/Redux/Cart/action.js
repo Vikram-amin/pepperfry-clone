@@ -4,7 +4,8 @@ import {ADDRESS_INFO_SAVE, ADD_TO_CART,REMOVE_CART_ITEM} from "./actionType"
 
 
 export const addItemsToCart = (id, quantity) => async (dispatch, getState) => {
-  const { data } = await axios.get(`/api/v1/product/${id}`);
+  const { data } = await axios.get(`http://localhost:8000/api/v1/product/${id}`);
+
 
   dispatch({
     type: ADD_TO_CART,

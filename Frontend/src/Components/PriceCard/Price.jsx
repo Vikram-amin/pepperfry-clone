@@ -10,31 +10,45 @@ import {
   Hr,
   PriceDiv,
 } from "./PriceCSS";
-import { useSelector, useDispatch } from "react-redux";
+ import { useSelector } from "react-redux";
 
 
 
 const Price = ({cart}) => {
+  
   const { cartItems } = useSelector((state) => state.cart);
-  const [price, setPrice] = useState(0);
-  const [totalItem, setTotalItem] = useState(0);
-  const [discount, setDiscount] = useState(0);
-  const [totalPrice, setTotalPrice] = useState(0);
+  
+    const [price, setPrice] = useState(0);
+    const [totalItem, setTotalItem] = useState(0);
+    const [discount, setDiscount] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0);
 
-  useEffect(() => {
-    let items = 0;
-    let price = 0;
-    let discount = 0;
+    useEffect(() => {
+      let items = 0;
+      let price = 0;
+      let discount = 0;
+      let quantity = 0;
 
- cartItems && cartItems.map((el) => {
-   price+= el.price
- })
+      cartItems.forEach((el) => {
+        price += el.price * el.quantity;
+        discount += Math.round(el.price * el.discount / 100)
+      });
 
-    setTotalItem(items);
-    setPrice(price);
-    setDiscount(discount)
-    setTotalPrice (price + 99 + 1500)
-  }, [cart, price, totalItem, setTotalItem, setPrice,discount,setDiscount]);
+          console.log(price,discount);
+
+  
+      let totalPrice = price - discount;
+
+     // console.log(withoutOfferprice, totalPrice, totaldiscount);
+
+      setTotalItem(items);
+      setPrice(price);
+      setDiscount(discount);
+      setTotalPrice(totalPrice + 99 + 1500);
+    }, [cartItems]);
+
+
+
 
   return (
     <PriceDiv>

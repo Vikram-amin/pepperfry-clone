@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import { CardContainer, CardIcon, CardLeft, CardMid, CardRight, Orange } from "./CartCSS";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { BsLayers } from "react-icons/bs";
@@ -18,7 +18,6 @@ const CartCards = () => {
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);
 
-    
 
   const increaseQuantity = (id, quantity, stock) => {
     const newQty = quantity + 1;
@@ -39,6 +38,9 @@ const CartCards = () => {
   const deleteCartItems = (id) => {
     dispatch(removeItemsFromCart(id));
   };
+
+  
+ 
   
   return (
     <div>
