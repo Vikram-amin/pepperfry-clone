@@ -1,19 +1,22 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom';
-import "../../style/form.css"
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "../../style/form.css";
 import { useSelector, useDispatch } from "react-redux";
-import { login } from '../../Redux/Login/action';
+import { login } from "../../Redux/Login/action";
 
 function Login(props) {
-const dispatch = useDispatch();
-const { error, loading, isAuthenticated } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const { error, loading, isAuthenticated } = useSelector(
+    (state) => state.user
+  );
 
-const [email, setEmail] = React.useState("");
-const [password,setPassword] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
 
-const getData =()=>{
- dispatch(login (email, password));
-}
+  const getData = () => {
+    dispatch(login(email, password));
+    props.setTrig(false);
+  };
 
   return props.trig ? (
     ""
@@ -47,7 +50,7 @@ const getData =()=>{
         </Link>
       </form>
     </div>
-  ); 
+  );
 }
 
-export default Login
+export default Login;

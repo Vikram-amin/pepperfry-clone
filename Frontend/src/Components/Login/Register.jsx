@@ -1,14 +1,13 @@
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate, Navigate } from "react-router-dom";
-import "../../style/form.css"
+import "../../style/form.css";
 import { useSelector, useDispatch } from "react-redux";
 import { register } from "../../Redux/Login/action";
-
+import axios from "axios";
 
 export const Register = (props) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
 
   const { error, loading, isAuthenticated } = useSelector(
     (state) => state.user
@@ -28,21 +27,40 @@ export const Register = (props) => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(register(name, mobileNumber, email, password));
+    try {
+      const config = { headers: { "Content-Type": "application/json" } };
+      const { data } = await axios.post(
+        `https://backend-mhwg.onrender.com/api/v1/user/register`,
+        { name, mobileNumber, email, password },
+        config
+      );
+      props.setTrig(false);
+      navigate("/");
+    } catch (error) {
+      alert("Could not authenticate");
+    }
+
+    // const data = await register(name, mobileNumber, email, password);
+    // console.log("data", data);
+    // if (authenticated) {
+    //   navigate("/");
+    // } else {
+    //   alert(error);
+    // }
   };
 
-  useEffect (() => {
-    console.log(isAuthenticated, error)
-       if (isAuthenticated) {
-        alert("sucess")
-       }
+  // useEffect (() => {
+  //   console.log(isAuthenticated, error)
+  //      if (isAuthenticated) {
+  //       alert("sucess")
+  //      }
 
-       if (error) {
-         alert(error);
-       }
-  },[]) 
+  //      if (error) {
+  //        alert(error);
+  //      }
+  // },[])
 
   return props.trig ? (
     <div className="full">
