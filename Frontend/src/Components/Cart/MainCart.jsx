@@ -8,6 +8,7 @@ import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 import { EmptyCart } from "./CartCSS";
 
 
+
 const MainCart = () => {
     const { cartItems } = useSelector((state) => state.cart);
 

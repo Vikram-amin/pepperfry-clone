@@ -5,19 +5,8 @@ import { OrderContainer } from './OrderSummeryCSS';
 
 const OrderSummery = () => {
   const { shippingInfo } = useSelector((state) => state.cart);
-    const [totalItem, setTotalItem] = useState(0);
+   const { cartItems } = useSelector((state) => state.cart);
 
-      // useEffect(() => {
-      //   let items = 0;
-
-      //   cart.forEach((item) => {
-      //     // console.log(item.qty,"hjfghf")
-      //     items += item.qty;
-      //   });
-
-      //   setTotalItem(items);
-
-      // }, [totalItem,setTotalItem]);
 
   return (
     <>
@@ -25,7 +14,7 @@ const OrderSummery = () => {
         <div>ORDER SUMMARY</div>
         <div>
           <div>
-            ({totalItem} items) <img src={plus} alt="plusIcon" />
+            ({cartItems.length} items) <img src={plus} alt="plusIcon" />
           </div>
         </div>
       </OrderContainer>
