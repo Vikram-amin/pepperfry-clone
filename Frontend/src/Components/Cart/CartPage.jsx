@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from 'react'
+import React,{ useState } from 'react'
 import { Link } from "react-router-dom";
 import Checkbox from "@mui/material/Checkbox";
 import { Button, CartCountHeading, CartHeader, CartLeft, CartPageWrapper, CartRight, CheckBoxDiv, CoupenDiv, Emi,  PriceContainer} from './CartCSS';
@@ -7,8 +7,10 @@ import  CartCards  from './CartCards';
 import Price  from '../PriceCard/Price';
 import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { useSelector } from "react-redux";
 
 const CartPage= () => {
+     const { cartItems } = useSelector((state) => state.cart);
 
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalItem,setTotalItem] = useState(0);
@@ -17,7 +19,7 @@ const CartPage= () => {
   return (
     <>
       <CartCountHeading>
-        <h2>IN YOUR CART({totalItem})</h2>
+        <h2>IN YOUR CART({cartItems.length})</h2>
       </CartCountHeading>
       <CartPageWrapper>
         <CartLeft>
