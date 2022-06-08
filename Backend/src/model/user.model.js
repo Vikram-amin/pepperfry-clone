@@ -2,34 +2,34 @@ const mongoose = require("mongoose");
 const validator = require("validator");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
+require("dotenv").config();
 
 const userSchema = new mongoose.Schema({
-        name:{
-            type: String, 
-            required:[true , "Please Enter Your Name"],
-            minLength:1
-        },
+  name: {
+    type: String,
+    required: [true, "Please Enter Your Name"],
+    minLength: 1,
+  },
 
-        mobileNumber: { 
-            type: Number,
-            required:[true, "Please Enter Your Mobile Number "],
-            unique: true,
-            minlength: 10
-        },
-        email: {
-            type: String,
-            required:[ true, "Please Enter Your Email"],
-            unique : true,
-            validate : [validator.isEmail, " Please Enter Valid Email"]
-        },
-        password: {
-            type: String,
-            required: [true, "Please Enter Your Password"],
-            minLength: 8,
-            select : false,
-        }
-    }
-)
+  mobileNumber: {
+    type: Number,
+    required: [true, "Please Enter Your Mobile Number "],
+    minLength: 10,
+    unique: true,
+  },
+  email: {
+    type: String,
+    required: [true, "Please Enter Your Email"],
+    unique: true,
+    validate: [validator.isEmail, " Please Enter Valid Email"],
+  },
+  password: {
+    type: String,
+    required: [true, "Please Enter Your Password"],
+    minLength: 8,
+    select: false,
+  },
+});
 
 
 // bcrypt the passoword  before
@@ -44,11 +44,11 @@ userSchema.pre('save', async function(next) {
 
 // do login along with register
 
-userSchema.methods.getJWTtoken = function(){
-    return jwt.sign({ id: this._id.toString()}, process.env.JWT_SECRET_KEY, {
-      expiresIn: process.env.JWT_EXPIRES,
-    });
-}
+// userSchema.methods.getJWTtoken = function(){
+//     return jwt.sign({ id: this._id.toString()}, process.env.JWT_SECRET_KEY, {
+//       expiresIn: process.env.JWT_EXPIRES,
+//     });
+// }
 
 // compare the passord for signin 
 

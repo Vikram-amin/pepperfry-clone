@@ -2,7 +2,18 @@ const {body, validationResult} = require('express-validator');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require("../model/user.model");
-const sendToken = require('../utils/jwtToken');
+
+
+const newToken = (user) => {
+  return jwt.sign(
+    {
+      id: user._id,
+      exp: Math.floor(Date.now() / 1000) + 60 * 2,
+      iat: Math.floor(Date.now()),
+    },
+    process.env.JWT_SECRET_KEY
+  );
+};
 
 // //Create or Register User
 const registerUser = async(req, res, next) => {
@@ -14,17 +25,17 @@ const registerUser = async(req, res, next) => {
             password: req.body.password
         });
 
-        // const token = user.getJWTtoken()
+        const token = newToken(user)
 
-        // res.status(201).json({
-        //     success : true, 
-        //     user,
-        //     token
-        // })
-          sendToken(user, 201, res);
+        res.status(201).json({
+            success : true, 
+            user,
+            token
+        })
+        
 
     }catch(error){
-        res.status(500).json({message : error.message});
+        res.status(500).json({ success: false, message: error.message });
     }
 }
 
@@ -34,30 +45,30 @@ const userLogin = async(req,res,next) => {
         const { email, password} = req.body;
 
         if(!email || !password){
-            return res.status(400).json({message : "Please Enter the Email and password"})
+            return res.status(400).json({success: false, message : "Please Enter the Email and password"})
         }
 
         const user = await User.findOne({email}).select("+password")
         if(!user){
-             return res.status(401).json({message : "Invalid Email or password"})
+             return res.status(401).json({success: false, message : "Invalid Email or password"})
         }
 
         const match = await user.comparePassword(password);
         if(!match){
-            return res.status(401).json({status : "failed" , message : "Invalid email or password"})
+            return res.status(401).json({success: false , message : "Invalid email or password"})
         }
 
-      //  const token = user.getJWTtoken();
+       const token = newToken(user);
 
-        // res.status(200).json({
-        //     success: true,
-        //     user,
-        //     token,
-        // });
-        sendToken(user, 200, res);
+        res.status(200).json({
+            success: true,
+            user,
+            token,
+        });
+       
 
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        res.status(500).json({ success: false, message: error.message });
     }
 
 }
